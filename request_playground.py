@@ -14,6 +14,8 @@ import cursor_edgar
 
 # Create the EDGAR cursor object
 ticker = "AAPL"
+ticker = "SOFI"
+# ticker = "SOFI"
 cursor = cursor_edgar.CursorEdgar()
 
 # Return the ticker CIK
@@ -23,6 +25,11 @@ cursor.get_cik(ticker)
 # Return the Concept keys
 cursor.query_company_facts()
 keys_concept = cursor.get_keys_concept()
+
+
+
+
+
 
 
 # %% Define plotting
@@ -41,8 +48,8 @@ def get_concept_df(cursor_edgar, key_concept, mask_form=None):
 
 # %%
 
-key_concept = "GrossProfit"
-# key_concept = "Revenues"
+# key_concept = "GrossProfit"
+key_concept = "Revenues"
 # key_concept = "OperatingExpenses"
 
 df_raw = get_concept_df(cursor, key_concept=key_concept, mask_form=None)
