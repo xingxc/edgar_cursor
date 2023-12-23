@@ -1,9 +1,10 @@
 # %% Begin
-
 # import modules
 import datetime
 import requests
 import json
+import subprocess
+import csv
 
 import numpy as np
 import pandas as pd
@@ -13,9 +14,9 @@ import parser_edgar
 import cursor_edgar
 
 # Create the EDGAR cursor object
-ticker = "AAPL"
-ticker = "SOFI"
+# ticker = "AAPL"
 # ticker = "SOFI"
+ticker = "SAND"
 cursor = cursor_edgar.CursorEdgar()
 
 # Return the ticker CIK
@@ -24,16 +25,24 @@ cursor.get_cik(ticker)
 
 # Return the Concept keys
 cursor.query_company_facts()
+
+cursor.company_facts
+
 keys_concept = cursor.get_keys_concept()
 
+std_input  =f"mkdir {ticker}"
+subprocess.run(std_input, shell=True)
+
+
+with open(f'{ticker}/{ticker}_key_concept.csv', 'w') as file:
+    wr = csv.writer(file, quoting=csv.QUOTE_ALL)
+    wr.writerow(keys_concept)
 
 
 
-
-
+cursor_edgar.company_facts.json()
 
 # %% Define plotting
-
 
 def get_concept_df(cursor_edgar, key_concept, mask_form=None):
     cursor_edgar.query_get_df_concept(key_concept)
@@ -45,35 +54,49 @@ def get_concept_df(cursor_edgar, key_concept, mask_form=None):
 
     return df
 
-
 # %%
 
 # key_concept = "GrossProfit"
-key_concept = "Revenues"
+key_concept = "Assets"
 # key_concept = "OperatingExpenses"
 
-df_raw = get_concept_df(cursor, key_concept=key_concept, mask_form=None)
-display(df_raw)
+# df_raw = get_concept_df(cursor, key_concept=key_concept, mask_form=None)
+
+
+cursor_edgar.query_get_df_concept(key_concept)
+
+#%%
+
+df_raw['end']
+
+
+
+
+#%%
+
+
+
+
 
 # Convert str to date time and get duration
-df_raw["start"] = pd.to_datetime(df_raw["start"], format=r"%Y-%m-%d")
-df_raw["end"] = pd.to_datetime(df_raw["end"], format=r"%Y-%m-%d")
-df_raw["duration"] = df_raw["end"] - df_raw["start"]
+# df_raw["start"] = pd.to_datetime(df_raw["start"], format=r"%Y-%m-%d")
+# df_raw["end"] = pd.to_datetime(df_raw["end"], format=r"%Y-%m-%d")
+# df_raw["duration"] = df_raw["end"] - df_raw["start"]
 
-duration_quarter = (df_raw["duration"] > datetime.timedelta(days=70)) & (
-    df_raw["duration"] < datetime.timedelta(days=110)
-)
-duration_annual = df_raw["duration"] > datetime.timedelta(days=340)
+# duration_quarter = (df_raw["duration"] > datetime.timedelta(days=70)) & (
+#     df_raw["duration"] < datetime.timedelta(days=110)
+# )
+# duration_annual = df_raw["duration"] > datetime.timedelta(days=340)
 
-df_FY = df_raw[duration_annual]
-df_Q = df_raw[duration_quarter]
-
-
-df_Q["start_ym"] = df_Q["start"].dt.strftime("%Y-%m")
-df_Q["end_ym"] = df_Q["end"].dt.strftime("%Y-%m")
+# df_FY = df_raw[duration_annual]
+# df_Q = df_raw[duration_quarter]
 
 
-df_Q.drop_duplicates(subset=["start_ym", "end_ym"], keep="last")
+# df_Q["start_ym"] = df_Q["start"].dt.strftime("%Y-%m")
+# df_Q["end_ym"] = df_Q["end"].dt.strftime("%Y-%m")
+
+
+# df_Q.drop_duplicates(subset=["start_ym", "end_ym"], keep="last")
 
 
 # %%
