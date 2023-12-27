@@ -1,0 +1,1507 @@
+
+<?xml version='1.0' encoding='utf-8'?>
+<FilingSummary>
+  <Version>3.22.4</Version>
+  <ProcessingTime/>
+  <ReportFormat>html</ReportFormat>
+  <ContextCount>651</ContextCount>
+  <ElementCount>584</ElementCount>
+  <EntityCount>1</EntityCount>
+  <FootnotesReported>false</FootnotesReported>
+  <SegmentCount>180</SegmentCount>
+  <ScenarioCount>0</ScenarioCount>
+  <TuplesReported>false</TuplesReported>
+  <UnitCount>10</UnitCount>
+  <MyReports>
+    <Report instance="pypl-20221231.htm">
+      <IsDefault>false</IsDefault>
+      <HasEmbeddedReports>false</HasEmbeddedReports>
+      <HtmlFileName>R1.htm</HtmlFileName>
+      <LongName>0000001 - Document - Cover Page</LongName>
+      <ReportType>Sheet</ReportType>
+      <Role>http://www.paypal.com/role/CoverPage</Role>
+      <ShortName>Cover Page</ShortName>
+      <MenuCategory>Cover</MenuCategory>
+      <Position>1</Position>
+    </Report>
+    <Report instance="pypl-20221231.htm">
+      <IsDefault>false</IsDefault>
+      <HasEmbeddedReports>false</HasEmbeddedReports>
+      <HtmlFileName>R2.htm</HtmlFileName>
+      <LongName>0000002 - Document - Audit Information</LongName>
+      <ReportType>Sheet</ReportType>
+      <Role>http://www.paypal.com/role/AuditInformation</Role>
+      <ShortName>Audit Information</ShortName>
+      <MenuCategory>Cover</MenuCategory>
+      <Position>2</Position>
+    </Report>
+    <Report instance="pypl-20221231.htm">
+      <IsDefault>false</IsDefault>
+      <HasEmbeddedReports>false</HasEmbeddedReports>
+      <HtmlFileName>R3.htm</HtmlFileName>
+      <LongName>0000003 - Statement - CONSOLIDATED BALANCE SHEETS</LongName>
+      <ReportType>Sheet</ReportType>
+      <Role>http://www.paypal.com/role/CONSOLIDATEDBALANCESHEETS</Role>
+      <ShortName>CONSOLIDATED BALANCE SHEETS</ShortName>
+      <MenuCategory>Statements</MenuCategory>
+      <Position>3</Position>
+    </Report>
+    <Report instance="pypl-20221231.htm">
+      <IsDefault>false</IsDefault>
+      <HasEmbeddedReports>false</HasEmbeddedReports>
+      <HtmlFileName>R4.htm</HtmlFileName>
+      <LongName>0000004 - Statement - CONSOLIDATED BALANCE SHEETS (PARENTHETICAL)</LongName>
+      <ReportType>Sheet</ReportType>
+      <Role>http://www.paypal.com/role/CONSOLIDATEDBALANCESHEETSPARENTHETICAL</Role>
+      <ShortName>CONSOLIDATED BALANCE SHEETS (PARENTHETICAL)</ShortName>
+      <MenuCategory>Statements</MenuCategory>
+      <Position>4</Position>
+    </Report>
+    <Report instance="pypl-20221231.htm">
+      <IsDefault>false</IsDefault>
+      <HasEmbeddedReports>false</HasEmbeddedReports>
+      <HtmlFileName>R5.htm</HtmlFileName>
+      <LongName>0000005 - Statement - CONSOLIDATED STATEMENTS OF INCOME (LOSS)</LongName>
+      <ReportType>Sheet</ReportType>
+      <Role>http://www.paypal.com/role/CONSOLIDATEDSTATEMENTSOFINCOMELOSS</Role>
+      <ShortName>CONSOLIDATED STATEMENTS OF INCOME (LOSS)</ShortName>
+      <MenuCategory>Statements</MenuCategory>
+      <Position>5</Position>
+    </Report>
+    <Report instance="pypl-20221231.htm">
+      <IsDefault>false</IsDefault>
+      <HasEmbeddedReports>false</HasEmbeddedReports>
+      <HtmlFileName>R6.htm</HtmlFileName>
+      <LongName>0000006 - Statement - CONSOLIDATED STATEMENTS OF COMPREHENSIVE INCOME (LOSS)</LongName>
+      <ReportType>Sheet</ReportType>
+      <Role>http://www.paypal.com/role/CONSOLIDATEDSTATEMENTSOFCOMPREHENSIVEINCOMELOSS</Role>
+      <ShortName>CONSOLIDATED STATEMENTS OF COMPREHENSIVE INCOME (LOSS)</ShortName>
+      <MenuCategory>Statements</MenuCategory>
+      <Position>6</Position>
+    </Report>
+    <Report instance="pypl-20221231.htm">
+      <IsDefault>false</IsDefault>
+      <HasEmbeddedReports>false</HasEmbeddedReports>
+      <HtmlFileName>R7.htm</HtmlFileName>
+      <LongName>0000007 - Statement - CONSOLIDATED STATEMENTS OF STOCKHOLDERS' EQUITY</LongName>
+      <ReportType>Sheet</ReportType>
+      <Role>http://www.paypal.com/role/CONSOLIDATEDSTATEMENTSOFSTOCKHOLDERSEQUITY</Role>
+      <ShortName>CONSOLIDATED STATEMENTS OF STOCKHOLDERS' EQUITY</ShortName>
+      <MenuCategory>Statements</MenuCategory>
+      <Position>7</Position>
+    </Report>
+    <Report instance="pypl-20221231.htm">
+      <IsDefault>false</IsDefault>
+      <HasEmbeddedReports>false</HasEmbeddedReports>
+      <HtmlFileName>R8.htm</HtmlFileName>
+      <LongName>0000008 - Statement - CONSOLIDATED STATEMENTS OF CASH FLOWS</LongName>
+      <ReportType>Sheet</ReportType>
+      <Role>http://www.paypal.com/role/CONSOLIDATEDSTATEMENTSOFCASHFLOWS</Role>
+      <ShortName>CONSOLIDATED STATEMENTS OF CASH FLOWS</ShortName>
+      <MenuCategory>Statements</MenuCategory>
+      <Position>8</Position>
+    </Report>
+    <Report instance="pypl-20221231.htm">
+      <IsDefault>false</IsDefault>
+      <HasEmbeddedReports>false</HasEmbeddedReports>
+      <HtmlFileName>R9.htm</HtmlFileName>
+      <LongName>0000009 - Disclosure - OVERVIEW AND SUMMARY OF SIGNIFICANT ACCOUNTING POLICIES</LongName>
+      <ReportType>Sheet</ReportType>
+      <Role>http://www.paypal.com/role/OVERVIEWANDSUMMARYOFSIGNIFICANTACCOUNTINGPOLICIES</Role>
+      <ShortName>OVERVIEW AND SUMMARY OF SIGNIFICANT ACCOUNTING POLICIES</ShortName>
+      <MenuCategory>Notes</MenuCategory>
+      <Position>9</Position>
+    </Report>
+    <Report instance="pypl-20221231.htm">
+      <IsDefault>false</IsDefault>
+      <HasEmbeddedReports>false</HasEmbeddedReports>
+      <HtmlFileName>R10.htm</HtmlFileName>
+      <LongName>0000010 - Disclosure - REVENUE</LongName>
+      <ReportType>Sheet</ReportType>
+      <Role>http://www.paypal.com/role/REVENUE</Role>
+      <ShortName>REVENUE</ShortName>
+      <MenuCategory>Notes</MenuCategory>
+      <Position>10</Position>
+    </Report>
+    <Report instance="pypl-20221231.htm">
+      <IsDefault>false</IsDefault>
+      <HasEmbeddedReports>false</HasEmbeddedReports>
+      <HtmlFileName>R11.htm</HtmlFileName>
+      <LongName>0000011 - Disclosure - NET INCOME (LOSS) PER SHARE</LongName>
+      <ReportType>Sheet</ReportType>
+      <Role>http://www.paypal.com/role/NETINCOMELOSSPERSHARE</Role>
+      <ShortName>NET INCOME (LOSS) PER SHARE</ShortName>
+      <MenuCategory>Notes</MenuCategory>
+      <Position>11</Position>
+    </Report>
+    <Report instance="pypl-20221231.htm">
+      <IsDefault>false</IsDefault>
+      <HasEmbeddedReports>false</HasEmbeddedReports>
+      <HtmlFileName>R12.htm</HtmlFileName>
+      <LongName>0000012 - Disclosure - BUSINESS COMBINATIONS</LongName>
+      <ReportType>Sheet</ReportType>
+      <Role>http://www.paypal.com/role/BUSINESSCOMBINATIONS</Role>
+      <ShortName>BUSINESS COMBINATIONS</ShortName>
+      <MenuCategory>Notes</MenuCategory>
+      <Position>12</Position>
+    </Report>
+    <Report instance="pypl-20221231.htm">
+      <IsDefault>false</IsDefault>
+      <HasEmbeddedReports>false</HasEmbeddedReports>
+      <HtmlFileName>R13.htm</HtmlFileName>
+      <LongName>0000013 - Disclosure - GOODWILL AND INTANGIBLE ASSETS</LongName>
+      <ReportType>Sheet</ReportType>
+      <Role>http://www.paypal.com/role/GOODWILLANDINTANGIBLEASSETS</Role>
+      <ShortName>GOODWILL AND INTANGIBLE ASSETS</ShortName>
+      <MenuCategory>Notes</MenuCategory>
+      <Position>13</Position>
+    </Report>
+    <Report instance="pypl-20221231.htm">
+      <IsDefault>false</IsDefault>
+      <HasEmbeddedReports>false</HasEmbeddedReports>
+      <HtmlFileName>R14.htm</HtmlFileName>
+      <LongName>0000014 - Disclosure - LEASES</LongName>
+      <ReportType>Sheet</ReportType>
+      <Role>http://www.paypal.com/role/LEASES</Role>
+      <ShortName>LEASES</ShortName>
+      <MenuCategory>Notes</MenuCategory>
+      <Position>14</Position>
+    </Report>
+    <Report instance="pypl-20221231.htm">
+      <IsDefault>false</IsDefault>
+      <HasEmbeddedReports>false</HasEmbeddedReports>
+      <HtmlFileName>R15.htm</HtmlFileName>
+      <LongName>0000015 - Disclosure - OTHER FINANCIAL STATEMENT DETAILS</LongName>
+      <ReportType>Sheet</ReportType>
+      <Role>http://www.paypal.com/role/OTHERFINANCIALSTATEMENTDETAILS</Role>
+      <ShortName>OTHER FINANCIAL STATEMENT DETAILS</ShortName>
+      <MenuCategory>Notes</MenuCategory>
+      <Position>15</Position>
+    </Report>
+    <Report instance="pypl-20221231.htm">
+      <IsDefault>false</IsDefault>
+      <HasEmbeddedReports>false</HasEmbeddedReports>
+      <HtmlFileName>R16.htm</HtmlFileName>
+      <LongName>0000016 - Disclosure - FUNDS RECEIVABLE AND CUSTOMER ACCOUNTS AND INVESTMENTS</LongName>
+      <ReportType>Sheet</ReportType>
+      <Role>http://www.paypal.com/role/FUNDSRECEIVABLEANDCUSTOMERACCOUNTSANDINVESTMENTS</Role>
+      <ShortName>FUNDS RECEIVABLE AND CUSTOMER ACCOUNTS AND INVESTMENTS</ShortName>
+      <MenuCategory>Notes</MenuCategory>
+      <Position>16</Position>
+    </Report>
+    <Report instance="pypl-20221231.htm">
+      <IsDefault>false</IsDefault>
+      <HasEmbeddedReports>false</HasEmbeddedReports>
+      <HtmlFileName>R17.htm</HtmlFileName>
+      <LongName>0000017 - Disclosure - FAIR VALUE MEASUREMENT OF ASSETS AND LIABILITIES</LongName>
+      <ReportType>Sheet</ReportType>
+      <Role>http://www.paypal.com/role/FAIRVALUEMEASUREMENTOFASSETSANDLIABILITIES</Role>
+      <ShortName>FAIR VALUE MEASUREMENT OF ASSETS AND LIABILITIES</ShortName>
+      <MenuCategory>Notes</MenuCategory>
+      <Position>17</Position>
+    </Report>
+    <Report instance="pypl-20221231.htm">
+      <IsDefault>false</IsDefault>
+      <HasEmbeddedReports>false</HasEmbeddedReports>
+      <HtmlFileName>R18.htm</HtmlFileName>
+      <LongName>0000018 - Disclosure - DERIVATIVE INSTRUMENTS</LongName>
+      <ReportType>Sheet</ReportType>
+      <Role>http://www.paypal.com/role/DERIVATIVEINSTRUMENTS</Role>
+      <ShortName>DERIVATIVE INSTRUMENTS</ShortName>
+      <MenuCategory>Notes</MenuCategory>
+      <Position>18</Position>
+    </Report>
+    <Report instance="pypl-20221231.htm">
+      <IsDefault>false</IsDefault>
+      <HasEmbeddedReports>false</HasEmbeddedReports>
+      <HtmlFileName>R19.htm</HtmlFileName>
+      <LongName>0000019 - Disclosure - LOANS AND INTEREST RECEIVABLE</LongName>
+      <ReportType>Sheet</ReportType>
+      <Role>http://www.paypal.com/role/LOANSANDINTERESTRECEIVABLE</Role>
+      <ShortName>LOANS AND INTEREST RECEIVABLE</ShortName>
+      <MenuCategory>Notes</MenuCategory>
+      <Position>19</Position>
+    </Report>
+    <Report instance="pypl-20221231.htm">
+      <IsDefault>false</IsDefault>
+      <HasEmbeddedReports>false</HasEmbeddedReports>
+      <HtmlFileName>R20.htm</HtmlFileName>
+      <LongName>0000020 - Disclosure - DEBT</LongName>
+      <ReportType>Sheet</ReportType>
+      <Role>http://www.paypal.com/role/DEBT</Role>
+      <ShortName>DEBT</ShortName>
+      <MenuCategory>Notes</MenuCategory>
+      <Position>20</Position>
+    </Report>
+    <Report instance="pypl-20221231.htm">
+      <IsDefault>false</IsDefault>
+      <HasEmbeddedReports>false</HasEmbeddedReports>
+      <HtmlFileName>R21.htm</HtmlFileName>
+      <LongName>0000021 - Disclosure - COMMITMENTS AND CONTINGENCIES</LongName>
+      <ReportType>Sheet</ReportType>
+      <Role>http://www.paypal.com/role/COMMITMENTSANDCONTINGENCIES</Role>
+      <ShortName>COMMITMENTS AND CONTINGENCIES</ShortName>
+      <MenuCategory>Notes</MenuCategory>
+      <Position>21</Position>
+    </Report>
+    <Report instance="pypl-20221231.htm">
+      <IsDefault>false</IsDefault>
+      <HasEmbeddedReports>false</HasEmbeddedReports>
+      <HtmlFileName>R22.htm</HtmlFileName>
+      <LongName>0000022 - Disclosure - STOCK REPURCHASE PROGRAMS</LongName>
+      <ReportType>Sheet</ReportType>
+      <Role>http://www.paypal.com/role/STOCKREPURCHASEPROGRAMS</Role>
+      <ShortName>STOCK REPURCHASE PROGRAMS</ShortName>
+      <MenuCategory>Notes</MenuCategory>
+      <Position>22</Position>
+    </Report>
+    <Report instance="pypl-20221231.htm">
+      <IsDefault>false</IsDefault>
+      <HasEmbeddedReports>false</HasEmbeddedReports>
+      <HtmlFileName>R23.htm</HtmlFileName>
+      <LongName>0000023 - Disclosure - STOCK-BASED AND EMPLOYEE SAVINGS PLANS</LongName>
+      <ReportType>Sheet</ReportType>
+      <Role>http://www.paypal.com/role/STOCKBASEDANDEMPLOYEESAVINGSPLANS</Role>
+      <ShortName>STOCK-BASED AND EMPLOYEE SAVINGS PLANS</ShortName>
+      <MenuCategory>Notes</MenuCategory>
+      <Position>23</Position>
+    </Report>
+    <Report instance="pypl-20221231.htm">
+      <IsDefault>false</IsDefault>
+      <HasEmbeddedReports>false</HasEmbeddedReports>
+      <HtmlFileName>R24.htm</HtmlFileName>
+      <LongName>0000024 - Disclosure - INCOME TAXES</LongName>
+      <ReportType>Sheet</ReportType>
+      <Role>http://www.paypal.com/role/INCOMETAXES</Role>
+      <ShortName>INCOME TAXES</ShortName>
+      <MenuCategory>Notes</MenuCategory>
+      <Position>24</Position>
+    </Report>
+    <Report instance="pypl-20221231.htm">
+      <IsDefault>false</IsDefault>
+      <HasEmbeddedReports>false</HasEmbeddedReports>
+      <HtmlFileName>R25.htm</HtmlFileName>
+      <LongName>0000025 - Disclosure - RESTRUCTURING AND OTHER CHARGES</LongName>
+      <ReportType>Sheet</ReportType>
+      <Role>http://www.paypal.com/role/RESTRUCTURINGANDOTHERCHARGES</Role>
+      <ShortName>RESTRUCTURING AND OTHER CHARGES</ShortName>
+      <MenuCategory>Notes</MenuCategory>
+      <Position>25</Position>
+    </Report>
+    <Report instance="pypl-20221231.htm">
+      <IsDefault>false</IsDefault>
+      <HasEmbeddedReports>false</HasEmbeddedReports>
+      <HtmlFileName>R26.htm</HtmlFileName>
+      <LongName>0000026 - Disclosure - SUBSEQUENT EVENTS</LongName>
+      <ReportType>Sheet</ReportType>
+      <Role>http://www.paypal.com/role/SUBSEQUENTEVENTS</Role>
+      <ShortName>SUBSEQUENT EVENTS</ShortName>
+      <MenuCategory>Notes</MenuCategory>
+      <Position>26</Position>
+    </Report>
+    <Report instance="pypl-20221231.htm">
+      <IsDefault>false</IsDefault>
+      <HasEmbeddedReports>false</HasEmbeddedReports>
+      <HtmlFileName>R27.htm</HtmlFileName>
+      <LongName>0000027 - Disclosure - Schedule II???VALUATION AND QUALIFYING ACCOUNTS</LongName>
+      <ReportType>Sheet</ReportType>
+      <Role>http://www.paypal.com/role/ScheduleIIVALUATIONANDQUALIFYINGACCOUNTS</Role>
+      <ShortName>Schedule II???VALUATION AND QUALIFYING ACCOUNTS</ShortName>
+      <MenuCategory>Notes</MenuCategory>
+      <Position>27</Position>
+    </Report>
+    <Report instance="pypl-20221231.htm">
+      <IsDefault>false</IsDefault>
+      <HasEmbeddedReports>false</HasEmbeddedReports>
+      <HtmlFileName>R28.htm</HtmlFileName>
+      <LongName>0000028 - Disclosure - OVERVIEW AND SUMMARY OF SIGNIFICANT ACCOUNTING POLICIES (Policies)</LongName>
+      <ReportType>Sheet</ReportType>
+      <Role>http://www.paypal.com/role/OVERVIEWANDSUMMARYOFSIGNIFICANTACCOUNTINGPOLICIESPolicies</Role>
+      <ShortName>OVERVIEW AND SUMMARY OF SIGNIFICANT ACCOUNTING POLICIES (Policies)</ShortName>
+      <MenuCategory>Policies</MenuCategory>
+      <Position>28</Position>
+    </Report>
+    <Report instance="pypl-20221231.htm">
+      <IsDefault>false</IsDefault>
+      <HasEmbeddedReports>false</HasEmbeddedReports>
+      <HtmlFileName>R29.htm</HtmlFileName>
+      <LongName>0000029 - Disclosure - OVERVIEW AND SUMMARY OF SIGNIFICANT ACCOUNTING POLICIES (Tables)</LongName>
+      <ReportType>Sheet</ReportType>
+      <Role>http://www.paypal.com/role/OVERVIEWANDSUMMARYOFSIGNIFICANTACCOUNTINGPOLICIESTables</Role>
+      <ShortName>OVERVIEW AND SUMMARY OF SIGNIFICANT ACCOUNTING POLICIES (Tables)</ShortName>
+      <MenuCategory>Tables</MenuCategory>
+      <ParentRole>http://www.paypal.com/role/OVERVIEWANDSUMMARYOFSIGNIFICANTACCOUNTINGPOLICIES</ParentRole>
+      <Position>29</Position>
+    </Report>
+    <Report instance="pypl-20221231.htm">
+      <IsDefault>false</IsDefault>
+      <HasEmbeddedReports>false</HasEmbeddedReports>
+      <HtmlFileName>R30.htm</HtmlFileName>
+      <LongName>0000030 - Disclosure - REVENUE (Tables)</LongName>
+      <ReportType>Sheet</ReportType>
+      <Role>http://www.paypal.com/role/REVENUETables</Role>
+      <ShortName>REVENUE (Tables)</ShortName>
+      <MenuCategory>Tables</MenuCategory>
+      <ParentRole>http://www.paypal.com/role/REVENUE</ParentRole>
+      <Position>30</Position>
+    </Report>
+    <Report instance="pypl-20221231.htm">
+      <IsDefault>false</IsDefault>
+      <HasEmbeddedReports>false</HasEmbeddedReports>
+      <HtmlFileName>R31.htm</HtmlFileName>
+      <LongName>0000031 - Disclosure - NET INCOME (LOSS) PER SHARE (Tables)</LongName>
+      <ReportType>Sheet</ReportType>
+      <Role>http://www.paypal.com/role/NETINCOMELOSSPERSHARETables</Role>
+      <ShortName>NET INCOME (LOSS) PER SHARE (Tables)</ShortName>
+      <MenuCategory>Tables</MenuCategory>
+      <ParentRole>http://www.paypal.com/role/NETINCOMELOSSPERSHARE</ParentRole>
+      <Position>31</Position>
+    </Report>
+    <Report instance="pypl-20221231.htm">
+      <IsDefault>false</IsDefault>
+      <HasEmbeddedReports>false</HasEmbeddedReports>
+      <HtmlFileName>R32.htm</HtmlFileName>
+      <LongName>0000032 - Disclosure - BUSINESS COMBINATIONS (Tables)</LongName>
+      <ReportType>Sheet</ReportType>
+      <Role>http://www.paypal.com/role/BUSINESSCOMBINATIONSTables</Role>
+      <ShortName>BUSINESS COMBINATIONS (Tables)</ShortName>
+      <MenuCategory>Tables</MenuCategory>
+      <ParentRole>http://www.paypal.com/role/BUSINESSCOMBINATIONS</ParentRole>
+      <Position>32</Position>
+    </Report>
+    <Report instance="pypl-20221231.htm">
+      <IsDefault>false</IsDefault>
+      <HasEmbeddedReports>false</HasEmbeddedReports>
+      <HtmlFileName>R33.htm</HtmlFileName>
+      <LongName>0000033 - Disclosure - GOODWILL AND INTANGIBLE ASSETS (Tables)</LongName>
+      <ReportType>Sheet</ReportType>
+      <Role>http://www.paypal.com/role/GOODWILLANDINTANGIBLEASSETSTables</Role>
+      <ShortName>GOODWILL AND INTANGIBLE ASSETS (Tables)</ShortName>
+      <MenuCategory>Tables</MenuCategory>
+      <ParentRole>http://www.paypal.com/role/GOODWILLANDINTANGIBLEASSETS</ParentRole>
+      <Position>33</Position>
+    </Report>
+    <Report instance="pypl-20221231.htm">
+      <IsDefault>false</IsDefault>
+      <HasEmbeddedReports>false</HasEmbeddedReports>
+      <HtmlFileName>R34.htm</HtmlFileName>
+      <LongName>0000034 - Disclosure - LEASES (Tables)</LongName>
+      <ReportType>Sheet</ReportType>
+      <Role>http://www.paypal.com/role/LEASESTables</Role>
+      <ShortName>LEASES (Tables)</ShortName>
+      <MenuCategory>Tables</MenuCategory>
+      <ParentRole>http://www.paypal.com/role/LEASES</ParentRole>
+      <Position>34</Position>
+    </Report>
+    <Report instance="pypl-20221231.htm">
+      <IsDefault>false</IsDefault>
+      <HasEmbeddedReports>false</HasEmbeddedReports>
+      <HtmlFileName>R35.htm</HtmlFileName>
+      <LongName>0000035 - Disclosure - OTHER FINANCIAL STATEMENT DETAILS (Tables)</LongName>
+      <ReportType>Sheet</ReportType>
+      <Role>http://www.paypal.com/role/OTHERFINANCIALSTATEMENTDETAILSTables</Role>
+      <ShortName>OTHER FINANCIAL STATEMENT DETAILS (Tables)</ShortName>
+      <MenuCategory>Tables</MenuCategory>
+      <ParentRole>http://www.paypal.com/role/OTHERFINANCIALSTATEMENTDETAILS</ParentRole>
+      <Position>35</Position>
+    </Report>
+    <Report instance="pypl-20221231.htm">
+      <IsDefault>false</IsDefault>
+      <HasEmbeddedReports>false</HasEmbeddedReports>
+      <HtmlFileName>R36.htm</HtmlFileName>
+      <LongName>0000036 - Disclosure - FUNDS RECEIVABLE AND CUSTOMER ACCOUNTS AND INVESTMENTS (Tables)</LongName>
+      <ReportType>Sheet</ReportType>
+      <Role>http://www.paypal.com/role/FUNDSRECEIVABLEANDCUSTOMERACCOUNTSANDINVESTMENTSTables</Role>
+      <ShortName>FUNDS RECEIVABLE AND CUSTOMER ACCOUNTS AND INVESTMENTS (Tables)</ShortName>
+      <MenuCategory>Tables</MenuCategory>
+      <ParentRole>http://www.paypal.com/role/FUNDSRECEIVABLEANDCUSTOMERACCOUNTSANDINVESTMENTS</ParentRole>
+      <Position>36</Position>
+    </Report>
+    <Report instance="pypl-20221231.htm">
+      <IsDefault>false</IsDefault>
+      <HasEmbeddedReports>false</HasEmbeddedReports>
+      <HtmlFileName>R37.htm</HtmlFileName>
+      <LongName>0000037 - Disclosure - FAIR VALUE MEASUREMENT OF ASSETS AND LIABILITIES (Tables)</LongName>
+      <ReportType>Sheet</ReportType>
+      <Role>http://www.paypal.com/role/FAIRVALUEMEASUREMENTOFASSETSANDLIABILITIESTables</Role>
+      <ShortName>FAIR VALUE MEASUREMENT OF ASSETS AND LIABILITIES (Tables)</ShortName>
+      <MenuCategory>Tables</MenuCategory>
+      <ParentRole>http://www.paypal.com/role/FAIRVALUEMEASUREMENTOFASSETSANDLIABILITIES</ParentRole>
+      <Position>37</Position>
+    </Report>
+    <Report instance="pypl-20221231.htm">
+      <IsDefault>false</IsDefault>
+      <HasEmbeddedReports>false</HasEmbeddedReports>
+      <HtmlFileName>R38.htm</HtmlFileName>
+      <LongName>0000038 - Disclosure - DERIVATIVE INSTRUMENTS (Tables)</LongName>
+      <ReportType>Sheet</ReportType>
+      <Role>http://www.paypal.com/role/DERIVATIVEINSTRUMENTSTables</Role>
+      <ShortName>DERIVATIVE INSTRUMENTS (Tables)</ShortName>
+      <MenuCategory>Tables</MenuCategory>
+      <ParentRole>http://www.paypal.com/role/DERIVATIVEINSTRUMENTS</ParentRole>
+      <Position>38</Position>
+    </Report>
+    <Report instance="pypl-20221231.htm">
+      <IsDefault>false</IsDefault>
+      <HasEmbeddedReports>false</HasEmbeddedReports>
+      <HtmlFileName>R39.htm</HtmlFileName>
+      <LongName>0000039 - Disclosure - LOANS AND INTEREST RECEIVABLE (Tables)</LongName>
+      <ReportType>Sheet</ReportType>
+      <Role>http://www.paypal.com/role/LOANSANDINTERESTRECEIVABLETables</Role>
+      <ShortName>LOANS AND INTEREST RECEIVABLE (Tables)</ShortName>
+      <MenuCategory>Tables</MenuCategory>
+      <ParentRole>http://www.paypal.com/role/LOANSANDINTERESTRECEIVABLE</ParentRole>
+      <Position>39</Position>
+    </Report>
+    <Report instance="pypl-20221231.htm">
+      <IsDefault>false</IsDefault>
+      <HasEmbeddedReports>false</HasEmbeddedReports>
+      <HtmlFileName>R40.htm</HtmlFileName>
+      <LongName>0000040 - Disclosure - DEBT (Tables)</LongName>
+      <ReportType>Sheet</ReportType>
+      <Role>http://www.paypal.com/role/DEBTTables</Role>
+      <ShortName>DEBT (Tables)</ShortName>
+      <MenuCategory>Tables</MenuCategory>
+      <ParentRole>http://www.paypal.com/role/DEBT</ParentRole>
+      <Position>40</Position>
+    </Report>
+    <Report instance="pypl-20221231.htm">
+      <IsDefault>false</IsDefault>
+      <HasEmbeddedReports>false</HasEmbeddedReports>
+      <HtmlFileName>R41.htm</HtmlFileName>
+      <LongName>0000041 - Disclosure - COMMITMENTS AND CONTINGENCIES (Tables)</LongName>
+      <ReportType>Sheet</ReportType>
+      <Role>http://www.paypal.com/role/COMMITMENTSANDCONTINGENCIESTables</Role>
+      <ShortName>COMMITMENTS AND CONTINGENCIES (Tables)</ShortName>
+      <MenuCategory>Tables</MenuCategory>
+      <ParentRole>http://www.paypal.com/role/COMMITMENTSANDCONTINGENCIES</ParentRole>
+      <Position>41</Position>
+    </Report>
+    <Report instance="pypl-20221231.htm">
+      <IsDefault>false</IsDefault>
+      <HasEmbeddedReports>false</HasEmbeddedReports>
+      <HtmlFileName>R42.htm</HtmlFileName>
+      <LongName>0000042 - Disclosure - STOCK-BASED AND EMPLOYEE SAVINGS PLANS (Tables)</LongName>
+      <ReportType>Sheet</ReportType>
+      <Role>http://www.paypal.com/role/STOCKBASEDANDEMPLOYEESAVINGSPLANSTables</Role>
+      <ShortName>STOCK-BASED AND EMPLOYEE SAVINGS PLANS (Tables)</ShortName>
+      <MenuCategory>Tables</MenuCategory>
+      <ParentRole>http://www.paypal.com/role/STOCKBASEDANDEMPLOYEESAVINGSPLANS</ParentRole>
+      <Position>42</Position>
+    </Report>
+    <Report instance="pypl-20221231.htm">
+      <IsDefault>false</IsDefault>
+      <HasEmbeddedReports>false</HasEmbeddedReports>
+      <HtmlFileName>R43.htm</HtmlFileName>
+      <LongName>0000043 - Disclosure - INCOME TAXES (Tables)</LongName>
+      <ReportType>Sheet</ReportType>
+      <Role>http://www.paypal.com/role/INCOMETAXESTables</Role>
+      <ShortName>INCOME TAXES (Tables)</ShortName>
+      <MenuCategory>Tables</MenuCategory>
+      <ParentRole>http://www.paypal.com/role/INCOMETAXES</ParentRole>
+      <Position>43</Position>
+    </Report>
+    <Report instance="pypl-20221231.htm">
+      <IsDefault>false</IsDefault>
+      <HasEmbeddedReports>false</HasEmbeddedReports>
+      <HtmlFileName>R44.htm</HtmlFileName>
+      <LongName>0000044 - Disclosure - RESTRUCTURING AND OTHER CHARGES (Tables)</LongName>
+      <ReportType>Sheet</ReportType>
+      <Role>http://www.paypal.com/role/RESTRUCTURINGANDOTHERCHARGESTables</Role>
+      <ShortName>RESTRUCTURING AND OTHER CHARGES (Tables)</ShortName>
+      <MenuCategory>Tables</MenuCategory>
+      <ParentRole>http://www.paypal.com/role/RESTRUCTURINGANDOTHERCHARGES</ParentRole>
+      <Position>44</Position>
+    </Report>
+    <Report instance="pypl-20221231.htm">
+      <IsDefault>false</IsDefault>
+      <HasEmbeddedReports>false</HasEmbeddedReports>
+      <HtmlFileName>R45.htm</HtmlFileName>
+      <LongName>0000045 - Disclosure - OVERVIEW AND SUMMARY OF SIGNIFICANT ACCOUNTING POLICIES - Basis of Presentation and Principles of Consolidation (Details)</LongName>
+      <ReportType>Sheet</ReportType>
+      <Role>http://www.paypal.com/role/OVERVIEWANDSUMMARYOFSIGNIFICANTACCOUNTINGPOLICIESBasisofPresentationandPrinciplesofConsolidationDetails</Role>
+      <ShortName>OVERVIEW AND SUMMARY OF SIGNIFICANT ACCOUNTING POLICIES - Basis of Presentation and Principles of Consolidation (Details)</ShortName>
+      <MenuCategory>Details</MenuCategory>
+      <Position>45</Position>
+    </Report>
+    <Report instance="pypl-20221231.htm">
+      <IsDefault>false</IsDefault>
+      <HasEmbeddedReports>false</HasEmbeddedReports>
+      <HtmlFileName>R46.htm</HtmlFileName>
+      <LongName>0000046 - Disclosure - OVERVIEW AND SUMMARY OF SIGNIFICANT ACCOUNTING POLICIES - Reclassifications (Details)</LongName>
+      <ReportType>Sheet</ReportType>
+      <Role>http://www.paypal.com/role/OVERVIEWANDSUMMARYOFSIGNIFICANTACCOUNTINGPOLICIESReclassificationsDetails</Role>
+      <ShortName>OVERVIEW AND SUMMARY OF SIGNIFICANT ACCOUNTING POLICIES - Reclassifications (Details)</ShortName>
+      <MenuCategory>Details</MenuCategory>
+      <Position>46</Position>
+    </Report>
+    <Report instance="pypl-20221231.htm">
+      <IsDefault>false</IsDefault>
+      <HasEmbeddedReports>false</HasEmbeddedReports>
+      <HtmlFileName>R47.htm</HtmlFileName>
+      <LongName>0000047 - Disclosure - OVERVIEW AND SUMMARY OF SIGNIFICANT ACCOUNTING POLICIES - Allowance for Loans and Interest Receivable (Details)</LongName>
+      <ReportType>Sheet</ReportType>
+      <Role>http://www.paypal.com/role/OVERVIEWANDSUMMARYOFSIGNIFICANTACCOUNTINGPOLICIESAllowanceforLoansandInterestReceivableDetails</Role>
+      <ShortName>OVERVIEW AND SUMMARY OF SIGNIFICANT ACCOUNTING POLICIES - Allowance for Loans and Interest Receivable (Details)</ShortName>
+      <MenuCategory>Details</MenuCategory>
+      <Position>47</Position>
+    </Report>
+    <Report instance="pypl-20221231.htm">
+      <IsDefault>false</IsDefault>
+      <HasEmbeddedReports>false</HasEmbeddedReports>
+      <HtmlFileName>R48.htm</HtmlFileName>
+      <LongName>0000048 - Disclosure - OVERVIEW AND SUMMARY OF SIGNIFICANT ACCOUNTING POLICIES - Customer Accounts and Funds Receivable and Funds Payable (Details)</LongName>
+      <ReportType>Sheet</ReportType>
+      <Role>http://www.paypal.com/role/OVERVIEWANDSUMMARYOFSIGNIFICANTACCOUNTINGPOLICIESCustomerAccountsandFundsReceivableandFundsPayableDetails</Role>
+      <ShortName>OVERVIEW AND SUMMARY OF SIGNIFICANT ACCOUNTING POLICIES - Customer Accounts and Funds Receivable and Funds Payable (Details)</ShortName>
+      <MenuCategory>Details</MenuCategory>
+      <Position>48</Position>
+    </Report>
+    <Report instance="pypl-20221231.htm">
+      <IsDefault>false</IsDefault>
+      <HasEmbeddedReports>false</HasEmbeddedReports>
+      <HtmlFileName>R49.htm</HtmlFileName>
+      <LongName>0000049 - Disclosure - OVERVIEW AND SUMMARY OF SIGNIFICANT ACCOUNTING POLICIES - Property and Equipment (Details)</LongName>
+      <ReportType>Sheet</ReportType>
+      <Role>http://www.paypal.com/role/OVERVIEWANDSUMMARYOFSIGNIFICANTACCOUNTINGPOLICIESPropertyandEquipmentDetails</Role>
+      <ShortName>OVERVIEW AND SUMMARY OF SIGNIFICANT ACCOUNTING POLICIES - Property and Equipment (Details)</ShortName>
+      <MenuCategory>Details</MenuCategory>
+      <Position>49</Position>
+    </Report>
+    <Report instance="pypl-20221231.htm">
+      <IsDefault>false</IsDefault>
+      <HasEmbeddedReports>false</HasEmbeddedReports>
+      <HtmlFileName>R50.htm</HtmlFileName>
+      <LongName>0000050 - Disclosure - OVERVIEW AND SUMMARY OF SIGNIFICANT ACCOUNTING POLICIES - Goodwill and Intangible Assets (Details)</LongName>
+      <ReportType>Sheet</ReportType>
+      <Role>http://www.paypal.com/role/OVERVIEWANDSUMMARYOFSIGNIFICANTACCOUNTINGPOLICIESGoodwillandIntangibleAssetsDetails</Role>
+      <ShortName>OVERVIEW AND SUMMARY OF SIGNIFICANT ACCOUNTING POLICIES - Goodwill and Intangible Assets (Details)</ShortName>
+      <MenuCategory>Details</MenuCategory>
+      <Position>50</Position>
+    </Report>
+    <Report instance="pypl-20221231.htm">
+      <IsDefault>false</IsDefault>
+      <HasEmbeddedReports>false</HasEmbeddedReports>
+      <HtmlFileName>R51.htm</HtmlFileName>
+      <LongName>0000051 - Disclosure - OVERVIEW AND SUMMARY OF SIGNIFICANT ACCOUNTING POLICIES - Allowance for Transaction Losses and Negative Customer Balances (Details)</LongName>
+      <ReportType>Sheet</ReportType>
+      <Role>http://www.paypal.com/role/OVERVIEWANDSUMMARYOFSIGNIFICANTACCOUNTINGPOLICIESAllowanceforTransactionLossesandNegativeCustomerBalancesDetails</Role>
+      <ShortName>OVERVIEW AND SUMMARY OF SIGNIFICANT ACCOUNTING POLICIES - Allowance for Transaction Losses and Negative Customer Balances (Details)</ShortName>
+      <MenuCategory>Details</MenuCategory>
+      <Position>51</Position>
+    </Report>
+    <Report instance="pypl-20221231.htm">
+      <IsDefault>false</IsDefault>
+      <HasEmbeddedReports>false</HasEmbeddedReports>
+      <HtmlFileName>R52.htm</HtmlFileName>
+      <LongName>0000052 - Disclosure - OVERVIEW AND SUMMARY OF SIGNIFICANT ACCOUNTING POLICIES - Concentrations of Risk (Details)</LongName>
+      <ReportType>Sheet</ReportType>
+      <Role>http://www.paypal.com/role/OVERVIEWANDSUMMARYOFSIGNIFICANTACCOUNTINGPOLICIESConcentrationsofRiskDetails</Role>
+      <ShortName>OVERVIEW AND SUMMARY OF SIGNIFICANT ACCOUNTING POLICIES - Concentrations of Risk (Details)</ShortName>
+      <MenuCategory>Details</MenuCategory>
+      <Position>52</Position>
+    </Report>
+    <Report instance="pypl-20221231.htm">
+      <IsDefault>false</IsDefault>
+      <HasEmbeddedReports>false</HasEmbeddedReports>
+      <HtmlFileName>R53.htm</HtmlFileName>
+      <LongName>0000053 - Disclosure - OVERVIEW AND SUMMARY OF SIGNIFICANT ACCOUNTING POLICIES - Advertising Expense (Details)</LongName>
+      <ReportType>Sheet</ReportType>
+      <Role>http://www.paypal.com/role/OVERVIEWANDSUMMARYOFSIGNIFICANTACCOUNTINGPOLICIESAdvertisingExpenseDetails</Role>
+      <ShortName>OVERVIEW AND SUMMARY OF SIGNIFICANT ACCOUNTING POLICIES - Advertising Expense (Details)</ShortName>
+      <MenuCategory>Details</MenuCategory>
+      <Position>53</Position>
+    </Report>
+    <Report instance="pypl-20221231.htm">
+      <IsDefault>false</IsDefault>
+      <HasEmbeddedReports>false</HasEmbeddedReports>
+      <HtmlFileName>R54.htm</HtmlFileName>
+      <LongName>0000054 - Disclosure - OVERVIEW AND SUMMARY OF SIGNIFICANT ACCOUNTING POLICIES - Recently Adopted Accounting Guidance (Details)</LongName>
+      <ReportType>Sheet</ReportType>
+      <Role>http://www.paypal.com/role/OVERVIEWANDSUMMARYOFSIGNIFICANTACCOUNTINGPOLICIESRecentlyAdoptedAccountingGuidanceDetails</Role>
+      <ShortName>OVERVIEW AND SUMMARY OF SIGNIFICANT ACCOUNTING POLICIES - Recently Adopted Accounting Guidance (Details)</ShortName>
+      <MenuCategory>Details</MenuCategory>
+      <Position>54</Position>
+    </Report>
+    <Report instance="pypl-20221231.htm">
+      <IsDefault>false</IsDefault>
+      <HasEmbeddedReports>false</HasEmbeddedReports>
+      <HtmlFileName>R55.htm</HtmlFileName>
+      <LongName>0000055 - Disclosure - REVENUE - Additional Information (Details)</LongName>
+      <ReportType>Sheet</ReportType>
+      <Role>http://www.paypal.com/role/REVENUEAdditionalInformationDetails</Role>
+      <ShortName>REVENUE - Additional Information (Details)</ShortName>
+      <MenuCategory>Details</MenuCategory>
+      <Position>55</Position>
+    </Report>
+    <Report instance="pypl-20221231.htm">
+      <IsDefault>false</IsDefault>
+      <HasEmbeddedReports>false</HasEmbeddedReports>
+      <HtmlFileName>R56.htm</HtmlFileName>
+      <LongName>0000056 - Disclosure - REVENUE - Disaggregation of Revenue (Details)</LongName>
+      <ReportType>Sheet</ReportType>
+      <Role>http://www.paypal.com/role/REVENUEDisaggregationofRevenueDetails</Role>
+      <ShortName>REVENUE - Disaggregation of Revenue (Details)</ShortName>
+      <MenuCategory>Details</MenuCategory>
+      <Position>56</Position>
+    </Report>
+    <Report instance="pypl-20221231.htm">
+      <IsDefault>false</IsDefault>
+      <HasEmbeddedReports>false</HasEmbeddedReports>
+      <HtmlFileName>R57.htm</HtmlFileName>
+      <LongName>0000057 - Disclosure - NET INCOME (LOSS) PER SHARE - Computation of Basic and Diluted Earnings per Share (Details)</LongName>
+      <ReportType>Sheet</ReportType>
+      <Role>http://www.paypal.com/role/NETINCOMELOSSPERSHAREComputationofBasicandDilutedEarningsperShareDetails</Role>
+      <ShortName>NET INCOME (LOSS) PER SHARE - Computation of Basic and Diluted Earnings per Share (Details)</ShortName>
+      <MenuCategory>Details</MenuCategory>
+      <ParentRole>http://www.paypal.com/role/NETINCOMELOSSPERSHARETables</ParentRole>
+      <Position>57</Position>
+    </Report>
+    <Report instance="pypl-20221231.htm">
+      <IsDefault>false</IsDefault>
+      <HasEmbeddedReports>false</HasEmbeddedReports>
+      <HtmlFileName>R58.htm</HtmlFileName>
+      <LongName>0000058 - Disclosure - BUSINESS COMBINATIONS - Narrative (Details)</LongName>
+      <ReportType>Sheet</ReportType>
+      <Role>http://www.paypal.com/role/BUSINESSCOMBINATIONSNarrativeDetails</Role>
+      <ShortName>BUSINESS COMBINATIONS - Narrative (Details)</ShortName>
+      <MenuCategory>Details</MenuCategory>
+      <Position>58</Position>
+    </Report>
+    <Report instance="pypl-20221231.htm">
+      <IsDefault>false</IsDefault>
+      <HasEmbeddedReports>false</HasEmbeddedReports>
+      <HtmlFileName>R59.htm</HtmlFileName>
+      <LongName>0000059 - Disclosure - BUSINESS COMBINATIONS - Acquisitions Completed in 2021 (Details)</LongName>
+      <ReportType>Sheet</ReportType>
+      <Role>http://www.paypal.com/role/BUSINESSCOMBINATIONSAcquisitionsCompletedin2021Details</Role>
+      <ShortName>BUSINESS COMBINATIONS - Acquisitions Completed in 2021 (Details)</ShortName>
+      <MenuCategory>Details</MenuCategory>
+      <Position>59</Position>
+    </Report>
+    <Report instance="pypl-20221231.htm">
+      <IsDefault>false</IsDefault>
+      <HasEmbeddedReports>false</HasEmbeddedReports>
+      <HtmlFileName>R60.htm</HtmlFileName>
+      <LongName>0000060 - Disclosure - BUSINESS COMBINATIONS - Schedule of Allocation of Purchase Consideration to Fair Value of Assets Acquired and Liabilities Assumed (Details)</LongName>
+      <ReportType>Sheet</ReportType>
+      <Role>http://www.paypal.com/role/BUSINESSCOMBINATIONSScheduleofAllocationofPurchaseConsiderationtoFairValueofAssetsAcquiredandLiabilitiesAssumedDetails</Role>
+      <ShortName>BUSINESS COMBINATIONS - Schedule of Allocation of Purchase Consideration to Fair Value of Assets Acquired and Liabilities Assumed (Details)</ShortName>
+      <MenuCategory>Details</MenuCategory>
+      <Position>60</Position>
+    </Report>
+    <Report instance="pypl-20221231.htm">
+      <IsDefault>false</IsDefault>
+      <HasEmbeddedReports>false</HasEmbeddedReports>
+      <HtmlFileName>R61.htm</HtmlFileName>
+      <LongName>0000061 - Disclosure - BUSINESS COMBINATIONS - Acquisitions Completed in 2020 (Details)</LongName>
+      <ReportType>Sheet</ReportType>
+      <Role>http://www.paypal.com/role/BUSINESSCOMBINATIONSAcquisitionsCompletedin2020Details</Role>
+      <ShortName>BUSINESS COMBINATIONS - Acquisitions Completed in 2020 (Details)</ShortName>
+      <MenuCategory>Details</MenuCategory>
+      <Position>61</Position>
+    </Report>
+    <Report instance="pypl-20221231.htm">
+      <IsDefault>false</IsDefault>
+      <HasEmbeddedReports>false</HasEmbeddedReports>
+      <HtmlFileName>R62.htm</HtmlFileName>
+      <LongName>0000062 - Disclosure - BUSINESS COMBINATIONS - Other Information (Details)</LongName>
+      <ReportType>Sheet</ReportType>
+      <Role>http://www.paypal.com/role/BUSINESSCOMBINATIONSOtherInformationDetails</Role>
+      <ShortName>BUSINESS COMBINATIONS - Other Information (Details)</ShortName>
+      <MenuCategory>Details</MenuCategory>
+      <Position>62</Position>
+    </Report>
+    <Report instance="pypl-20221231.htm">
+      <IsDefault>false</IsDefault>
+      <HasEmbeddedReports>false</HasEmbeddedReports>
+      <HtmlFileName>R63.htm</HtmlFileName>
+      <LongName>0000063 - Disclosure - GOODWILL AND INTANGIBLE ASSETS - Schedule of Goodwill Balances and Adjustments (Details)</LongName>
+      <ReportType>Sheet</ReportType>
+      <Role>http://www.paypal.com/role/GOODWILLANDINTANGIBLEASSETSScheduleofGoodwillBalancesandAdjustmentsDetails</Role>
+      <ShortName>GOODWILL AND INTANGIBLE ASSETS - Schedule of Goodwill Balances and Adjustments (Details)</ShortName>
+      <MenuCategory>Details</MenuCategory>
+      <Position>63</Position>
+    </Report>
+    <Report instance="pypl-20221231.htm">
+      <IsDefault>false</IsDefault>
+      <HasEmbeddedReports>false</HasEmbeddedReports>
+      <HtmlFileName>R64.htm</HtmlFileName>
+      <LongName>0000064 - Disclosure - GOODWILL AND INTANGIBLE ASSETS - Additional Information (Details)</LongName>
+      <ReportType>Sheet</ReportType>
+      <Role>http://www.paypal.com/role/GOODWILLANDINTANGIBLEASSETSAdditionalInformationDetails</Role>
+      <ShortName>GOODWILL AND INTANGIBLE ASSETS - Additional Information (Details)</ShortName>
+      <MenuCategory>Details</MenuCategory>
+      <Position>64</Position>
+    </Report>
+    <Report instance="pypl-20221231.htm">
+      <IsDefault>false</IsDefault>
+      <HasEmbeddedReports>false</HasEmbeddedReports>
+      <HtmlFileName>R65.htm</HtmlFileName>
+      <LongName>0000065 - Disclosure - GOODWILL AND INTANGIBLE ASSETS - Schedule of Components of Identifiable Intangible Assets (Details)</LongName>
+      <ReportType>Sheet</ReportType>
+      <Role>http://www.paypal.com/role/GOODWILLANDINTANGIBLEASSETSScheduleofComponentsofIdentifiableIntangibleAssetsDetails</Role>
+      <ShortName>GOODWILL AND INTANGIBLE ASSETS - Schedule of Components of Identifiable Intangible Assets (Details)</ShortName>
+      <MenuCategory>Details</MenuCategory>
+      <Position>65</Position>
+    </Report>
+    <Report instance="pypl-20221231.htm">
+      <IsDefault>false</IsDefault>
+      <HasEmbeddedReports>false</HasEmbeddedReports>
+      <HtmlFileName>R66.htm</HtmlFileName>
+      <LongName>0000066 - Disclosure - GOODWILL AND INTANGIBLE ASSETS - Schedule of Expected Future Intangible Asset Amortization (Details)</LongName>
+      <ReportType>Sheet</ReportType>
+      <Role>http://www.paypal.com/role/GOODWILLANDINTANGIBLEASSETSScheduleofExpectedFutureIntangibleAssetAmortizationDetails</Role>
+      <ShortName>GOODWILL AND INTANGIBLE ASSETS - Schedule of Expected Future Intangible Asset Amortization (Details)</ShortName>
+      <MenuCategory>Details</MenuCategory>
+      <Position>66</Position>
+    </Report>
+    <Report instance="pypl-20221231.htm">
+      <IsDefault>false</IsDefault>
+      <HasEmbeddedReports>false</HasEmbeddedReports>
+      <HtmlFileName>R67.htm</HtmlFileName>
+      <LongName>0000067 - Disclosure - LEASES - Schedule of Components of Lease Expense (Details)</LongName>
+      <ReportType>Sheet</ReportType>
+      <Role>http://www.paypal.com/role/LEASESScheduleofComponentsofLeaseExpenseDetails</Role>
+      <ShortName>LEASES - Schedule of Components of Lease Expense (Details)</ShortName>
+      <MenuCategory>Details</MenuCategory>
+      <Position>67</Position>
+    </Report>
+    <Report instance="pypl-20221231.htm">
+      <IsDefault>false</IsDefault>
+      <HasEmbeddedReports>false</HasEmbeddedReports>
+      <HtmlFileName>R68.htm</HtmlFileName>
+      <LongName>0000068 - Disclosure - LEASES - Schedule of Future Minimum Operating Lease Payments (Details)</LongName>
+      <ReportType>Sheet</ReportType>
+      <Role>http://www.paypal.com/role/LEASESScheduleofFutureMinimumOperatingLeasePaymentsDetails</Role>
+      <ShortName>LEASES - Schedule of Future Minimum Operating Lease Payments (Details)</ShortName>
+      <MenuCategory>Details</MenuCategory>
+      <Position>68</Position>
+    </Report>
+    <Report instance="pypl-20221231.htm">
+      <IsDefault>false</IsDefault>
+      <HasEmbeddedReports>false</HasEmbeddedReports>
+      <HtmlFileName>R69.htm</HtmlFileName>
+      <LongName>0000069 - Disclosure - LEASES - Additional Information (Details)</LongName>
+      <ReportType>Sheet</ReportType>
+      <Role>http://www.paypal.com/role/LEASESAdditionalInformationDetails</Role>
+      <ShortName>LEASES - Additional Information (Details)</ShortName>
+      <MenuCategory>Details</MenuCategory>
+      <Position>69</Position>
+    </Report>
+    <Report instance="pypl-20221231.htm">
+      <IsDefault>false</IsDefault>
+      <HasEmbeddedReports>false</HasEmbeddedReports>
+      <HtmlFileName>R70.htm</HtmlFileName>
+      <LongName>0000070 - Disclosure - OTHER FINANCIAL STATEMENT DETAILS - Crypto Asset Safeguarding Liability and Corresponding Asset (Details)</LongName>
+      <ReportType>Sheet</ReportType>
+      <Role>http://www.paypal.com/role/OTHERFINANCIALSTATEMENTDETAILSCryptoAssetSafeguardingLiabilityandCorrespondingAssetDetails</Role>
+      <ShortName>OTHER FINANCIAL STATEMENT DETAILS - Crypto Asset Safeguarding Liability and Corresponding Asset (Details)</ShortName>
+      <MenuCategory>Details</MenuCategory>
+      <Position>70</Position>
+    </Report>
+    <Report instance="pypl-20221231.htm">
+      <IsDefault>false</IsDefault>
+      <HasEmbeddedReports>false</HasEmbeddedReports>
+      <HtmlFileName>R71.htm</HtmlFileName>
+      <LongName>0000071 - Disclosure - OTHER FINANCIAL STATEMENT DETAILS - Property and Equipment, Net (Details)</LongName>
+      <ReportType>Sheet</ReportType>
+      <Role>http://www.paypal.com/role/OTHERFINANCIALSTATEMENTDETAILSPropertyandEquipmentNetDetails</Role>
+      <ShortName>OTHER FINANCIAL STATEMENT DETAILS - Property and Equipment, Net (Details)</ShortName>
+      <MenuCategory>Details</MenuCategory>
+      <Position>71</Position>
+    </Report>
+    <Report instance="pypl-20221231.htm">
+      <IsDefault>false</IsDefault>
+      <HasEmbeddedReports>false</HasEmbeddedReports>
+      <HtmlFileName>R72.htm</HtmlFileName>
+      <LongName>0000072 - Disclosure - OTHER FINANCIAL STATEMENT DETAILS - Schedule of Accumulated Other Comprehensive Income (Loss) (Details)</LongName>
+      <ReportType>Sheet</ReportType>
+      <Role>http://www.paypal.com/role/OTHERFINANCIALSTATEMENTDETAILSScheduleofAccumulatedOtherComprehensiveIncomeLossDetails</Role>
+      <ShortName>OTHER FINANCIAL STATEMENT DETAILS - Schedule of Accumulated Other Comprehensive Income (Loss) (Details)</ShortName>
+      <MenuCategory>Details</MenuCategory>
+      <Position>72</Position>
+    </Report>
+    <Report instance="pypl-20221231.htm">
+      <IsDefault>false</IsDefault>
+      <HasEmbeddedReports>false</HasEmbeddedReports>
+      <HtmlFileName>R73.htm</HtmlFileName>
+      <LongName>0000073 - Disclosure - OTHER FINANCIAL STATEMENT DETAILS - Schedule of Reclassifications out of Accumulated Other Comprehensive Income (Details)</LongName>
+      <ReportType>Sheet</ReportType>
+      <Role>http://www.paypal.com/role/OTHERFINANCIALSTATEMENTDETAILSScheduleofReclassificationsoutofAccumulatedOtherComprehensiveIncomeDetails</Role>
+      <ShortName>OTHER FINANCIAL STATEMENT DETAILS - Schedule of Reclassifications out of Accumulated Other Comprehensive Income (Details)</ShortName>
+      <MenuCategory>Details</MenuCategory>
+      <Position>73</Position>
+    </Report>
+    <Report instance="pypl-20221231.htm">
+      <IsDefault>false</IsDefault>
+      <HasEmbeddedReports>false</HasEmbeddedReports>
+      <HtmlFileName>R74.htm</HtmlFileName>
+      <LongName>0000074 - Disclosure - OTHER FINANCIAL STATEMENT DETAILS - Schedule of Other Income (Expense), Net (Details)</LongName>
+      <ReportType>Sheet</ReportType>
+      <Role>http://www.paypal.com/role/OTHERFINANCIALSTATEMENTDETAILSScheduleofOtherIncomeExpenseNetDetails</Role>
+      <ShortName>OTHER FINANCIAL STATEMENT DETAILS - Schedule of Other Income (Expense), Net (Details)</ShortName>
+      <MenuCategory>Details</MenuCategory>
+      <Position>74</Position>
+    </Report>
+    <Report instance="pypl-20221231.htm">
+      <IsDefault>false</IsDefault>
+      <HasEmbeddedReports>false</HasEmbeddedReports>
+      <HtmlFileName>R75.htm</HtmlFileName>
+      <LongName>0000075 - Disclosure - FUNDS RECEIVABLE AND CUSTOMER ACCOUNTS AND INVESTMENTS - Schedule of Assets Underlying Funds Receivable and Customer Accounts, Short-term Investments, and Long-term Investments (Details)</LongName>
+      <ReportType>Sheet</ReportType>
+      <Role>http://www.paypal.com/role/FUNDSRECEIVABLEANDCUSTOMERACCOUNTSANDINVESTMENTSScheduleofAssetsUnderlyingFundsReceivableandCustomerAccountsShorttermInvestmentsandLongtermInvestmentsDetails</Role>
+      <ShortName>FUNDS RECEIVABLE AND CUSTOMER ACCOUNTS AND INVESTMENTS - Schedule of Assets Underlying Funds Receivable and Customer Accounts, Short-term Investments, and Long-term Investments (Details)</ShortName>
+      <MenuCategory>Details</MenuCategory>
+      <Position>75</Position>
+    </Report>
+    <Report instance="pypl-20221231.htm">
+      <IsDefault>false</IsDefault>
+      <HasEmbeddedReports>false</HasEmbeddedReports>
+      <HtmlFileName>R76.htm</HtmlFileName>
+      <LongName>0000076 - Disclosure - FUNDS RECEIVABLE AND CUSTOMER ACCOUNTS AND INVESTMENTS - Schedule of Estimated Fair Value of Available-for-Sale Debt Securities (Details)</LongName>
+      <ReportType>Sheet</ReportType>
+      <Role>http://www.paypal.com/role/FUNDSRECEIVABLEANDCUSTOMERACCOUNTSANDINVESTMENTSScheduleofEstimatedFairValueofAvailableforSaleDebtSecuritiesDetails</Role>
+      <ShortName>FUNDS RECEIVABLE AND CUSTOMER ACCOUNTS AND INVESTMENTS - Schedule of Estimated Fair Value of Available-for-Sale Debt Securities (Details)</ShortName>
+      <MenuCategory>Details</MenuCategory>
+      <Position>76</Position>
+    </Report>
+    <Report instance="pypl-20221231.htm">
+      <IsDefault>false</IsDefault>
+      <HasEmbeddedReports>false</HasEmbeddedReports>
+      <HtmlFileName>R77.htm</HtmlFileName>
+      <LongName>0000077 - Disclosure - FUNDS RECEIVABLE AND CUSTOMER ACCOUNTS AND INVESTMENTS - Narrative (Details)</LongName>
+      <ReportType>Sheet</ReportType>
+      <Role>http://www.paypal.com/role/FUNDSRECEIVABLEANDCUSTOMERACCOUNTSANDINVESTMENTSNarrativeDetails</Role>
+      <ShortName>FUNDS RECEIVABLE AND CUSTOMER ACCOUNTS AND INVESTMENTS - Narrative (Details)</ShortName>
+      <MenuCategory>Details</MenuCategory>
+      <ParentRole>http://www.paypal.com/role/FUNDSRECEIVABLEANDCUSTOMERACCOUNTSANDINVESTMENTSTables</ParentRole>
+      <Position>77</Position>
+    </Report>
+    <Report instance="pypl-20221231.htm">
+      <IsDefault>false</IsDefault>
+      <HasEmbeddedReports>false</HasEmbeddedReports>
+      <HtmlFileName>R78.htm</HtmlFileName>
+      <LongName>0000078 - Disclosure - FUNDS RECEIVABLE AND CUSTOMER ACCOUNTS AND INVESTMENTS - Schedule of Gross Unrealized Losses and Estimated Fair Value of Available-for-Sale Debt Securities in a Continuous Loss Position (Details)</LongName>
+      <ReportType>Sheet</ReportType>
+      <Role>http://www.paypal.com/role/FUNDSRECEIVABLEANDCUSTOMERACCOUNTSANDINVESTMENTSScheduleofGrossUnrealizedLossesandEstimatedFairValueofAvailableforSaleDebtSecuritiesinaContinuousLossPositionDetails</Role>
+      <ShortName>FUNDS RECEIVABLE AND CUSTOMER ACCOUNTS AND INVESTMENTS - Schedule of Gross Unrealized Losses and Estimated Fair Value of Available-for-Sale Debt Securities in a Continuous Loss Position (Details)</ShortName>
+      <MenuCategory>Details</MenuCategory>
+      <Position>78</Position>
+    </Report>
+    <Report instance="pypl-20221231.htm">
+      <IsDefault>false</IsDefault>
+      <HasEmbeddedReports>false</HasEmbeddedReports>
+      <HtmlFileName>R79.htm</HtmlFileName>
+      <LongName>0000079 - Disclosure - FUNDS RECEIVABLE AND CUSTOMER ACCOUNTS AND INVESTMENTS - Estimated Fair Values of Investments Classified as Available for Sale Included within Funds Receivable and Customer Accounts by Date of Contractual Maturity (Details)</LongName>
+      <ReportType>Sheet</ReportType>
+      <Role>http://www.paypal.com/role/FUNDSRECEIVABLEANDCUSTOMERACCOUNTSANDINVESTMENTSEstimatedFairValuesofInvestmentsClassifiedasAvailableforSaleIncludedwithinFundsReceivableandCustomerAccountsbyDateofContractualMaturityDetails</Role>
+      <ShortName>FUNDS RECEIVABLE AND CUSTOMER ACCOUNTS AND INVESTMENTS - Estimated Fair Values of Investments Classified as Available for Sale Included within Funds Receivable and Customer Accounts by Date of Contractual Maturity (Details)</ShortName>
+      <MenuCategory>Details</MenuCategory>
+      <Position>79</Position>
+    </Report>
+    <Report instance="pypl-20221231.htm">
+      <IsDefault>false</IsDefault>
+      <HasEmbeddedReports>false</HasEmbeddedReports>
+      <HtmlFileName>R80.htm</HtmlFileName>
+      <LongName>0000080 - Disclosure - FUNDS RECEIVABLE AND CUSTOMER ACCOUNTS AND INVESTMENTS - Strategic Investments (Details)</LongName>
+      <ReportType>Sheet</ReportType>
+      <Role>http://www.paypal.com/role/FUNDSRECEIVABLEANDCUSTOMERACCOUNTSANDINVESTMENTSStrategicInvestmentsDetails</Role>
+      <ShortName>FUNDS RECEIVABLE AND CUSTOMER ACCOUNTS AND INVESTMENTS - Strategic Investments (Details)</ShortName>
+      <MenuCategory>Details</MenuCategory>
+      <Position>80</Position>
+    </Report>
+    <Report instance="pypl-20221231.htm">
+      <IsDefault>false</IsDefault>
+      <HasEmbeddedReports>false</HasEmbeddedReports>
+      <HtmlFileName>R81.htm</HtmlFileName>
+      <LongName>0000081 - Disclosure - FUNDS RECEIVABLE AND CUSTOMER ACCOUNTS AND INVESTMENTS - Schedule of Adjustments to Carrying Value of Equity Investments (Details)</LongName>
+      <ReportType>Sheet</ReportType>
+      <Role>http://www.paypal.com/role/FUNDSRECEIVABLEANDCUSTOMERACCOUNTSANDINVESTMENTSScheduleofAdjustmentstoCarryingValueofEquityInvestmentsDetails</Role>
+      <ShortName>FUNDS RECEIVABLE AND CUSTOMER ACCOUNTS AND INVESTMENTS - Schedule of Adjustments to Carrying Value of Equity Investments (Details)</ShortName>
+      <MenuCategory>Details</MenuCategory>
+      <Position>81</Position>
+    </Report>
+    <Report instance="pypl-20221231.htm">
+      <IsDefault>false</IsDefault>
+      <HasEmbeddedReports>false</HasEmbeddedReports>
+      <HtmlFileName>R82.htm</HtmlFileName>
+      <LongName>0000082 - Disclosure - FUNDS RECEIVABLE AND CUSTOMER ACCOUNTS AND INVESTMENTS - Summary of Cumulative Gross Unrealized Gains and Cumulative Gross Unrealized Losses and Impairment Related to Non-marketable Equity Securities Accounted for Under the Measurement Alternative (Details)</LongName>
+      <ReportType>Sheet</ReportType>
+      <Role>http://www.paypal.com/role/FUNDSRECEIVABLEANDCUSTOMERACCOUNTSANDINVESTMENTSSummaryofCumulativeGrossUnrealizedGainsandCumulativeGrossUnrealizedLossesandImpairmentRelatedtoNonmarketableEquitySecuritiesAccountedforUndertheMeasurementAlternativeDetails</Role>
+      <ShortName>FUNDS RECEIVABLE AND CUSTOMER ACCOUNTS AND INVESTMENTS - Summary of Cumulative Gross Unrealized Gains and Cumulative Gross Unrealized Losses and Impairment Related to Non-marketable Equity Securities Accounted for Under the Measurement Alternative (Details)</ShortName>
+      <MenuCategory>Details</MenuCategory>
+      <Position>82</Position>
+    </Report>
+    <Report instance="pypl-20221231.htm">
+      <IsDefault>false</IsDefault>
+      <HasEmbeddedReports>false</HasEmbeddedReports>
+      <HtmlFileName>R83.htm</HtmlFileName>
+      <LongName>0000083 - Disclosure - FUNDS RECEIVABLE AND CUSTOMER ACCOUNTS AND INVESTMENTS - Schedule of Unrealized Gains (Losses) on Strategic Investments, Excluding Those Accounted for Using the Equity Method (Details)</LongName>
+      <ReportType>Sheet</ReportType>
+      <Role>http://www.paypal.com/role/FUNDSRECEIVABLEANDCUSTOMERACCOUNTSANDINVESTMENTSScheduleofUnrealizedGainsLossesonStrategicInvestmentsExcludingThoseAccountedforUsingtheEquityMethodDetails</Role>
+      <ShortName>FUNDS RECEIVABLE AND CUSTOMER ACCOUNTS AND INVESTMENTS - Schedule of Unrealized Gains (Losses) on Strategic Investments, Excluding Those Accounted for Using the Equity Method (Details)</ShortName>
+      <MenuCategory>Details</MenuCategory>
+      <Position>83</Position>
+    </Report>
+    <Report instance="pypl-20221231.htm">
+      <IsDefault>false</IsDefault>
+      <HasEmbeddedReports>false</HasEmbeddedReports>
+      <HtmlFileName>R84.htm</HtmlFileName>
+      <LongName>0000084 - Disclosure - FAIR VALUE MEASUREMENT OF ASSETS AND LIABILITIES - Summary of Financial Assets and Liabilities Measured at Fair Value on a Recurring Basis (Details)</LongName>
+      <ReportType>Sheet</ReportType>
+      <Role>http://www.paypal.com/role/FAIRVALUEMEASUREMENTOFASSETSANDLIABILITIESSummaryofFinancialAssetsandLiabilitiesMeasuredatFairValueonaRecurringBasisDetails</Role>
+      <ShortName>FAIR VALUE MEASUREMENT OF ASSETS AND LIABILITIES - Summary of Financial Assets and Liabilities Measured at Fair Value on a Recurring Basis (Details)</ShortName>
+      <MenuCategory>Details</MenuCategory>
+      <Position>84</Position>
+    </Report>
+    <Report instance="pypl-20221231.htm">
+      <IsDefault>false</IsDefault>
+      <HasEmbeddedReports>false</HasEmbeddedReports>
+      <HtmlFileName>R85.htm</HtmlFileName>
+      <LongName>0000085 - Disclosure - FAIR VALUE MEASUREMENT OF ASSETS AND LIABILITIES - Additional Information (Details)</LongName>
+      <ReportType>Sheet</ReportType>
+      <Role>http://www.paypal.com/role/FAIRVALUEMEASUREMENTOFASSETSANDLIABILITIESAdditionalInformationDetails</Role>
+      <ShortName>FAIR VALUE MEASUREMENT OF ASSETS AND LIABILITIES - Additional Information (Details)</ShortName>
+      <MenuCategory>Details</MenuCategory>
+      <Position>85</Position>
+    </Report>
+    <Report instance="pypl-20221231.htm">
+      <IsDefault>false</IsDefault>
+      <HasEmbeddedReports>false</HasEmbeddedReports>
+      <HtmlFileName>R86.htm</HtmlFileName>
+      <LongName>0000086 - Disclosure - FAIR VALUE MEASUREMENT OF ASSETS AND LIABILITIES - Summary of Investments Under the Fair Value Option (Details)</LongName>
+      <ReportType>Sheet</ReportType>
+      <Role>http://www.paypal.com/role/FAIRVALUEMEASUREMENTOFASSETSANDLIABILITIESSummaryofInvestmentsUndertheFairValueOptionDetails</Role>
+      <ShortName>FAIR VALUE MEASUREMENT OF ASSETS AND LIABILITIES - Summary of Investments Under the Fair Value Option (Details)</ShortName>
+      <MenuCategory>Details</MenuCategory>
+      <Position>86</Position>
+    </Report>
+    <Report instance="pypl-20221231.htm">
+      <IsDefault>false</IsDefault>
+      <HasEmbeddedReports>false</HasEmbeddedReports>
+      <HtmlFileName>R87.htm</HtmlFileName>
+      <LongName>0000087 - Disclosure - FAIR VALUE MEASUREMENT OF ASSETS AND LIABILITIES - Summary of Assets and Liabilities Measured at Fair Value on a Non-Recurring Basis (Details)</LongName>
+      <ReportType>Sheet</ReportType>
+      <Role>http://www.paypal.com/role/FAIRVALUEMEASUREMENTOFASSETSANDLIABILITIESSummaryofAssetsandLiabilitiesMeasuredatFairValueonaNonRecurringBasisDetails</Role>
+      <ShortName>FAIR VALUE MEASUREMENT OF ASSETS AND LIABILITIES - Summary of Assets and Liabilities Measured at Fair Value on a Non-Recurring Basis (Details)</ShortName>
+      <MenuCategory>Details</MenuCategory>
+      <Position>87</Position>
+    </Report>
+    <Report instance="pypl-20221231.htm">
+      <IsDefault>false</IsDefault>
+      <HasEmbeddedReports>false</HasEmbeddedReports>
+      <HtmlFileName>R88.htm</HtmlFileName>
+      <LongName>0000088 - Disclosure - DERIVATIVE INSTRUMENTS - Additional Information (Details)</LongName>
+      <ReportType>Sheet</ReportType>
+      <Role>http://www.paypal.com/role/DERIVATIVEINSTRUMENTSAdditionalInformationDetails</Role>
+      <ShortName>DERIVATIVE INSTRUMENTS - Additional Information (Details)</ShortName>
+      <MenuCategory>Details</MenuCategory>
+      <Position>88</Position>
+    </Report>
+    <Report instance="pypl-20221231.htm">
+      <IsDefault>false</IsDefault>
+      <HasEmbeddedReports>false</HasEmbeddedReports>
+      <HtmlFileName>R89.htm</HtmlFileName>
+      <LongName>0000089 - Disclosure - DERIVATIVE INSTRUMENTS - Schedule of Fair Value of Outstanding Derivative Instruments (Details)</LongName>
+      <ReportType>Sheet</ReportType>
+      <Role>http://www.paypal.com/role/DERIVATIVEINSTRUMENTSScheduleofFairValueofOutstandingDerivativeInstrumentsDetails</Role>
+      <ShortName>DERIVATIVE INSTRUMENTS - Schedule of Fair Value of Outstanding Derivative Instruments (Details)</ShortName>
+      <MenuCategory>Details</MenuCategory>
+      <Position>89</Position>
+    </Report>
+    <Report instance="pypl-20221231.htm">
+      <IsDefault>false</IsDefault>
+      <HasEmbeddedReports>false</HasEmbeddedReports>
+      <HtmlFileName>R90.htm</HtmlFileName>
+      <LongName>0000090 - Disclosure - DERIVATIVE INSTRUMENTS - Offsetting Liabilities (Details)</LongName>
+      <ReportType>Sheet</ReportType>
+      <Role>http://www.paypal.com/role/DERIVATIVEINSTRUMENTSOffsettingLiabilitiesDetails</Role>
+      <ShortName>DERIVATIVE INSTRUMENTS - Offsetting Liabilities (Details)</ShortName>
+      <MenuCategory>Details</MenuCategory>
+      <Position>90</Position>
+    </Report>
+    <Report instance="pypl-20221231.htm">
+      <IsDefault>false</IsDefault>
+      <HasEmbeddedReports>false</HasEmbeddedReports>
+      <HtmlFileName>R91.htm</HtmlFileName>
+      <LongName>0000091 - Disclosure - DERIVATIVE INSTRUMENTS - Location in the Condensed Consolidated Statements of Income and Amount of Recognized Gains or Losses Related to Derivative Instruments (Details)</LongName>
+      <ReportType>Sheet</ReportType>
+      <Role>http://www.paypal.com/role/DERIVATIVEINSTRUMENTSLocationintheCondensedConsolidatedStatementsofIncomeandAmountofRecognizedGainsorLossesRelatedtoDerivativeInstrumentsDetails</Role>
+      <ShortName>DERIVATIVE INSTRUMENTS - Location in the Condensed Consolidated Statements of Income and Amount of Recognized Gains or Losses Related to Derivative Instruments (Details)</ShortName>
+      <MenuCategory>Details</MenuCategory>
+      <Position>91</Position>
+    </Report>
+    <Report instance="pypl-20221231.htm">
+      <IsDefault>false</IsDefault>
+      <HasEmbeddedReports>false</HasEmbeddedReports>
+      <HtmlFileName>R92.htm</HtmlFileName>
+      <LongName>0000092 - Disclosure - DERIVATIVE INSTRUMENTS - Pre-tax Unrealized Gains or Losses Included in the Assessment of Hedge Effectiveness Related To Derivative Instruments Designated as Hedging Instruments That Are Recognized in Other Comprehensive Income (Loss) (Details)</LongName>
+      <ReportType>Sheet</ReportType>
+      <Role>http://www.paypal.com/role/DERIVATIVEINSTRUMENTSPretaxUnrealizedGainsorLossesIncludedintheAssessmentofHedgeEffectivenessRelatedToDerivativeInstrumentsDesignatedasHedgingInstrumentsThatAreRecognizedinOtherComprehensiveIncomeLossDetails</Role>
+      <ShortName>DERIVATIVE INSTRUMENTS - Pre-tax Unrealized Gains or Losses Included in the Assessment of Hedge Effectiveness Related To Derivative Instruments Designated as Hedging Instruments That Are Recognized in Other Comprehensive Income (Loss) (Details)</ShortName>
+      <MenuCategory>Details</MenuCategory>
+      <Position>92</Position>
+    </Report>
+    <Report instance="pypl-20221231.htm">
+      <IsDefault>false</IsDefault>
+      <HasEmbeddedReports>false</HasEmbeddedReports>
+      <HtmlFileName>R93.htm</HtmlFileName>
+      <LongName>0000093 - Disclosure - DERIVATIVE INSTRUMENTS - Notional Amounts of Outstanding Derivatives (Details)</LongName>
+      <ReportType>Sheet</ReportType>
+      <Role>http://www.paypal.com/role/DERIVATIVEINSTRUMENTSNotionalAmountsofOutstandingDerivativesDetails</Role>
+      <ShortName>DERIVATIVE INSTRUMENTS - Notional Amounts of Outstanding Derivatives (Details)</ShortName>
+      <MenuCategory>Details</MenuCategory>
+      <Position>93</Position>
+    </Report>
+    <Report instance="pypl-20221231.htm">
+      <IsDefault>false</IsDefault>
+      <HasEmbeddedReports>false</HasEmbeddedReports>
+      <HtmlFileName>R94.htm</HtmlFileName>
+      <LongName>0000094 - Disclosure - LOANS AND INTEREST RECEIVABLE - Consumer Receivables (Details)</LongName>
+      <ReportType>Sheet</ReportType>
+      <Role>http://www.paypal.com/role/LOANSANDINTERESTRECEIVABLEConsumerReceivablesDetails</Role>
+      <ShortName>LOANS AND INTEREST RECEIVABLE - Consumer Receivables (Details)</ShortName>
+      <MenuCategory>Details</MenuCategory>
+      <Position>94</Position>
+    </Report>
+    <Report instance="pypl-20221231.htm">
+      <IsDefault>false</IsDefault>
+      <HasEmbeddedReports>false</HasEmbeddedReports>
+      <HtmlFileName>R95.htm</HtmlFileName>
+      <LongName>0000095 - Disclosure - LOANS AND INTEREST RECEIVABLE - Schedule of Delinquency Status of Consumer Loans and Interest Receivable by Year of Origination (Details)</LongName>
+      <ReportType>Sheet</ReportType>
+      <Role>http://www.paypal.com/role/LOANSANDINTERESTRECEIVABLEScheduleofDelinquencyStatusofConsumerLoansandInterestReceivablebyYearofOriginationDetails</Role>
+      <ShortName>LOANS AND INTEREST RECEIVABLE - Schedule of Delinquency Status of Consumer Loans and Interest Receivable by Year of Origination (Details)</ShortName>
+      <MenuCategory>Details</MenuCategory>
+      <Position>95</Position>
+    </Report>
+    <Report instance="pypl-20221231.htm">
+      <IsDefault>false</IsDefault>
+      <HasEmbeddedReports>false</HasEmbeddedReports>
+      <HtmlFileName>R96.htm</HtmlFileName>
+      <LongName>0000096 - Disclosure - LOANS AND INTEREST RECEIVABLE - Schedule of Allowance for Loans and Interest Receivable (Details)</LongName>
+      <ReportType>Sheet</ReportType>
+      <Role>http://www.paypal.com/role/LOANSANDINTERESTRECEIVABLEScheduleofAllowanceforLoansandInterestReceivableDetails</Role>
+      <ShortName>LOANS AND INTEREST RECEIVABLE - Schedule of Allowance for Loans and Interest Receivable (Details)</ShortName>
+      <MenuCategory>Details</MenuCategory>
+      <Position>96</Position>
+    </Report>
+    <Report instance="pypl-20221231.htm">
+      <IsDefault>false</IsDefault>
+      <HasEmbeddedReports>false</HasEmbeddedReports>
+      <HtmlFileName>R97.htm</HtmlFileName>
+      <LongName>0000097 - Disclosure - LOANS AND INTEREST RECEIVABLE - Merchant Receivables (Details)</LongName>
+      <ReportType>Sheet</ReportType>
+      <Role>http://www.paypal.com/role/LOANSANDINTERESTRECEIVABLEMerchantReceivablesDetails</Role>
+      <ShortName>LOANS AND INTEREST RECEIVABLE - Merchant Receivables (Details)</ShortName>
+      <MenuCategory>Details</MenuCategory>
+      <Position>97</Position>
+    </Report>
+    <Report instance="pypl-20221231.htm">
+      <IsDefault>false</IsDefault>
+      <HasEmbeddedReports>false</HasEmbeddedReports>
+      <HtmlFileName>R98.htm</HtmlFileName>
+      <LongName>0000098 - Disclosure - LOANS AND INTEREST RECEIVABLE - Schedule of Delinquency Status of Merchant Loans, Advances, and Interest and Fees Receivable by Year of Origination (Details)</LongName>
+      <ReportType>Sheet</ReportType>
+      <Role>http://www.paypal.com/role/LOANSANDINTERESTRECEIVABLEScheduleofDelinquencyStatusofMerchantLoansAdvancesandInterestandFeesReceivablebyYearofOriginationDetails</Role>
+      <ShortName>LOANS AND INTEREST RECEIVABLE - Schedule of Delinquency Status of Merchant Loans, Advances, and Interest and Fees Receivable by Year of Origination (Details)</ShortName>
+      <MenuCategory>Details</MenuCategory>
+      <Position>98</Position>
+    </Report>
+    <Report instance="pypl-20221231.htm">
+      <IsDefault>false</IsDefault>
+      <HasEmbeddedReports>false</HasEmbeddedReports>
+      <HtmlFileName>R99.htm</HtmlFileName>
+      <LongName>0000099 - Disclosure - LOANS AND INTEREST RECEIVABLE - Schedule of Allowance for Merchant Loans, Advances, and Interest and Fees Receivable (Details)</LongName>
+      <ReportType>Sheet</ReportType>
+      <Role>http://www.paypal.com/role/LOANSANDINTERESTRECEIVABLEScheduleofAllowanceforMerchantLoansAdvancesandInterestandFeesReceivableDetails</Role>
+      <ShortName>LOANS AND INTEREST RECEIVABLE - Schedule of Allowance for Merchant Loans, Advances, and Interest and Fees Receivable (Details)</ShortName>
+      <MenuCategory>Details</MenuCategory>
+      <Position>99</Position>
+    </Report>
+    <Report instance="pypl-20221231.htm">
+      <IsDefault>false</IsDefault>
+      <HasEmbeddedReports>false</HasEmbeddedReports>
+      <HtmlFileName>R100.htm</HtmlFileName>
+      <LongName>0000100 - Disclosure - LOANS AND INTEREST RECEIVABLE - Troubled Debt Restructurings ("TDRs") (Details)</LongName>
+      <ReportType>Sheet</ReportType>
+      <Role>http://www.paypal.com/role/LOANSANDINTERESTRECEIVABLETroubledDebtRestructuringsTDRsDetails</Role>
+      <ShortName>LOANS AND INTEREST RECEIVABLE - Troubled Debt Restructurings ("TDRs") (Details)</ShortName>
+      <MenuCategory>Details</MenuCategory>
+      <Position>100</Position>
+    </Report>
+    <Report instance="pypl-20221231.htm">
+      <IsDefault>false</IsDefault>
+      <HasEmbeddedReports>false</HasEmbeddedReports>
+      <HtmlFileName>R101.htm</HtmlFileName>
+      <LongName>0000101 - Disclosure - LOANS AND INTEREST RECEIVABLE - Loans Modified as TDRs (Details)</LongName>
+      <ReportType>Sheet</ReportType>
+      <Role>http://www.paypal.com/role/LOANSANDINTERESTRECEIVABLELoansModifiedasTDRsDetails</Role>
+      <ShortName>LOANS AND INTEREST RECEIVABLE - Loans Modified as TDRs (Details)</ShortName>
+      <MenuCategory>Details</MenuCategory>
+      <Position>101</Position>
+    </Report>
+    <Report instance="pypl-20221231.htm">
+      <IsDefault>false</IsDefault>
+      <HasEmbeddedReports>false</HasEmbeddedReports>
+      <HtmlFileName>R102.htm</HtmlFileName>
+      <LongName>0000102 - Disclosure - DEBT - Fixed Rate Notes (Details)</LongName>
+      <ReportType>Notes</ReportType>
+      <Role>http://www.paypal.com/role/DEBTFixedRateNotesDetails</Role>
+      <ShortName>DEBT - Fixed Rate Notes (Details)</ShortName>
+      <MenuCategory>Details</MenuCategory>
+      <Position>102</Position>
+    </Report>
+    <Report instance="pypl-20221231.htm">
+      <IsDefault>false</IsDefault>
+      <HasEmbeddedReports>false</HasEmbeddedReports>
+      <HtmlFileName>R103.htm</HtmlFileName>
+      <LongName>0000103 - Disclosure - DEBT - Schedule of Outstanding Aggregate Principal Amount Related to the Notes (Details)</LongName>
+      <ReportType>Notes</ReportType>
+      <Role>http://www.paypal.com/role/DEBTScheduleofOutstandingAggregatePrincipalAmountRelatedtotheNotesDetails</Role>
+      <ShortName>DEBT - Schedule of Outstanding Aggregate Principal Amount Related to the Notes (Details)</ShortName>
+      <MenuCategory>Details</MenuCategory>
+      <Position>103</Position>
+    </Report>
+    <Report instance="pypl-20221231.htm">
+      <IsDefault>false</IsDefault>
+      <HasEmbeddedReports>false</HasEmbeddedReports>
+      <HtmlFileName>R104.htm</HtmlFileName>
+      <LongName>0000104 - Disclosure - DEBT - Five-Year Revolving Credit Facility (Details)</LongName>
+      <ReportType>Sheet</ReportType>
+      <Role>http://www.paypal.com/role/DEBTFiveYearRevolvingCreditFacilityDetails</Role>
+      <ShortName>DEBT - Five-Year Revolving Credit Facility (Details)</ShortName>
+      <MenuCategory>Details</MenuCategory>
+      <Position>104</Position>
+    </Report>
+    <Report instance="pypl-20221231.htm">
+      <IsDefault>false</IsDefault>
+      <HasEmbeddedReports>false</HasEmbeddedReports>
+      <HtmlFileName>R105.htm</HtmlFileName>
+      <LongName>0000105 - Disclosure - DEBT - Paidy Revolving Credit Facility (Details)</LongName>
+      <ReportType>Sheet</ReportType>
+      <Role>http://www.paypal.com/role/DEBTPaidyRevolvingCreditFacilityDetails</Role>
+      <ShortName>DEBT - Paidy Revolving Credit Facility (Details)</ShortName>
+      <MenuCategory>Details</MenuCategory>
+      <Position>105</Position>
+    </Report>
+    <Report instance="pypl-20221231.htm">
+      <IsDefault>false</IsDefault>
+      <HasEmbeddedReports>false</HasEmbeddedReports>
+      <HtmlFileName>R106.htm</HtmlFileName>
+      <LongName>0000106 - Disclosure - DEBT - Other Available Facilities (Details)</LongName>
+      <ReportType>Sheet</ReportType>
+      <Role>http://www.paypal.com/role/DEBTOtherAvailableFacilitiesDetails</Role>
+      <ShortName>DEBT - Other Available Facilities (Details)</ShortName>
+      <MenuCategory>Details</MenuCategory>
+      <Position>106</Position>
+    </Report>
+    <Report instance="pypl-20221231.htm">
+      <IsDefault>false</IsDefault>
+      <HasEmbeddedReports>false</HasEmbeddedReports>
+      <HtmlFileName>R107.htm</HtmlFileName>
+      <LongName>0000107 - Disclosure - DEBT - Schedule of Future Principal Payments (Details)</LongName>
+      <ReportType>Sheet</ReportType>
+      <Role>http://www.paypal.com/role/DEBTScheduleofFuturePrincipalPaymentsDetails</Role>
+      <ShortName>DEBT - Schedule of Future Principal Payments (Details)</ShortName>
+      <MenuCategory>Details</MenuCategory>
+      <Position>107</Position>
+    </Report>
+    <Report instance="pypl-20221231.htm">
+      <IsDefault>false</IsDefault>
+      <HasEmbeddedReports>false</HasEmbeddedReports>
+      <HtmlFileName>R108.htm</HtmlFileName>
+      <LongName>0000108 - Disclosure - COMMITMENTS AND CONTINGENCIES - Additional Information (Details)</LongName>
+      <ReportType>Sheet</ReportType>
+      <Role>http://www.paypal.com/role/COMMITMENTSANDCONTINGENCIESAdditionalInformationDetails</Role>
+      <ShortName>COMMITMENTS AND CONTINGENCIES - Additional Information (Details)</ShortName>
+      <MenuCategory>Details</MenuCategory>
+      <Position>108</Position>
+    </Report>
+    <Report instance="pypl-20221231.htm">
+      <IsDefault>false</IsDefault>
+      <HasEmbeddedReports>false</HasEmbeddedReports>
+      <HtmlFileName>R109.htm</HtmlFileName>
+      <LongName>0000109 - Disclosure - COMMITMENTS AND CONTINGENCIES - Schedule of Allowance for Transaction Losses and Negative Customer Balances Related to Protection Products (Details)</LongName>
+      <ReportType>Sheet</ReportType>
+      <Role>http://www.paypal.com/role/COMMITMENTSANDCONTINGENCIESScheduleofAllowanceforTransactionLossesandNegativeCustomerBalancesRelatedtoProtectionProductsDetails</Role>
+      <ShortName>COMMITMENTS AND CONTINGENCIES - Schedule of Allowance for Transaction Losses and Negative Customer Balances Related to Protection Products (Details)</ShortName>
+      <MenuCategory>Details</MenuCategory>
+      <Position>109</Position>
+    </Report>
+    <Report instance="pypl-20221231.htm">
+      <IsDefault>false</IsDefault>
+      <HasEmbeddedReports>false</HasEmbeddedReports>
+      <HtmlFileName>R110.htm</HtmlFileName>
+      <LongName>0000110 - Disclosure - STOCK REPURCHASE PROGRAMS (Details)</LongName>
+      <ReportType>Sheet</ReportType>
+      <Role>http://www.paypal.com/role/STOCKREPURCHASEPROGRAMSDetails</Role>
+      <ShortName>STOCK REPURCHASE PROGRAMS (Details)</ShortName>
+      <MenuCategory>Details</MenuCategory>
+      <ParentRole>http://www.paypal.com/role/STOCKREPURCHASEPROGRAMS</ParentRole>
+      <Position>110</Position>
+    </Report>
+    <Report instance="pypl-20221231.htm">
+      <IsDefault>false</IsDefault>
+      <HasEmbeddedReports>false</HasEmbeddedReports>
+      <HtmlFileName>R111.htm</HtmlFileName>
+      <LongName>0000111 - Disclosure - STOCK-BASED AND EMPLOYEE SAVINGS PLANS - Equity Incentive Plans (Details)</LongName>
+      <ReportType>Sheet</ReportType>
+      <Role>http://www.paypal.com/role/STOCKBASEDANDEMPLOYEESAVINGSPLANSEquityIncentivePlansDetails</Role>
+      <ShortName>STOCK-BASED AND EMPLOYEE SAVINGS PLANS - Equity Incentive Plans (Details)</ShortName>
+      <MenuCategory>Details</MenuCategory>
+      <Position>111</Position>
+    </Report>
+    <Report instance="pypl-20221231.htm">
+      <IsDefault>false</IsDefault>
+      <HasEmbeddedReports>false</HasEmbeddedReports>
+      <HtmlFileName>R112.htm</HtmlFileName>
+      <LongName>0000112 - Disclosure - STOCK-BASED AND EMPLOYEE SAVINGS PLANS - Employee Stock Purchase Plan (Details)</LongName>
+      <ReportType>Sheet</ReportType>
+      <Role>http://www.paypal.com/role/STOCKBASEDANDEMPLOYEESAVINGSPLANSEmployeeStockPurchasePlanDetails</Role>
+      <ShortName>STOCK-BASED AND EMPLOYEE SAVINGS PLANS - Employee Stock Purchase Plan (Details)</ShortName>
+      <MenuCategory>Details</MenuCategory>
+      <Position>112</Position>
+    </Report>
+    <Report instance="pypl-20221231.htm">
+      <IsDefault>false</IsDefault>
+      <HasEmbeddedReports>false</HasEmbeddedReports>
+      <HtmlFileName>R113.htm</HtmlFileName>
+      <LongName>0000113 - Disclosure - STOCK-BASED AND EMPLOYEE SAVINGS PLANS - Schedule of RSUs, PBRSUs, and Restricted Stock Activity (Details)</LongName>
+      <ReportType>Sheet</ReportType>
+      <Role>http://www.paypal.com/role/STOCKBASEDANDEMPLOYEESAVINGSPLANSScheduleofRSUsPBRSUsandRestrictedStockActivityDetails</Role>
+      <ShortName>STOCK-BASED AND EMPLOYEE SAVINGS PLANS - Schedule of RSUs, PBRSUs, and Restricted Stock Activity (Details)</ShortName>
+      <MenuCategory>Details</MenuCategory>
+      <Position>113</Position>
+    </Report>
+    <Report instance="pypl-20221231.htm">
+      <IsDefault>false</IsDefault>
+      <HasEmbeddedReports>false</HasEmbeddedReports>
+      <HtmlFileName>R114.htm</HtmlFileName>
+      <LongName>0000114 - Disclosure - STOCK-BASED AND EMPLOYEE SAVINGS PLANS - Schedule of RSUs, PBRSUs, and Restricted Stock Activity Narrative (Details)</LongName>
+      <ReportType>Sheet</ReportType>
+      <Role>http://www.paypal.com/role/STOCKBASEDANDEMPLOYEESAVINGSPLANSScheduleofRSUsPBRSUsandRestrictedStockActivityNarrativeDetails</Role>
+      <ShortName>STOCK-BASED AND EMPLOYEE SAVINGS PLANS - Schedule of RSUs, PBRSUs, and Restricted Stock Activity Narrative (Details)</ShortName>
+      <MenuCategory>Details</MenuCategory>
+      <Position>114</Position>
+    </Report>
+    <Report instance="pypl-20221231.htm">
+      <IsDefault>false</IsDefault>
+      <HasEmbeddedReports>false</HasEmbeddedReports>
+      <HtmlFileName>R115.htm</HtmlFileName>
+      <LongName>0000115 - Disclosure - STOCK-BASED AND EMPLOYEE SAVINGS PLANS - Schedule of Stock Option Activity (Details)</LongName>
+      <ReportType>Sheet</ReportType>
+      <Role>http://www.paypal.com/role/STOCKBASEDANDEMPLOYEESAVINGSPLANSScheduleofStockOptionActivityDetails</Role>
+      <ShortName>STOCK-BASED AND EMPLOYEE SAVINGS PLANS - Schedule of Stock Option Activity (Details)</ShortName>
+      <MenuCategory>Details</MenuCategory>
+      <Position>115</Position>
+    </Report>
+    <Report instance="pypl-20221231.htm">
+      <IsDefault>false</IsDefault>
+      <HasEmbeddedReports>false</HasEmbeddedReports>
+      <HtmlFileName>R116.htm</HtmlFileName>
+      <LongName>0000116 - Disclosure - STOCK-BASED AND EMPLOYEE SAVINGS PLANS - Stock-Based Compensation Expense (Details)</LongName>
+      <ReportType>Sheet</ReportType>
+      <Role>http://www.paypal.com/role/STOCKBASEDANDEMPLOYEESAVINGSPLANSStockBasedCompensationExpenseDetails</Role>
+      <ShortName>STOCK-BASED AND EMPLOYEE SAVINGS PLANS - Stock-Based Compensation Expense (Details)</ShortName>
+      <MenuCategory>Details</MenuCategory>
+      <Position>116</Position>
+    </Report>
+    <Report instance="pypl-20221231.htm">
+      <IsDefault>false</IsDefault>
+      <HasEmbeddedReports>false</HasEmbeddedReports>
+      <HtmlFileName>R117.htm</HtmlFileName>
+      <LongName>0000117 - Disclosure - STOCK-BASED AND EMPLOYEE SAVINGS PLANS - Employee Saving Plans (Details)</LongName>
+      <ReportType>Sheet</ReportType>
+      <Role>http://www.paypal.com/role/STOCKBASEDANDEMPLOYEESAVINGSPLANSEmployeeSavingPlansDetails</Role>
+      <ShortName>STOCK-BASED AND EMPLOYEE SAVINGS PLANS - Employee Saving Plans (Details)</ShortName>
+      <MenuCategory>Details</MenuCategory>
+      <Position>117</Position>
+    </Report>
+    <Report instance="pypl-20221231.htm">
+      <IsDefault>false</IsDefault>
+      <HasEmbeddedReports>false</HasEmbeddedReports>
+      <HtmlFileName>R118.htm</HtmlFileName>
+      <LongName>0000118 - Disclosure - INCOME TAXES - Schedule of Components of Income (Loss) Before Income Taxes (Details)</LongName>
+      <ReportType>Sheet</ReportType>
+      <Role>http://www.paypal.com/role/INCOMETAXESScheduleofComponentsofIncomeLossBeforeIncomeTaxesDetails</Role>
+      <ShortName>INCOME TAXES - Schedule of Components of Income (Loss) Before Income Taxes (Details)</ShortName>
+      <MenuCategory>Details</MenuCategory>
+      <Position>118</Position>
+    </Report>
+    <Report instance="pypl-20221231.htm">
+      <IsDefault>false</IsDefault>
+      <HasEmbeddedReports>false</HasEmbeddedReports>
+      <HtmlFileName>R119.htm</HtmlFileName>
+      <LongName>0000119 - Disclosure - INCOME TAXES - Schedule of Income Tax Expense (Details)</LongName>
+      <ReportType>Sheet</ReportType>
+      <Role>http://www.paypal.com/role/INCOMETAXESScheduleofIncomeTaxExpenseDetails</Role>
+      <ShortName>INCOME TAXES - Schedule of Income Tax Expense (Details)</ShortName>
+      <MenuCategory>Details</MenuCategory>
+      <Position>119</Position>
+    </Report>
+    <Report instance="pypl-20221231.htm">
+      <IsDefault>false</IsDefault>
+      <HasEmbeddedReports>false</HasEmbeddedReports>
+      <HtmlFileName>R120.htm</HtmlFileName>
+      <LongName>0000120 - Disclosure - INCOME TAXES - Schedule of Reconciliation of the Difference Between the Effective Income Tax Rate and the Federal Statutory Rate (Details)</LongName>
+      <ReportType>Sheet</ReportType>
+      <Role>http://www.paypal.com/role/INCOMETAXESScheduleofReconciliationoftheDifferenceBetweentheEffectiveIncomeTaxRateandtheFederalStatutoryRateDetails</Role>
+      <ShortName>INCOME TAXES - Schedule of Reconciliation of the Difference Between the Effective Income Tax Rate and the Federal Statutory Rate (Details)</ShortName>
+      <MenuCategory>Details</MenuCategory>
+      <Position>120</Position>
+    </Report>
+    <Report instance="pypl-20221231.htm">
+      <IsDefault>false</IsDefault>
+      <HasEmbeddedReports>false</HasEmbeddedReports>
+      <HtmlFileName>R121.htm</HtmlFileName>
+      <LongName>0000121 - Disclosure - INCOME TAXES - Schedule of Deferred Tax Assets and Liabilities (Details)</LongName>
+      <ReportType>Sheet</ReportType>
+      <Role>http://www.paypal.com/role/INCOMETAXESScheduleofDeferredTaxAssetsandLiabilitiesDetails</Role>
+      <ShortName>INCOME TAXES - Schedule of Deferred Tax Assets and Liabilities (Details)</ShortName>
+      <MenuCategory>Details</MenuCategory>
+      <Position>121</Position>
+    </Report>
+    <Report instance="pypl-20221231.htm">
+      <IsDefault>false</IsDefault>
+      <HasEmbeddedReports>false</HasEmbeddedReports>
+      <HtmlFileName>R122.htm</HtmlFileName>
+      <LongName>0000122 - Disclosure - INCOME TAXES - Schedule of Deferred Tax Assets and Liabilities by Balance Sheet Location (Details)</LongName>
+      <ReportType>Sheet</ReportType>
+      <Role>http://www.paypal.com/role/INCOMETAXESScheduleofDeferredTaxAssetsandLiabilitiesbyBalanceSheetLocationDetails</Role>
+      <ShortName>INCOME TAXES - Schedule of Deferred Tax Assets and Liabilities by Balance Sheet Location (Details)</ShortName>
+      <MenuCategory>Details</MenuCategory>
+      <Position>122</Position>
+    </Report>
+    <Report instance="pypl-20221231.htm">
+      <IsDefault>false</IsDefault>
+      <HasEmbeddedReports>false</HasEmbeddedReports>
+      <HtmlFileName>R123.htm</HtmlFileName>
+      <LongName>0000123 - Disclosure - INCOME TAXES - Additional Information (Details)</LongName>
+      <ReportType>Sheet</ReportType>
+      <Role>http://www.paypal.com/role/INCOMETAXESAdditionalInformationDetails</Role>
+      <ShortName>INCOME TAXES - Additional Information (Details)</ShortName>
+      <MenuCategory>Details</MenuCategory>
+      <Position>123</Position>
+    </Report>
+    <Report instance="pypl-20221231.htm">
+      <IsDefault>false</IsDefault>
+      <HasEmbeddedReports>false</HasEmbeddedReports>
+      <HtmlFileName>R124.htm</HtmlFileName>
+      <LongName>0000124 - Disclosure - IINCOME TAXES - Schedule of Unrecognized Tax Benefits (Details)</LongName>
+      <ReportType>Sheet</ReportType>
+      <Role>http://www.paypal.com/role/IINCOMETAXESScheduleofUnrecognizedTaxBenefitsDetails</Role>
+      <ShortName>IINCOME TAXES - Schedule of Unrecognized Tax Benefits (Details)</ShortName>
+      <MenuCategory>Details</MenuCategory>
+      <Position>124</Position>
+    </Report>
+    <Report instance="pypl-20221231.htm">
+      <IsDefault>false</IsDefault>
+      <HasEmbeddedReports>false</HasEmbeddedReports>
+      <HtmlFileName>R125.htm</HtmlFileName>
+      <LongName>0000125 - Disclosure - RESTRUCTURING AND OTHER CHARGES - Additional Information (Details)</LongName>
+      <ReportType>Sheet</ReportType>
+      <Role>http://www.paypal.com/role/RESTRUCTURINGANDOTHERCHARGESAdditionalInformationDetails</Role>
+      <ShortName>RESTRUCTURING AND OTHER CHARGES - Additional Information (Details)</ShortName>
+      <MenuCategory>Details</MenuCategory>
+      <Position>125</Position>
+    </Report>
+    <Report instance="pypl-20221231.htm">
+      <IsDefault>false</IsDefault>
+      <HasEmbeddedReports>false</HasEmbeddedReports>
+      <HtmlFileName>R126.htm</HtmlFileName>
+      <LongName>0000126 - Disclosure - RESTRUCTURING AND OTHER CHARGES - Summary of Restructuring Reserve Activity (Details)</LongName>
+      <ReportType>Sheet</ReportType>
+      <Role>http://www.paypal.com/role/RESTRUCTURINGANDOTHERCHARGESSummaryofRestructuringReserveActivityDetails</Role>
+      <ShortName>RESTRUCTURING AND OTHER CHARGES - Summary of Restructuring Reserve Activity (Details)</ShortName>
+      <MenuCategory>Details</MenuCategory>
+      <Position>126</Position>
+    </Report>
+    <Report instance="pypl-20221231.htm">
+      <IsDefault>false</IsDefault>
+      <HasEmbeddedReports>false</HasEmbeddedReports>
+      <HtmlFileName>R127.htm</HtmlFileName>
+      <LongName>0000127 - Disclosure - Subsequent Events (Details)</LongName>
+      <ReportType>Sheet</ReportType>
+      <Role>http://www.paypal.com/role/SubsequentEventsDetails</Role>
+      <ShortName>Subsequent Events (Details)</ShortName>
+      <MenuCategory>Details</MenuCategory>
+      <Position>127</Position>
+    </Report>
+    <Report instance="pypl-20221231.htm">
+      <IsDefault>false</IsDefault>
+      <HasEmbeddedReports>false</HasEmbeddedReports>
+      <HtmlFileName>R128.htm</HtmlFileName>
+      <LongName>0000128 - Disclosure - Schedule II???VALUATION AND QUALIFYING ACCOUNTS (Details)</LongName>
+      <ReportType>Sheet</ReportType>
+      <Role>http://www.paypal.com/role/ScheduleIIVALUATIONANDQUALIFYINGACCOUNTSDetails</Role>
+      <ShortName>Schedule II???VALUATION AND QUALIFYING ACCOUNTS (Details)</ShortName>
+      <MenuCategory>Details</MenuCategory>
+      <ParentRole>http://www.paypal.com/role/ScheduleIIVALUATIONANDQUALIFYINGACCOUNTS</ParentRole>
+      <Position>128</Position>
+    </Report>
+    <Report instance="pypl-20221231.htm">
+      <IsDefault>false</IsDefault>
+      <HasEmbeddedReports>false</HasEmbeddedReports>
+      <HtmlFileName>R9999.htm</HtmlFileName>
+      <LongName>Uncategorized Items - pypl-20221231.htm</LongName>
+      <ReportType>Sheet</ReportType>
+      <Role>http://xbrl.sec.gov/role/uncategorizedFacts</Role>
+      <ShortName>Uncategorized Items - pypl-20221231.htm</ShortName>
+      <MenuCategory>Cover</MenuCategory>
+      <Position>129</Position>
+    </Report>
+    <Report>
+      <IsDefault>false</IsDefault>
+      <HasEmbeddedReports>false</HasEmbeddedReports>
+      <LongName>All Reports</LongName>
+      <ReportType>Book</ReportType>
+      <ShortName>All Reports</ShortName>
+    </Report>
+  </MyReports>
+  <Logs>
+    <Log type="Warning">[ix-0514-Hidden-Fact-Eligible-For-Transform] WARN: 14 fact(s) appearing in ix:hidden were eligible for transformation: pypl:FundsReceivableAndFundsPayableTransactionClearingPeriod, pypl:SharebasedCompensationArrangementbySharebasedPaymentAwardAwardPerformancePeriod, us-gaap:FiniteLivedIntangibleAssetUsefulLife, us-gaap:LossContingencyPendingClaimsNumber, us-gaap:PropertyPlantAndEquipmentUsefulLife -  pypl-20221231.htm 4</Log>
+  </Logs>
+  <InputFiles>
+    <File doctype="10-K" original="pypl-20221231.htm">pypl-20221231.htm</File>
+    <File>exhibit2101subsidiarylistf.htm</File>
+    <File>exhibit3101ceoq42022.htm</File>
+    <File>exhibit3102cfoq42022.htm</File>
+    <File>exhibit3201ceoq42022.htm</File>
+    <File>exhibit3202cfoq42022.htm</File>
+    <File>paypalfy2210kconsent.htm</File>
+    <File>pypl-20221231.xsd</File>
+    <File>pypl-20221231_cal.xml</File>
+    <File>pypl-20221231_def.xml</File>
+    <File>pypl-20221231_lab.xml</File>
+    <File>pypl-20221231_pre.xml</File>
+  </InputFiles>
+  <SupplementalFiles>
+    <File>pypl-20221231_g1.jpg</File>
+    <File>pypl-20221231_g10.jpg</File>
+    <File>pypl-20221231_g11.jpg</File>
+    <File>pypl-20221231_g12.jpg</File>
+    <File>pypl-20221231_g13.jpg</File>
+    <File>pypl-20221231_g14.jpg</File>
+    <File>pypl-20221231_g15.jpg</File>
+    <File>pypl-20221231_g16.jpg</File>
+    <File>pypl-20221231_g17.jpg</File>
+    <File>pypl-20221231_g2.jpg</File>
+    <File>pypl-20221231_g3.jpg</File>
+    <File>pypl-20221231_g4.jpg</File>
+    <File>pypl-20221231_g5.jpg</File>
+    <File>pypl-20221231_g6.jpg</File>
+    <File>pypl-20221231_g7.jpg</File>
+    <File>pypl-20221231_g8.jpg</File>
+    <File>pypl-20221231_g9.jpg</File>
+  </SupplementalFiles>
+  <BaseTaxonomies>
+    <BaseTaxonomy items="17">http://fasb.org/srt-sup/2022q3</BaseTaxonomy>
+    <BaseTaxonomy items="1">http://fasb.org/srt/2022</BaseTaxonomy>
+    <BaseTaxonomy items="2069">http://fasb.org/us-gaap/2022</BaseTaxonomy>
+    <BaseTaxonomy items="37">http://xbrl.sec.gov/dei/2022</BaseTaxonomy>
+  </BaseTaxonomies>
+  <HasPresentationLinkbase>true</HasPresentationLinkbase>
+  <HasCalculationLinkbase>true</HasCalculationLinkbase>
+</FilingSummary>
