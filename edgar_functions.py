@@ -113,10 +113,10 @@ def get_submissions_for_ticker(tickers, headers, only_filings_df=False):
 
 def get_filter_filing(ticker, headers, ten_k=True, accession_number_only=False):
     """
-    - if accession number is false: returns a dataframe of allthe
+    - if accession_number_only is false: returns a dataframe of all the
       10-K or 10-Q filings for a given ticker.
 
-    - if accession number is true: returns a series of
+    - if accession_number_only is true: returns a series of
       the accession numbers for all the 10-K or 10-Q filings for a given ticker.
     """
 
@@ -283,14 +283,15 @@ def get_statement_file_names_in_filling_summary(ticker, acc_num, headers):
 def get_statement_soup(ticker, acc_num, statement_name, headers, statement_keys_map):
     """
     Args:
-        ticker [str]: ticker symbol
-        acc_num [str]: accession number
-        statement_name [str]: name of the statement, e.g. "balance_sheet"
-        headers [dict]: headers for the requests.get() function
-        statement_keys_map [dict]: dictionary of statement names and possible keys
+        - ticker [str]: ticker symbol
+        - acc_num [str]: accession number
+        - statement_name [str]: name of the statement, e.g. "balance_sheet"
+        - headers [dict]: headers for the requests.get() function
+        - statement_keys_map [dict]: dictionary of statement names and possible keys
 
     Returns:
-        BeautifulSoup object of the html or xml of the statement
+        - BeautifulSoup object of the html or xml of the statement from baselink.
+        - Baselink: https://www.sec.gov/Archives/edgar/data/{cik}/{accession_number}/{statement_ID}
 
     Description:
         - Gets the cik number from the ticker symbol
@@ -311,7 +312,6 @@ def get_statement_soup(ticker, acc_num, statement_name, headers, statement_keys_
 
     statement_link = None
 
-    i = 0
     for possible_key in statement_keys_map.get(statement_name.lower(), []):
         file_name = statement_file_name_dict.get(possible_key.lower())
         if file_name:
