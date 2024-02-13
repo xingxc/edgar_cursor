@@ -37,6 +37,7 @@ statement_keys_map = {
         "consolidated income statements",
         "consolidated income statement",
         "condensed consolidated statements of earnings",
+        'condensed consolidated statements of income (loss)',
         "consolidated results of operations",
         "consolidated statements of income (loss)",
         "consolidated statements of income - southern",
@@ -304,7 +305,7 @@ def get_statement_soup(ticker, acc_num, statement_name, headers, statement_keys_
 
     session = requests.Session()
     cik = cik_matching_ticker(ticker, headers=headers)
-    base_link = f"https://www.sec.gov/Archives/edgar/data/{cik}/{acc_num}"
+    baselink = f"https://www.sec.gov/Archives/edgar/data/{cik}/{acc_num}"
 
     statement_file_name_dict = get_statement_file_names_in_filling_summary(
         ticker, acc_num, headers
@@ -315,7 +316,7 @@ def get_statement_soup(ticker, acc_num, statement_name, headers, statement_keys_
     for possible_key in statement_keys_map.get(statement_name.lower(), []):
         file_name = statement_file_name_dict.get(possible_key.lower())
         if file_name:
-            statement_link = f"{base_link}/{file_name}"
+            statement_link = f"{baselink}/{file_name}"
             break
 
     if not statement_link:
