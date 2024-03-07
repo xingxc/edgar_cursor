@@ -5,60 +5,60 @@ import numpy as np
 import logging
 from bs4 import BeautifulSoup
 
-statement_keys_map = {
-    "balance_sheet": [
-        "balance sheet",
-        "balance sheets",
-        "statement of financial position",
-        "consolidated balance sheets",
-        "consolidated balance sheet",
-        "consolidated financial position",
-        "consolidated balance sheets - southern",
-        "consolidated statements of financial position",
-        "consolidated statement of financial position",
-        "consolidated statements of financial condition",
-        "combined and consolidated balance sheet",
-        "condensed consolidated balance sheets",
-        "consolidated balance sheets, as of december 31",
-        "dow consolidated balance sheets",
-        "consolidated balance sheets (unaudited)",
-    ],
-    "income_statement": [
-        "income statement",
-        "income statements",
-        "statement of earnings (loss)",
-        "statements of consolidated income",
-        "consolidated statements of operations",
-        "consolidated statement of operations",
-        "consolidated statements of earnings",
-        "consolidated statement of earnings",
-        "consolidated statements of income",
-        "consolidated statement of income",
-        "consolidated income statements",
-        "consolidated income statement",
-        "condensed consolidated statements of earnings",
-        'condensed consolidated statements of income (loss)',
-        "consolidated results of operations",
-        "consolidated statements of income (loss)",
-        "consolidated statements of income - southern",
-        "consolidated statements of operations and comprehensive income",
-        "consolidated statements of comprehensive income",
-    ],
-    "cash_flow_statement": [
-        "cash flows statement",
-        "cash flows statements",
-        "statement of cash flows",
-        "statements of consolidated cash flows",
-        "consolidated statements of cash flows",
-        "consolidated statement of cash flows",
-        "consolidated statement of cash flow",
-        "consolidated cash flows statements",
-        "consolidated cash flow statements",
-        "condensed consolidated statements of cash flows",
-        "consolidated statements of cash flows (unaudited)",
-        "consolidated statements of cash flows - southern",
-    ],
-}
+# statement_keys_map = {
+#     "balance_sheet": [
+#         "balance sheet",
+#         "balance sheets",
+#         "statement of financial position",
+#         "consolidated balance sheets",
+#         "consolidated balance sheet",
+#         "consolidated financial position",
+#         "consolidated balance sheets - southern",
+#         "consolidated statements of financial position",
+#         "consolidated statement of financial position",
+#         "consolidated statements of financial condition",
+#         "combined and consolidated balance sheet",
+#         "condensed consolidated balance sheets",
+#         "consolidated balance sheets, as of december 31",
+#         "dow consolidated balance sheets",
+#         "consolidated balance sheets (unaudited)",
+#     ],
+#     "income_statement": [
+#         "income statement",
+#         "income statements",
+#         "statement of earnings (loss)",
+#         "statements of consolidated income",
+#         "consolidated statements of operations",
+#         "consolidated statement of operations",
+#         "consolidated statements of earnings",
+#         "consolidated statement of earnings",
+#         "consolidated statements of income",
+#         "consolidated statement of income",
+#         "consolidated income statements",
+#         "consolidated income statement",
+#         "condensed consolidated statements of earnings",
+#         'condensed consolidated statements of income (loss)',
+#         "consolidated results of operations",
+#         "consolidated statements of income (loss)",
+#         "consolidated statements of income - southern",
+#         "consolidated statements of operations and comprehensive income",
+#         "consolidated statements of comprehensive income",
+#     ],
+#     "cash_flow_statement": [
+#         "cash flows statement",
+#         "cash flows statements",
+#         "statement of cash flows",
+#         "statements of consolidated cash flows",
+#         "consolidated statements of cash flows",
+#         "consolidated statement of cash flows",
+#         "consolidated statement of cash flow",
+#         "consolidated cash flows statements",
+#         "consolidated cash flow statements",
+#         "condensed consolidated statements of cash flows",
+#         "consolidated statements of cash flows (unaudited)",
+#         "consolidated statements of cash flows - southern",
+#     ],
+# }
 
 
 links_logged = {}
@@ -114,11 +114,19 @@ def get_submissions_for_ticker(tickers, headers, only_filings_df=False):
 
 def get_filter_filing(ticker, headers, ten_k=True, accession_number_only=False):
     """
-    - if accession_number_only is false: returns a dataframe of all the
-      10-K or 10-Q filings for a given ticker.
+    Inputs:
+        ticker [str]: ticker symbol
+        headers [dict]: headers for the requests.get() function
+        ten_k [bool]: if True, returns 10-K filings, if False, returns 10-Q filings
+        accession_number_only [bool]:
+            - if True: returns a series of the accession numbers for all the 10-K or 10-Q filings.
+            - if False: returns a dataframe of all the 10-K or 10-Q filings.
 
-    - if accession_number_only is true: returns a series of
-      the accession numbers for all the 10-K or 10-Q filings for a given ticker.
+    Returns:
+        if accession_number_only is True:
+            return pd.Series: series of the acc-numbers with index as the reportDate.
+        if accession_number_only is False:
+            return df [pd.DataFrame]: dataframe of all the 10-K or 10-Q filings.
     """
 
     company_filing_df = get_submissions_for_ticker(
@@ -325,9 +333,9 @@ def get_statement_soup(ticker, acc_num, statement_name, headers, statement_keys_
     try:
         statement_response = session.get(statement_link, headers=headers)
         statement_response.raise_for_status()  # Check if the request was successful
-        links_logged[
-            f"{ticker}-{statement_name}-{file_name}-{acc_num}"
-        ] = statement_link
+        links_logged[f"{ticker}-{statement_name}-{file_name}-{acc_num}"] = (
+            statement_link
+        )
 
         if statement_link.endswith(".xml"):
             return BeautifulSoup(
@@ -525,7 +533,7 @@ def create_dataframe_of_statement_values_columns_dates(
     return df
 
 
-def process_one_statement(ticker, acc_num, statement_name, headers):
+def process_one_statement(ticker, acc_num, statement_name, statement_keys_map, headers):
     """
     Args:
         ticker (str): Ticker of the company.

@@ -1,0 +1,342 @@
+{
+    "revenue": {
+        "keys": [
+            "us-gaap_Revenues"
+        ],
+        "sign": "pos",
+        "balance": "credit"
+    },
+    "cost_of_revenue": {
+        "keys": [
+            "us-gaap_CostOfRevenue"
+        ],
+        "sign": "pos",
+        "balance": "debit"
+    },
+    "gross_profit": {
+        "keys": [
+            "us-gaap_GrossProfit"
+        ],
+        "sign": "pos",
+        "balance": "credit"
+    },
+    "research_and_development": {
+        "keys": [
+            "us-gaap_ResearchAndDevelopmentExpense"
+        ],
+        "sign": "pos",
+        "balance": "debit"
+    },
+    "sales_general_administration": {
+        "keys": [
+            "us-gaap_SellingGeneralAndAdmi nistrativeExpense"
+        ],
+        "sign": "pos",
+        "balance": "debit"
+    },
+    "aquisition_termination_cost": {
+        "keys": [
+            "nvda_BusinessCombinationAdvancedConsiderationWrittenOff"
+        ],
+        "sign": "pos",
+        "balance": "debit"
+    },
+    "operating_expense": {
+        "keys": [
+            "us-gaap_OperatingExpenses"
+        ],
+        "sign": "pos",
+        "balance": "debit"
+    },
+    "investment_income_interest": {
+        "keys": [
+            "us-gaap_InvestmentIncomeInterest"
+        ],
+        "sign": "pos",
+        "balance": "credit"
+    },
+    "interest_expense": {
+        "keys": [
+            "us-gaap_InterestExpense"
+        ],
+        "sign": "pos",
+        "balance": "debit"
+    },
+    "other_non_operating_income": {
+        "keys": [
+            "us-gaap_OtherNonoperatingIncomeExpense"
+        ],
+        "sign": "neg",
+        "balance": "credit"
+    },
+    "net_non_operating_income": {
+        "keys": [
+            "us-gaap_NonoperatingIncomeExpense"
+        ],
+        "sign": "pos",
+        "balance": "credit"
+    },
+    "income_bt": {
+        "keys": [
+            "us-gaap_IncomeLossFromContinuingOperationsBeforeIncomeTaxesExtraordinaryItemsNoncontrollingInterest"
+        ],
+        "sign": "pos",
+        "balance": "credit"
+    },
+    "income_tax_expense": {
+        "keys": [
+            "us-gaap_IncomeTaxExpenseBenefit"
+        ],
+        "sign": "pos",
+        "balance": "debit"
+    },
+    "net_income": {
+        "keys": [
+            "us-gaap_NetIncomeLoss"
+        ],
+        "sign": "pos",
+        "balance": "credit"
+    },
+    "income_per_share_basic": {
+        "keys": [
+            "us-gaap_EarningsPerShareBasic"
+        ],
+        "sign": "pos",
+        "balance": ""
+    },
+    "income_per_share_diluted": {
+        "keys": [
+            "us-gaap_EarningsPerShareDiluted"
+        ],
+        "sign": "pos",
+        "balance": ""
+    },
+    "shares_outstanding_basic": {
+        "keys": [
+            "us-gaap_WeightedAverageNumberOfSharesOutstandingBasic"
+        ],
+        "sign": "pos",
+        "balance": ""
+    },
+    "shares_outstanding_diluted": {
+        "keys": [
+            "us-gaap_WeightedAverageNumberOfDilutedSharesOutstanding"
+        ],
+        "sign": "pos",
+        "balance": ""
+    },
+    "share_based_compensation": {
+        "keys": [
+            "us-gaap_ShareBasedCompensation"
+        ],
+        "sign": "pos",
+        "balance": "debit"
+    },
+    "depreciation_and_amortization": {
+        "keys": [
+            "us-gaap_DepreciationDepletionAndAmortization"
+        ],
+        "sign": "pos",
+        "balance": "debit"
+    },
+    "losses_on_investments": {
+        "keys": [
+            "us-gaap_GainLossOnInvestments"
+        ],
+        "sign": "neg",
+        "balance": "credit"
+    },
+    "deferred_income_tax": {
+        "keys": [
+            "us-gaap_DeferredIncomeTaxExpenseBenefit"
+        ],
+        "sign": "neg",
+        "balance": "debit"
+    },
+    "other_non_cash_income_expense": {
+        "keys": [
+            "us-gaap_OtherNoncashIncomeExpense"
+        ],
+        "sign": "pos",
+        "balance": "credit"
+    },
+    "accounts_receivable": {
+        "keys": [
+            "us-gaap_IncreaseDecreaseInAccountsReceivable"
+        ],
+        "sign": "pos",
+        "balance": "credit"
+    },
+    "inventories": {
+        "keys": [
+            "us-gaap_IncreaseDecreaseInInventories"
+        ],
+        "sign": "neg",
+        "balance": "credit"
+    },
+    "prepaid_expense_and_other_assets": {
+        "keys": [
+            "us-gaap_IncreaseDecreaseInPrepaidDeferredExpenseAndOtherAssets"
+        ],
+        "sign": "pos",
+        "balance": "credit"
+    },
+    "accounts_payable": {
+        "keys": [
+            "us-gaap_IncreaseDecreaseInAccountsPayable"
+        ],
+        "sign": "pos",
+        "balance": "debit"
+    },
+    "accrued_and_other_current_liabilities": {
+        "keys": [
+            "us-gaap_IncreaseDecreaseInAccruedLiabilitiesAndOtherOperatingLiabilities"
+        ],
+        "sign": "pos",
+        "balance": "debit"
+    },
+    "other_long_term_liabilities": {
+        "keys": [
+            "us-gaap_IncreaseDecreaseInOtherNoncurrentLiabilities"
+        ],
+        "sign": "pos",
+        "balance": "debit"
+    },
+    "net_cash_provided_by_operating_activities": {
+        "keys": [
+            "us-gaap_NetCashProvidedByUsedInOperatingActivities"
+        ],
+        "sign": "pos",
+        "balance": ""
+    },
+    "proceeds_from_maturities_of_marketable_securities": {
+        "keys": [
+            "us-gaap_ProceedsFromMaturitiesPrepaymentsAndCallsOfAvailableForSaleSecurities"
+        ],
+        "sign": "pos",
+        "balance": "debit"
+    },
+    "proceeds_from_sales_of_marketable_securities": {
+        "keys": [
+            "us-gaap_ProceedsFromSaleOfAvailableForSaleSecuritiesDebt"
+        ],
+        "sign": "pos",
+        "balance": "debit"
+    },
+    "purchases_of_marketable_securities": {
+        "keys": [
+            "us-gaap_PaymentsToAcquireAvailableForSaleSecuritiesDebt"
+        ],
+        "sign": "pos",
+        "balance": "credit"
+    },
+    "purchases_related_to_property_and_equipment_and_intangible_assets": {
+        "keys": [
+            "us-gaap_PaymentsToAcquireProductiveAssets"
+        ],
+        "sign": "pos",
+        "balance": "credit"
+    },
+    "acquisitions_net_of_cash_acquired": {
+        "keys": [
+            "us-gaap_PaymentsToAcquireBusinessesNetOfCashAcquired"
+        ],
+        "sign": "pos",
+        "balance": "credit"
+    },
+    "investments_in_non_affiliates_and_other_net": {
+        "keys": [
+            "us-gaap_PaymentsForProceedsFromOtherInvestingActivities"
+        ],
+        "sign": "pos",
+        "balance": "credit"
+    },
+    "Net_cash_provided_(used)_in_investing_activities": {
+        "keys": [
+            "us-gaap_NetCashProvidedByUsedInInvestingActivities"
+        ],
+        "sign": "neg",
+        "balance": "debit"
+    },
+    "proceeds_related_to_employee_stock_plans": {
+        "keys": [
+            "nvda_NetProceedsPaymentsRelatedToEmployeeStockPlans"
+        ],
+        "sign": "pos",
+        "balance": "debit"
+    },
+    "payments_related_to_repurchases_of_common_stock": {
+        "keys": [
+            "us-gaap_PaymentsForRepurchaseOfCommonStock"
+        ],
+        "sign": "pos",
+        "balance": "credit"
+    },
+    "repayment_of_debt": {
+        "keys": [
+            "us-gaap_RepaymentsOfDebt"
+        ],
+        "sign": "pos",
+        "balance": "credit"
+    },
+    "payments_related_to_tax_on_restricted_stock_units": {
+        "keys": [
+            "us-gaap_PaymentsRelatedToTaxWithholdingForShareBasedCompensation"
+        ],
+        "sign": "pos",
+        "balance": "credit"
+    },
+    "dividends_paid": {
+        "keys": [
+            "us-gaap_PaymentsOfDividends"
+        ],
+        "sign": "pos",
+        "balance": "credit"
+    },
+    "principal_payments_on_property_and_equipment_and_intangible_assets": {
+        "keys": [
+            "nvda_PaymentsForFinancedPropertyPlantAndEquipmentAndIntangibleAssetsFinancingActivities"
+        ],
+        "sign": "pos",
+        "balance": "credit"
+    },
+    "other": {
+        "keys": [
+            "us-gaap_ProceedsFromPaymentsForOtherFinancingActivities"
+        ],
+        "sign": "neg",
+        "balance": "debit"
+    },
+    "net_cash_provided_(used)_in_financing_activities": {
+        "keys": [
+            "us-gaap_NetCashProvidedByUsedInFinancingActivities"
+        ],
+        "sign": "neg",
+        "balance": "debit"
+    },
+    "change_in_cash,_cash_equivalents,_and_restricted_cash": {
+        "keys": [
+            "us-gaap_CashCashEquivalentsRestrictedCashAndRestrictedCashEquivalentsPeriodIncreaseDecreaseIncludingExchangeRateEffect"
+        ],
+        "sign": "pos",
+        "balance": "debit"
+    },
+    "0": {
+        "keys": [
+            "us-gaap_CashCashEquivalentsRestrictedCashAndRestrictedCashEquivalents"
+        ],
+        "sign": "pos"
+    },
+    "0": {
+        "keys": [
+            "us-gaap_CashCashEquivalentsRestrictedCashAndRestrictedCashEquivalents"
+        ],
+        "sign": "pos"
+    },
+    "0": {
+        "keys": [
+            "us-gaap_IncomeTaxesPaidNet"
+        ],
+        "sign": "pos"
+    }
+}
