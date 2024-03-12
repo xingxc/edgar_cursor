@@ -375,8 +375,8 @@ def extract_columns_values_and_dates_from_statement(soup):
         - return columns, values, and date_time_index
     """
 
-    columns = []
-    columns_dict = {}
+    index_list = []
+    index_dict = {}
     values_set = []
 
     date_time_index = get_datetime_index_dates_from_statement(soup=soup)
@@ -406,9 +406,9 @@ def extract_columns_values_and_dates_from_statement(soup):
             if not onclick_elements:
                 continue  # Skip rows without onclick elements
 
-            # save onclick elements to columns_dict and append name to columns
-            columns_dict[onclick_elements[0].text] = onclick_elements
-            columns.append(onclick_elements[0].text)
+            # save onclick elements to index_dict and append name to index_list
+            index_dict[onclick_elements[0].text] = onclick_elements
+            index_list.append(onclick_elements[0].text)
 
             # Inititate values array with NaNs
             values = [np.NaN] * len(date_time_index)
@@ -452,7 +452,7 @@ def extract_columns_values_and_dates_from_statement(soup):
                             values[i] = -value * unit_multiplier
 
             values_set.append(values)
-    return columns, columns_dict, values_set, date_time_index
+    return index_list, index_dict, values_set, date_time_index
 
 
 def get_datetime_index_dates_from_statement(soup: BeautifulSoup) -> pd.DatetimeIndex:
