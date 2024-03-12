@@ -376,6 +376,7 @@ def extract_columns_values_and_dates_from_statement(soup):
     """
 
     columns = []
+    columns_dict = {}
     values_set = []
 
     date_time_index = get_datetime_index_dates_from_statement(soup=soup)
@@ -405,10 +406,9 @@ def extract_columns_values_and_dates_from_statement(soup):
             if not onclick_elements:
                 continue  # Skip rows without onclick elements
 
-            # Extract column title from "onclick" attribute
-            onclick_attr = onclick_elements[0]["onclick"]
-            column_title = onclick_attr.split("defref_")[-1].split("',")[0]
-            columns.append(column_title)
+            # save onclick elements to columns_dict and append name to columns
+            columns_dict[onclick_elements[0].text] = onclick_elements
+            columns.append(onclick_elements[0].text)
 
             # Inititate values array with NaNs
             values = [np.NaN] * len(date_time_index)
@@ -452,7 +452,7 @@ def extract_columns_values_and_dates_from_statement(soup):
                             values[i] = -value * unit_multiplier
 
             values_set.append(values)
-    return columns, values_set, date_time_index
+    return columns, columns_dict, values_set, date_time_index
 
 
 def get_datetime_index_dates_from_statement(soup: BeautifulSoup) -> pd.DatetimeIndex:
@@ -569,6 +569,7 @@ def process_one_statement(ticker, acc_num, statement_name, statement_keys_map, h
         try:
             (
                 columns,
+                columns_dict,
                 values_set,
                 date_time_index,
             ) = extract_columns_values_and_dates_from_statement(soup=soup)
@@ -583,7 +584,7 @@ def process_one_statement(ticker, acc_num, statement_name, statement_keys_map, h
                 logging.warning(f"Empty DataFrame for accession number: {acc_num}")
                 return None
 
-            return df
+            return df, columns_dict
         except Exception as e:
             logging.error(f"Error processing soup to DataFrame: {e}")
             return None

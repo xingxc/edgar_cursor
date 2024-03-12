@@ -14,7 +14,6 @@ headers = {"User-Agent": "email@email.com"}
 ticker = "nvda"
 statement_keys_map = utility_belt.import_json_file("statement_key_mapping.json")
 
-
 # Get CIK and Filing information
 cik = edgar_functions.cik_matching_ticker(ticker, headers)
 filings_df = edgar_functions.get_submissions_for_ticker(
@@ -27,24 +26,28 @@ filings_df = edgar_functions.get_submissions_for_ticker(
 acc_10q = edgar_functions.get_filter_filing(
     ticker, headers=headers, ten_k=False, accession_number_only=True
 )
-# acc_10k = edgar_functions.get_filter_filing(
-#     ticker, headers=headers, ten_k=True, accession_number_only=True
-# )
 
-# %%
 
-statement_date = datetime.strptime(
-    acc_10q.index[0], "%Y-%m-%d"
-)  # convert to datetime object
-acc_num = acc_10q.iloc[0].replace("-", "")  # accession number
+# %% Return the baselink for the filing
+
+# convert to datetime object
+statement_date = datetime.strptime(acc_10q.index[0], "%Y-%m-%d")
+
+# accession number
+acc_num = acc_10q.iloc[0].replace("-", "")
+
+# return the baselink
 baselink = f"https://www.sec.gov/Archives/edgar/data/{cik}/{acc_num}/"
 
 
-# %%
+# %% Get the statement soup
 
 statement_balance_sheet = "balance_sheet"
 statement_income_statement = "income_statement"
 statement_cash_flow_statement = "cash_flow_statement"
+
+
+# %% Return the statements
 
 statement_dict = {
     "balance_sheet": None,
@@ -53,38 +56,16 @@ statement_dict = {
     "income_comprehensive": None,
 }
 
-
 for k in statement_dict.keys():
     statement_dict[k] = edgar_functions.process_one_statement(
         ticker, acc_num, k, statement_keys_map, headers
     )
 
-# %% CASH FLOWS
-
 links_logged
-df_balance = statement_dict["balance_sheet"]
-df_cash = statement_dict["cash_flow_statement"]
-df_income = statement_dict["income_statement"]
-df_income_comprehensive = statement_dict["income_comprehensive"]
-
-# %%
-
-keys_income = utility_belt.import_json_file("ticker_keys/nvda_keys.json")
-
-
-#%%
-
-for index_value in df_income.index:
-    print(index_value)
-    for key, value_list in keys_income.items():
-        for value in value_list["keys"]:
-            if index_value in value:
-                df_income.rename(index={index_value: key}, inplace=True)
-
-#%%
-
-
-
+df_balance, columns_balance = statement_dict["balance_sheet"]
+df_cash, columns_cash = statement_dict["cash_flow_statement"]
+df_income, columns_income = statement_dict["income_statement"]
+df_income_comprehensive, columns_comprehensive = statement_dict["income_comprehensive"]
 
 
 
