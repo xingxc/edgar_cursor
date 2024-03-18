@@ -35,8 +35,10 @@
         "consolidated statements of income (loss)",
         "consolidated statements of income - southern",
         "consolidated statements of operations and comprehensive income",
+        "consolidated statements of operations and comprehensive loss",
         "consolidated statements of comprehensive income",
-        "condensed consolidated statements of income"
+        "condensed consolidated statements of income",
+        "condensed consolidated statements of operations and comprehensive loss"
     ],
     "cash_flow_statement": [
         "cash flows statement",

@@ -1,17 +1,20 @@
-# %%
+# %% USED imports
+import utility_belt
 import edgar_functions
-from edgar_functions import links_logged
 import matplotlib.pyplot as plt
+from edgar_functions import links_logged
+from datetime import datetime
+
+# Unused imports
+import requests
 import numpy as np
 import pandas as pd
 from bs4 import BeautifulSoup
-import requests
-from datetime import datetime
-import utility_belt
 
 headers = {"User-Agent": "email@email.com"}
 # ticker = "pypl"
-ticker = "nvda"
+# ticker = "nvda"
+ticker = "sofi"
 statement_keys_map = utility_belt.import_json_file("statement_key_mapping.json")
 
 # Get CIK and Filing information
@@ -19,7 +22,6 @@ cik = edgar_functions.cik_matching_ticker(ticker, headers)
 filings_df = edgar_functions.get_submissions_for_ticker(
     ticker, headers, only_filings_df=True
 )
-
 
 # %% # Get the accession number for the 10-K filing
 
@@ -67,6 +69,10 @@ df_cash, columns_cash = statement_dict["cash_flow_statement"]
 df_income, columns_income = statement_dict["income_statement"]
 df_income_comprehensive, columns_comprehensive = statement_dict["income_comprehensive"]
 
+display(df_balance) 
+display(df_cash)
+display(df_income)
+display(df_income_comprehensive)
 
 
 # %%
