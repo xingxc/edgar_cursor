@@ -8,6 +8,9 @@ import pandas as pd
 import edgar_functions_working
 
 
+# %%
+
+
 def get_statement_df(statement_link, headers):
 
     statement_soup = edgar_functions_working.get_statement_soup(statement_link, headers)
@@ -38,6 +41,9 @@ class ticker_statement:
         self.cik = edgar_functions_working.cik_matching_ticker(ticker, headers=headers)
 
 
+# SOFI = ticker_statement(ticker, headers)
+
+
 # %%
 
 headers = {"User-agent": "email@email.com"}
@@ -49,7 +55,10 @@ path_dict = {
 
 statement_map = utility_belt.import_json_file(path_dict["json"])
 ticker = "sofi"
-SOFI = ticker_statement(ticker, headers)
+path_dict["ticker"] = os.path.join(path_dict["ticker"], ticker.lower())
+utility_belt.mkdir(path_dict["ticker"])
+
+
 
 # %% Get 10k and 10q accession numbers:
 
@@ -77,6 +86,8 @@ statement_links = edgar_functions_working.get_statement_links(
     acc_date,
     headers,
 )
+
+
 core_links = {}
 core_df = {}
 core_links[acc_date] = {}
@@ -105,5 +116,3 @@ core_df[acc_date]["cash_flow_statement"] = get_statement_df(
 display(core_df[acc_date]["balance_sheet"])
 display(core_df[acc_date]["income_statement"])
 display(core_df[acc_date]["cash_flow_statement"])
-
-
