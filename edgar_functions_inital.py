@@ -141,10 +141,6 @@ def get_filter_filing(ticker, headers, ten_k=True, accession_number_only=False):
         df = df.set_index("reportDate")
         return df["accessionNumber"]
     else:
-        df.index = df["reportDate"]
-        df = df.drop(columns=["reportDate"])
-        df = df[["accessionNumber", "form"]]
-        df["accessionNumber"] = df["accessionNumber"].str.replace("-", "")
         return df
 
 
@@ -293,40 +289,53 @@ def get_statement_file_names_in_filling_summary(ticker, acc_num, headers):
         return {}
 
 
-def get_statement_links(ticker, acc_num, acc_date, headers):
+def get_statement_soup(ticker, acc_num, statement_name, headers, statement_keys_map):
     """
     Args:
-        - ticker[str]: ticker symbol
-        - acc_num[str]: accession number
-        - acc_date[str]: date of the accession number
-        - headers[dict]: headers for the request.get() function
+        - ticker [str]: ticker symbol
+        - acc_num [str]: accession number
+        - statement_name [str]: name of the statement, e.g. "balance_sheet"
+        - headers [dict]: headers for the requests.get() function
+        - statement_keys_map [dict]: dictionary of statement names and possible keys
 
     Returns:
-        - statement_link_log[dict]: dictionary of all statement links
+        - BeautifulSoup object of the html or xml of the statement from baselink.
+        - Baselink: https://www.sec.gov/Archives/edgar/data/{cik}/{accession_number}/{statement_ID}
 
     Description:
-        - This function returns a dictionary of all statement links for a given ticker, accession number, and date
-
+        - Gets the cik number from the ticker symbol
+        - Gets the filing summary xml from baselink, cik, and acc_num and return the xml as dict
+        - Loops through the possible statement keys to find the file name of the statement
+        - Create the statement link from the base link and file name
+        - Query the statement link and return the BeautifulSoup object
+        - returns the BeautifulSoup object of the html or xml of the statement
     """
+
+    session = requests.Session()
     cik = cik_matching_ticker(ticker, headers=headers)
     baselink = f"https://www.sec.gov/Archives/edgar/data/{cik}/{acc_num}"
+
     statement_file_name_dict = get_statement_file_names_in_filling_summary(
         ticker, acc_num, headers
     )
-    statement_link_log = {acc_date: {"baselink": baselink}}
 
-    for statement_key, statement_value in statement_file_name_dict.items():
-        statement_link_log[acc_date][statement_key] = f"{baselink}/{statement_value}"
+    statement_link = None
 
-    return statement_link_log
+    for possible_key in statement_keys_map.get(statement_name.lower(), []):
+        file_name = statement_file_name_dict.get(possible_key.lower())
+        if file_name:
+            statement_link = f"{baselink}/{file_name}"
+            break
 
+    if not statement_link:
+        raise ValueError(f"Could not find statement file name for {statement_name}")
 
-def get_statement_soup(statement_link, headers):
-    session = requests.Session()
     try:
         statement_response = session.get(statement_link, headers=headers)
         statement_response.raise_for_status()  # Check if the request was successful
-        # links_logged[f"{ticker}-{statement_name}-{file_name}-{acc_num}"] = statement_link
+        links_logged[f"{ticker}-{statement_name}-{file_name}-{acc_num}"] = (
+            statement_link
+        )
 
         if statement_link.endswith(".xml"):
             return BeautifulSoup(
@@ -337,65 +346,6 @@ def get_statement_soup(statement_link, headers):
 
     except requests.RequestException as e:
         raise ValueError(f"Error fetching the statement: {e}")
-
-
-# def get_statement_soup(ticker, acc_num, statement_name, headers, statement_keys_map):
-#     """
-#     Args:
-#         - ticker [str]: ticker symbol
-#         - acc_num [str]: accession number
-#         - statement_name [str]: name of the statement, e.g. "balance_sheet"
-#         - headers [dict]: headers for the requests.get() function
-#         - statement_keys_map [dict]: dictionary of statement names and possible keys
-
-#     Returns:
-#         - BeautifulSoup object of the html or xml of the statement from baselink.
-#         - Baselink: https://www.sec.gov/Archives/edgar/data/{cik}/{accession_number}/{statement_ID}
-
-#     Description:
-#         - Gets the cik number from the ticker symbol
-#         - Gets the filing summary xml from baselink, cik, and acc_num and return the xml as dict
-#         - Loops through the possible statement keys to find the file name of the statement
-#         - Create the statement link from the base link and file name
-#         - Query the statement link and return the BeautifulSoup object
-#         - returns the BeautifulSoup object of the html or xml of the statement
-#     """
-
-#     session = requests.Session()
-#     cik = cik_matching_ticker(ticker, headers=headers)
-#     baselink = f"https://www.sec.gov/Archives/edgar/data/{cik}/{acc_num}"
-
-#     statement_file_name_dict = get_statement_file_names_in_filling_summary(
-#         ticker, acc_num, headers
-#     )
-
-#     statement_link = None
-
-#     for possible_key in statement_keys_map.get(statement_name.lower(), []):
-#         file_name = statement_file_name_dict.get(possible_key.lower())
-#         if file_name:
-#             statement_link = f"{baselink}/{file_name}"
-#             break
-
-#     if not statement_link:
-#         raise ValueError(f"Could not find statement file name for {statement_name}")
-
-#     try:
-#         statement_response = session.get(statement_link, headers=headers)
-#         statement_response.raise_for_status()  # Check if the request was successful
-#         links_logged[f"{ticker}-{statement_name}-{file_name}-{acc_num}"] = (
-#             statement_link
-#         )
-
-#         if statement_link.endswith(".xml"):
-#             return BeautifulSoup(
-#                 statement_response.content, "lxml-xml", from_encoding="utf-8"
-#             )
-#         else:
-#             return BeautifulSoup(statement_response.content, "lxml")
-
-#     except requests.RequestException as e:
-#         raise ValueError(f"Error fetching the statement: {e}")
 
 
 def extract_columns_values_and_dates_from_statement(soup):
@@ -638,60 +588,3 @@ def process_one_statement(ticker, acc_num, statement_name, statement_keys_map, h
         except Exception as e:
             logging.error(f"Error processing soup to DataFrame: {e}")
             return None
-
-
-# def process_one_statement(ticker, acc_num, statement_name, statement_keys_map, headers):
-#     """
-#     Args:
-#         ticker (str): Ticker of the company.
-#         acc_num (str): Accession number of the filing.
-#         statement_name (str): Name of the statement.
-#         headers (dict): Headers for the request.
-
-#     Returns:
-#         pd.DataFrame: DataFrame containing the statement data.
-
-
-#     Description:
-#         - Get the BeautifulSoup object of the statement from get_statement_soup
-#         - Extract the columns, values, and date_time_index from extract_columns_values_and_dates_from_statement
-#         - Create a DataFrame from create_dataframe_of_statement_values_columns_dates
-#         - Transpose the DataFrame and drop duplicates
-#         - Return the DataFrame
-
-#     """
-
-#     try:
-#         soup = get_statement_soup(
-#             ticker, acc_num, statement_name, headers, statement_keys_map
-#         )
-
-#     except Exception as e:
-#         logging.error(
-#             f"Failed to get statement soup: {e} for accession number: {acc_num}"
-#         )
-#         return None
-
-#     if soup:
-#         try:
-#             (
-#                 columns,
-#                 columns_dict,
-#                 values_set,
-#                 date_time_index,
-#             ) = extract_columns_values_and_dates_from_statement(soup=soup)
-
-#             df = create_dataframe_of_statement_values_columns_dates(
-#                 values_set, columns, date_time_index
-#             )
-
-#             if not df.empty:
-#                 df = df.T.drop_duplicates()
-#             else:
-#                 logging.warning(f"Empty DataFrame for accession number: {acc_num}")
-#                 return None
-
-#             return df, columns_dict
-#         except Exception as e:
-#             logging.error(f"Error processing soup to DataFrame: {e}")
-#             return None
