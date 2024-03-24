@@ -3,6 +3,7 @@ import requests
 import calendar
 import numpy as np
 import logging
+import utility_belt
 from bs4 import BeautifulSoup
 
 # statement_keys_map = {
@@ -638,6 +639,60 @@ def process_one_statement(ticker, acc_num, statement_name, statement_keys_map, h
         except Exception as e:
             logging.error(f"Error processing soup to DataFrame: {e}")
             return None
+
+
+def get_statement_df(statement_link, headers):
+    """
+    args:
+        - statement_link[str]: link to the statement
+        - headers[dict]: headers for the request
+
+    returns:
+        - df[pd.DataFrame]: dataframe of the statement
+
+    description:
+        - retrieves the statement from the link and returns it as a dataframe
+    """
+
+    statement_soup = get_statement_soup(statement_link, headers)
+
+    (
+        columns,
+        _,
+        values_set,
+        index_dates,
+    ) = extract_columns_values_and_dates_from_statement(statement_soup)
+
+    df = create_dataframe_of_statement_values_columns_dates(
+        values_set, columns, index_dates
+    )
+    df = df.T
+    return df
+
+
+def filter_links(links_dict, path_statement_map):
+    """
+    args:
+        - links_dict[dict]: dictionary of links
+        - path_statement_map[str]: path to the json file containing the statement map
+
+    returns:
+        - links_filtered[dict]: dictionary of filtered links
+
+    description:
+        - filters the links dictionary for the core statements
+    """
+
+    statement_map = utility_belt.import_json_file(path_statement_map)
+    links_filtered = {}
+    for statement_name, possible_keys_list in statement_map.items():
+        for possible_key in possible_keys_list:
+            statement_link = links_dict.get(possible_key, None)
+            if statement_link is not None:
+                links_filtered[statement_name] = statement_link
+                print(f"Retrieved: {statement_name} - {statement_link}")
+
+    return links_filtered
 
 
 # def process_one_statement(ticker, acc_num, statement_name, statement_keys_map, headers):

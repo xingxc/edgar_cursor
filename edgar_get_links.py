@@ -1,4 +1,7 @@
 # %%
+
+########## ------ START OF SCRIPT ------ ##########
+
 # Imports
 import os
 import requests
@@ -9,28 +12,6 @@ import edgar_functions
 
 
 # %%
-def filter_links(links_dict, path_statement_map):
-    """
-    args:
-        - links_dict[dict]: dictionary of links
-        - path_statement_map[str]: path to the json file containing the statement map
-
-    returns:
-        - links_filtered[dict]: dictionary of filtered links
-
-    description:
-        - filters the links dictionary for the core statements
-    """
-
-    statement_map = utility_belt.import_json_file(path_statement_map)
-    links_filtered = {}
-    for statement_name, possible_keys_list in statement_map.items():
-        for possible_key in possible_keys_list:
-            statement_link = links_dict.get(possible_key, None)
-            if statement_link is not None:
-                links_filtered[statement_name] = statement_link
-                print(f"Retrieved: {acc_date} - {statement_name} - {statement_link}")
-    return links_filtered
 
 
 def get_statement_df(statement_link, headers):
@@ -108,7 +89,7 @@ for acc_date, row in df_acc.iterrows():
 
 # % Filter for core links
 for acc_date, links in links_full.items():
-    links_core[acc_date] = filter_links(links, path_dict["json"])
+    links_core[acc_date] = edgar_functions.filter_links(links, path_dict["json"])
 
 # %% Export accession numbers and links to ticker folder
 
@@ -119,6 +100,10 @@ utility_belt.export_json_file(
     os.path.join(path_dict["ticker"], f"{ticker}_links_core.json"), links_core
 )
 df_acc.to_csv(os.path.join(path_dict["ticker"], "accession_numbers.csv"))
+
+
+########## ------ END OF SCRIPT ------ ##########
+
 
 # %%
 # acc_date = df_acc.index[-1]

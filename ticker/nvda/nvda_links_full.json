@@ -1,0 +1,335 @@
+{
+    "2014-07-27": {
+        "baselink": "https://www.sec.gov/Archives/edgar/data/0001045810/000104581014000158",
+        "condensed consolidated statements of income": "https://www.sec.gov/Archives/edgar/data/0001045810/000104581014000158/R2.htm",
+        "condensed consolidated statement of comprehnsive income": "https://www.sec.gov/Archives/edgar/data/0001045810/000104581014000158/R3.htm",
+        "condensed consolidated statement of comprehensive income (parentheticals)": "https://www.sec.gov/Archives/edgar/data/0001045810/000104581014000158/R4.htm",
+        "condensed consolidated balance sheets": "https://www.sec.gov/Archives/edgar/data/0001045810/000104581014000158/R5.htm",
+        "condensed consolidated statements of cash flows": "https://www.sec.gov/Archives/edgar/data/0001045810/000104581014000158/R6.htm"
+    },
+    "2014-10-26": {
+        "baselink": "https://www.sec.gov/Archives/edgar/data/0001045810/000104581014000188",
+        "condensed consolidated statements of income": "https://www.sec.gov/Archives/edgar/data/0001045810/000104581014000188/R2.htm",
+        "condensed consolidated statement of comprehensive income": "https://www.sec.gov/Archives/edgar/data/0001045810/000104581014000188/R3.htm",
+        "condensed consolidated statement of comprehensive income (parentheticals)": "https://www.sec.gov/Archives/edgar/data/0001045810/000104581014000188/R4.htm",
+        "condensed consolidated balance sheets": "https://www.sec.gov/Archives/edgar/data/0001045810/000104581014000188/R5.htm",
+        "condensed consolidated statements of cash flows": "https://www.sec.gov/Archives/edgar/data/0001045810/000104581014000188/R6.htm"
+    },
+    "2015-01-25": {
+        "baselink": "https://www.sec.gov/Archives/edgar/data/0001045810/000104581015000036",
+        "consolidated statements of income": "https://www.sec.gov/Archives/edgar/data/0001045810/000104581015000036/R2.htm",
+        "consolidated statements of comprehensive income": "https://www.sec.gov/Archives/edgar/data/0001045810/000104581015000036/R3.htm",
+        "consolidated statements of comprehensive income (parentheticals)": "https://www.sec.gov/Archives/edgar/data/0001045810/000104581015000036/R4.htm",
+        "consolidated balance sheets": "https://www.sec.gov/Archives/edgar/data/0001045810/000104581015000036/R5.htm",
+        "consolidated balance sheets (parentheticals)": "https://www.sec.gov/Archives/edgar/data/0001045810/000104581015000036/R6.htm",
+        "consolidated statements of shareholders' equity": "https://www.sec.gov/Archives/edgar/data/0001045810/000104581015000036/R7.htm",
+        "statements of stockholders' equity (parentheticals)": "https://www.sec.gov/Archives/edgar/data/0001045810/000104581015000036/R8.htm",
+        "consolidated statements of cash flows": "https://www.sec.gov/Archives/edgar/data/0001045810/000104581015000036/R9.htm"
+    },
+    "2015-04-26": {
+        "baselink": "https://www.sec.gov/Archives/edgar/data/0001045810/000104581015000097",
+        "condensed consolidated statements of income": "https://www.sec.gov/Archives/edgar/data/0001045810/000104581015000097/R2.htm",
+        "condensed consolidated statement of comprehensive income": "https://www.sec.gov/Archives/edgar/data/0001045810/000104581015000097/R3.htm",
+        "condensed consolidated balance sheets": "https://www.sec.gov/Archives/edgar/data/0001045810/000104581015000097/R4.htm",
+        "condensed consolidated statements of cash flows": "https://www.sec.gov/Archives/edgar/data/0001045810/000104581015000097/R5.htm"
+    },
+    "2015-07-26": {
+        "baselink": "https://www.sec.gov/Archives/edgar/data/0001045810/000104581015000143",
+        "condensed consolidated statements of income": "https://www.sec.gov/Archives/edgar/data/0001045810/000104581015000143/R2.htm",
+        "condensed consolidated statement of comprehensive income": "https://www.sec.gov/Archives/edgar/data/0001045810/000104581015000143/R3.htm",
+        "condensed consolidated balance sheets": "https://www.sec.gov/Archives/edgar/data/0001045810/000104581015000143/R4.htm",
+        "condensed consolidated statements of cash flows": "https://www.sec.gov/Archives/edgar/data/0001045810/000104581015000143/R5.htm"
+    },
+    "2015-10-25": {
+        "baselink": "https://www.sec.gov/Archives/edgar/data/0001045810/000104581015000173",
+        "condensed consolidated statements of income": "https://www.sec.gov/Archives/edgar/data/0001045810/000104581015000173/R2.htm",
+        "condensed consolidated statement of comprehensive income": "https://www.sec.gov/Archives/edgar/data/0001045810/000104581015000173/R3.htm",
+        "condensed consolidated balance sheets": "https://www.sec.gov/Archives/edgar/data/0001045810/000104581015000173/R4.htm",
+        "condensed consolidated statements of cash flows": "https://www.sec.gov/Archives/edgar/data/0001045810/000104581015000173/R5.htm"
+    },
+    "2016-01-31": {
+        "baselink": "https://www.sec.gov/Archives/edgar/data/0001045810/000104581016000205",
+        "consolidated statements of income": "https://www.sec.gov/Archives/edgar/data/0001045810/000104581016000205/R2.htm",
+        "consolidated statements of comprehensive income": "https://www.sec.gov/Archives/edgar/data/0001045810/000104581016000205/R3.htm",
+        "consolidated balance sheets": "https://www.sec.gov/Archives/edgar/data/0001045810/000104581016000205/R4.htm",
+        "consolidated balance sheets (parentheticals)": "https://www.sec.gov/Archives/edgar/data/0001045810/000104581016000205/R5.htm",
+        "consolidated statements of shareholders' equity": "https://www.sec.gov/Archives/edgar/data/0001045810/000104581016000205/R6.htm",
+        "consolidated statements of cash flows": "https://www.sec.gov/Archives/edgar/data/0001045810/000104581016000205/R7.htm"
+    },
+    "2016-05-01": {
+        "baselink": "https://www.sec.gov/Archives/edgar/data/0001045810/000104581016000275",
+        "condensed consolidated statements of income": "https://www.sec.gov/Archives/edgar/data/0001045810/000104581016000275/R2.htm",
+        "condensed consolidated statement of comprehensive income": "https://www.sec.gov/Archives/edgar/data/0001045810/000104581016000275/R3.htm",
+        "condensed consolidated balance sheets": "https://www.sec.gov/Archives/edgar/data/0001045810/000104581016000275/R4.htm",
+        "condensed consolidated statements of cash flows": "https://www.sec.gov/Archives/edgar/data/0001045810/000104581016000275/R5.htm"
+    },
+    "2016-07-31": {
+        "baselink": "https://www.sec.gov/Archives/edgar/data/0001045810/000104581016000300",
+        "condensed consolidated statements of income": "https://www.sec.gov/Archives/edgar/data/0001045810/000104581016000300/R2.htm",
+        "condensed consolidated statement of comprehensive income": "https://www.sec.gov/Archives/edgar/data/0001045810/000104581016000300/R3.htm",
+        "condensed consolidated balance sheets": "https://www.sec.gov/Archives/edgar/data/0001045810/000104581016000300/R4.htm",
+        "condensed consolidated statements of cash flows": "https://www.sec.gov/Archives/edgar/data/0001045810/000104581016000300/R5.htm"
+    },
+    "2016-10-30": {
+        "baselink": "https://www.sec.gov/Archives/edgar/data/0001045810/000104581016000353",
+        "condensed consolidated statements of income": "https://www.sec.gov/Archives/edgar/data/0001045810/000104581016000353/R2.htm",
+        "condensed consolidated statement of comprehensive income": "https://www.sec.gov/Archives/edgar/data/0001045810/000104581016000353/R3.htm",
+        "condensed consolidated balance sheets": "https://www.sec.gov/Archives/edgar/data/0001045810/000104581016000353/R4.htm",
+        "condensed consolidated statements of cash flows": "https://www.sec.gov/Archives/edgar/data/0001045810/000104581016000353/R5.htm"
+    },
+    "2017-01-29": {
+        "baselink": "https://www.sec.gov/Archives/edgar/data/0001045810/000104581017000027",
+        "consolidated statements of income": "https://www.sec.gov/Archives/edgar/data/0001045810/000104581017000027/R2.htm",
+        "consolidated statements of comprehensive income": "https://www.sec.gov/Archives/edgar/data/0001045810/000104581017000027/R3.htm",
+        "consolidated balance sheets": "https://www.sec.gov/Archives/edgar/data/0001045810/000104581017000027/R4.htm",
+        "consolidated balance sheets (parentheticals)": "https://www.sec.gov/Archives/edgar/data/0001045810/000104581017000027/R5.htm",
+        "consolidated statements of shareholders' equity": "https://www.sec.gov/Archives/edgar/data/0001045810/000104581017000027/R6.htm",
+        "consolidated statements of cash flows": "https://www.sec.gov/Archives/edgar/data/0001045810/000104581017000027/R7.htm"
+    },
+    "2017-04-30": {
+        "baselink": "https://www.sec.gov/Archives/edgar/data/0001045810/000104581017000075",
+        "condensed consolidated statements of income": "https://www.sec.gov/Archives/edgar/data/0001045810/000104581017000075/R2.htm",
+        "condensed consolidated statement of comprehensive income": "https://www.sec.gov/Archives/edgar/data/0001045810/000104581017000075/R3.htm",
+        "condensed consolidated balance sheets": "https://www.sec.gov/Archives/edgar/data/0001045810/000104581017000075/R4.htm",
+        "condensed consolidated statements of cash flows": "https://www.sec.gov/Archives/edgar/data/0001045810/000104581017000075/R5.htm"
+    },
+    "2017-07-30": {
+        "baselink": "https://www.sec.gov/Archives/edgar/data/0001045810/000104581017000123",
+        "condensed consolidated statements of income": "https://www.sec.gov/Archives/edgar/data/0001045810/000104581017000123/R2.htm",
+        "condensed consolidated statement of comprehensive income": "https://www.sec.gov/Archives/edgar/data/0001045810/000104581017000123/R3.htm",
+        "condensed consolidated balance sheets": "https://www.sec.gov/Archives/edgar/data/0001045810/000104581017000123/R4.htm",
+        "condensed consolidated statements of cash flows": "https://www.sec.gov/Archives/edgar/data/0001045810/000104581017000123/R5.htm"
+    },
+    "2017-10-29": {
+        "baselink": "https://www.sec.gov/Archives/edgar/data/0001045810/000104581017000172",
+        "condensed consolidated statements of income": "https://www.sec.gov/Archives/edgar/data/0001045810/000104581017000172/R2.htm",
+        "condensed consolidated statement of comprehensive income": "https://www.sec.gov/Archives/edgar/data/0001045810/000104581017000172/R3.htm",
+        "condensed consolidated balance sheets": "https://www.sec.gov/Archives/edgar/data/0001045810/000104581017000172/R4.htm",
+        "condensed consolidated statements of cash flows": "https://www.sec.gov/Archives/edgar/data/0001045810/000104581017000172/R5.htm"
+    },
+    "2018-01-28": {
+        "baselink": "https://www.sec.gov/Archives/edgar/data/0001045810/000104581018000010",
+        "consolidated statements of income": "https://www.sec.gov/Archives/edgar/data/0001045810/000104581018000010/R2.htm",
+        "consolidated statements of comprehensive income": "https://www.sec.gov/Archives/edgar/data/0001045810/000104581018000010/R3.htm",
+        "consolidated balance sheets": "https://www.sec.gov/Archives/edgar/data/0001045810/000104581018000010/R4.htm",
+        "consolidated balance sheets (parentheticals)": "https://www.sec.gov/Archives/edgar/data/0001045810/000104581018000010/R5.htm",
+        "consolidated statements of shareholders' equity": "https://www.sec.gov/Archives/edgar/data/0001045810/000104581018000010/R6.htm",
+        "consolidated statements of cash flows": "https://www.sec.gov/Archives/edgar/data/0001045810/000104581018000010/R7.htm"
+    },
+    "2018-04-29": {
+        "baselink": "https://www.sec.gov/Archives/edgar/data/0001045810/000104581018000080",
+        "condensed consolidated statements of income": "https://www.sec.gov/Archives/edgar/data/0001045810/000104581018000080/R2.htm",
+        "condensed consolidated statement of comprehensive income": "https://www.sec.gov/Archives/edgar/data/0001045810/000104581018000080/R3.htm",
+        "condensed consolidated balance sheets": "https://www.sec.gov/Archives/edgar/data/0001045810/000104581018000080/R4.htm",
+        "condensed consolidated statements of cash flows": "https://www.sec.gov/Archives/edgar/data/0001045810/000104581018000080/R5.htm"
+    },
+    "2018-07-29": {
+        "baselink": "https://www.sec.gov/Archives/edgar/data/0001045810/000104581018000114",
+        "condensed consolidated statements of income": "https://www.sec.gov/Archives/edgar/data/0001045810/000104581018000114/R2.htm",
+        "condensed consolidated statement of comprehensive income": "https://www.sec.gov/Archives/edgar/data/0001045810/000104581018000114/R3.htm",
+        "condensed consolidated balance sheets": "https://www.sec.gov/Archives/edgar/data/0001045810/000104581018000114/R4.htm",
+        "condensed consolidated statements of cash flows": "https://www.sec.gov/Archives/edgar/data/0001045810/000104581018000114/R5.htm"
+    },
+    "2018-10-28": {
+        "baselink": "https://www.sec.gov/Archives/edgar/data/0001045810/000104581018000150",
+        "condensed consolidated statements of income": "https://www.sec.gov/Archives/edgar/data/0001045810/000104581018000150/R2.htm",
+        "condensed consolidated statement of comprehensive income": "https://www.sec.gov/Archives/edgar/data/0001045810/000104581018000150/R3.htm",
+        "condensed consolidated balance sheets": "https://www.sec.gov/Archives/edgar/data/0001045810/000104581018000150/R4.htm",
+        "condensed consolidated statements of cash flows": "https://www.sec.gov/Archives/edgar/data/0001045810/000104581018000150/R5.htm"
+    },
+    "2019-01-27": {
+        "baselink": "https://www.sec.gov/Archives/edgar/data/0001045810/000104581019000023",
+        "consolidated statements of income": "https://www.sec.gov/Archives/edgar/data/0001045810/000104581019000023/R2.htm",
+        "consolidated statements of comprehensive income": "https://www.sec.gov/Archives/edgar/data/0001045810/000104581019000023/R3.htm",
+        "consolidated balance sheets": "https://www.sec.gov/Archives/edgar/data/0001045810/000104581019000023/R4.htm",
+        "consolidated balance sheets (parentheticals)": "https://www.sec.gov/Archives/edgar/data/0001045810/000104581019000023/R5.htm",
+        "consolidated statements of shareholders' equity": "https://www.sec.gov/Archives/edgar/data/0001045810/000104581019000023/R6.htm",
+        "consolidated statements of shareholders' equity (parentheticals)": "https://www.sec.gov/Archives/edgar/data/0001045810/000104581019000023/R7.htm",
+        "consolidated statements of cash flows": "https://www.sec.gov/Archives/edgar/data/0001045810/000104581019000023/R8.htm"
+    },
+    "2019-04-28": {
+        "baselink": "https://www.sec.gov/Archives/edgar/data/0001045810/000104581019000079",
+        "condensed consolidated statements of income": "https://www.sec.gov/Archives/edgar/data/0001045810/000104581019000079/R2.htm",
+        "condensed consolidated statement of comprehensive income": "https://www.sec.gov/Archives/edgar/data/0001045810/000104581019000079/R3.htm",
+        "condensed consolidated balance sheets": "https://www.sec.gov/Archives/edgar/data/0001045810/000104581019000079/R4.htm",
+        "condensed consolidated statements of shareholders' equity": "https://www.sec.gov/Archives/edgar/data/0001045810/000104581019000079/R5.htm",
+        "consolidated statements of shareholders' equity (parenthetical)": "https://www.sec.gov/Archives/edgar/data/0001045810/000104581019000079/R6.htm",
+        "condensed consolidated statements of cash flows": "https://www.sec.gov/Archives/edgar/data/0001045810/000104581019000079/R7.htm"
+    },
+    "2019-07-28": {
+        "baselink": "https://www.sec.gov/Archives/edgar/data/0001045810/000104581019000144",
+        "condensed consolidated statements of income": "https://www.sec.gov/Archives/edgar/data/0001045810/000104581019000144/R2.htm",
+        "condensed consolidated statement of comprehensive income": "https://www.sec.gov/Archives/edgar/data/0001045810/000104581019000144/R3.htm",
+        "condensed consolidated balance sheets": "https://www.sec.gov/Archives/edgar/data/0001045810/000104581019000144/R4.htm",
+        "condensed consolidated statements of shareholders' equity": "https://www.sec.gov/Archives/edgar/data/0001045810/000104581019000144/R5.htm",
+        "consolidated statements of shareholders' equity (parenthetical)": "https://www.sec.gov/Archives/edgar/data/0001045810/000104581019000144/R6.htm",
+        "condensed consolidated statements of cash flows": "https://www.sec.gov/Archives/edgar/data/0001045810/000104581019000144/R7.htm"
+    },
+    "2019-10-27": {
+        "baselink": "https://www.sec.gov/Archives/edgar/data/0001045810/000104581019000170",
+        "condensed consolidated statements of income": "https://www.sec.gov/Archives/edgar/data/0001045810/000104581019000170/R2.htm",
+        "condensed consolidated statement of comprehensive income": "https://www.sec.gov/Archives/edgar/data/0001045810/000104581019000170/R3.htm",
+        "condensed consolidated balance sheets": "https://www.sec.gov/Archives/edgar/data/0001045810/000104581019000170/R4.htm",
+        "condensed consolidated statements of shareholders' equity": "https://www.sec.gov/Archives/edgar/data/0001045810/000104581019000170/R5.htm",
+        "consolidated statements of shareholders' equity (parenthetical)": "https://www.sec.gov/Archives/edgar/data/0001045810/000104581019000170/R6.htm",
+        "condensed consolidated statements of cash flows": "https://www.sec.gov/Archives/edgar/data/0001045810/000104581019000170/R7.htm"
+    },
+    "2020-01-26": {
+        "baselink": "https://www.sec.gov/Archives/edgar/data/0001045810/000104581020000010",
+        "consolidated statements of income": "https://www.sec.gov/Archives/edgar/data/0001045810/000104581020000010/R2.htm",
+        "consolidated statements of comprehensive income": "https://www.sec.gov/Archives/edgar/data/0001045810/000104581020000010/R3.htm",
+        "consolidated balance sheets": "https://www.sec.gov/Archives/edgar/data/0001045810/000104581020000010/R4.htm",
+        "consolidated balance sheets (parenthetical)": "https://www.sec.gov/Archives/edgar/data/0001045810/000104581020000010/R5.htm",
+        "consolidated statements of shareholders' equity": "https://www.sec.gov/Archives/edgar/data/0001045810/000104581020000010/R6.htm",
+        "consolidated statements of shareholders' equity (parenthetical)": "https://www.sec.gov/Archives/edgar/data/0001045810/000104581020000010/R7.htm",
+        "consolidated statements of cash flows": "https://www.sec.gov/Archives/edgar/data/0001045810/000104581020000010/R8.htm"
+    },
+    "2020-04-26": {
+        "baselink": "https://www.sec.gov/Archives/edgar/data/0001045810/000104581020000065",
+        "condensed consolidated statements of income": "https://www.sec.gov/Archives/edgar/data/0001045810/000104581020000065/R2.htm",
+        "condensed consolidated statement of comprehensive income": "https://www.sec.gov/Archives/edgar/data/0001045810/000104581020000065/R3.htm",
+        "condensed consolidated balance sheets": "https://www.sec.gov/Archives/edgar/data/0001045810/000104581020000065/R4.htm",
+        "condensed consolidated statements of shareholders' equity": "https://www.sec.gov/Archives/edgar/data/0001045810/000104581020000065/R5.htm",
+        "consolidated statements of shareholders' equity (parenthetical)": "https://www.sec.gov/Archives/edgar/data/0001045810/000104581020000065/R6.htm",
+        "condensed consolidated statements of cash flows": "https://www.sec.gov/Archives/edgar/data/0001045810/000104581020000065/R7.htm"
+    },
+    "2020-07-26": {
+        "baselink": "https://www.sec.gov/Archives/edgar/data/0001045810/000104581020000147",
+        "condensed consolidated statements of income": "https://www.sec.gov/Archives/edgar/data/0001045810/000104581020000147/R2.htm",
+        "condensed consolidated statement of comprehensive income": "https://www.sec.gov/Archives/edgar/data/0001045810/000104581020000147/R3.htm",
+        "condensed consolidated balance sheets": "https://www.sec.gov/Archives/edgar/data/0001045810/000104581020000147/R4.htm",
+        "condensed consolidated statements of shareholders' equity": "https://www.sec.gov/Archives/edgar/data/0001045810/000104581020000147/R5.htm",
+        "consolidated statements of shareholders' equity (parenthetical)": "https://www.sec.gov/Archives/edgar/data/0001045810/000104581020000147/R6.htm",
+        "condensed consolidated statements of cash flows": "https://www.sec.gov/Archives/edgar/data/0001045810/000104581020000147/R7.htm"
+    },
+    "2020-10-25": {
+        "baselink": "https://www.sec.gov/Archives/edgar/data/0001045810/000104581020000189",
+        "condensed consolidated statements of income": "https://www.sec.gov/Archives/edgar/data/0001045810/000104581020000189/R2.htm",
+        "condensed consolidated statement of comprehensive income": "https://www.sec.gov/Archives/edgar/data/0001045810/000104581020000189/R3.htm",
+        "condensed consolidated balance sheets": "https://www.sec.gov/Archives/edgar/data/0001045810/000104581020000189/R4.htm",
+        "condensed consolidated statements of shareholders' equity": "https://www.sec.gov/Archives/edgar/data/0001045810/000104581020000189/R5.htm",
+        "consolidated statements of shareholders' equity (parenthetical)": "https://www.sec.gov/Archives/edgar/data/0001045810/000104581020000189/R6.htm",
+        "condensed consolidated statements of cash flows": "https://www.sec.gov/Archives/edgar/data/0001045810/000104581020000189/R7.htm"
+    },
+    "2021-01-31": {
+        "baselink": "https://www.sec.gov/Archives/edgar/data/0001045810/000104581021000010",
+        "consolidated statements of income": "https://www.sec.gov/Archives/edgar/data/0001045810/000104581021000010/R2.htm",
+        "consolidated statements of comprehensive income": "https://www.sec.gov/Archives/edgar/data/0001045810/000104581021000010/R3.htm",
+        "consolidated balance sheets": "https://www.sec.gov/Archives/edgar/data/0001045810/000104581021000010/R4.htm",
+        "consolidated balance sheets (parenthetical)": "https://www.sec.gov/Archives/edgar/data/0001045810/000104581021000010/R5.htm",
+        "consolidated statements of shareholders' equity": "https://www.sec.gov/Archives/edgar/data/0001045810/000104581021000010/R6.htm",
+        "consolidated statements of shareholders' equity (parenthetical)": "https://www.sec.gov/Archives/edgar/data/0001045810/000104581021000010/R7.htm",
+        "consolidated statements of cash flows": "https://www.sec.gov/Archives/edgar/data/0001045810/000104581021000010/R8.htm"
+    },
+    "2021-05-02": {
+        "baselink": "https://www.sec.gov/Archives/edgar/data/0001045810/000104581021000064",
+        "condensed consolidated statements of income": "https://www.sec.gov/Archives/edgar/data/0001045810/000104581021000064/R2.htm",
+        "condensed consolidated statement of comprehensive income": "https://www.sec.gov/Archives/edgar/data/0001045810/000104581021000064/R3.htm",
+        "condensed consolidated balance sheets": "https://www.sec.gov/Archives/edgar/data/0001045810/000104581021000064/R4.htm",
+        "condensed consolidated statements of shareholders' equity": "https://www.sec.gov/Archives/edgar/data/0001045810/000104581021000064/R5.htm",
+        "consolidated statements of shareholders' equity (parenthetical)": "https://www.sec.gov/Archives/edgar/data/0001045810/000104581021000064/R6.htm",
+        "condensed consolidated statements of cash flows": "https://www.sec.gov/Archives/edgar/data/0001045810/000104581021000064/R7.htm"
+    },
+    "2021-08-01": {
+        "baselink": "https://www.sec.gov/Archives/edgar/data/0001045810/000104581021000131",
+        "condensed consolidated statements of income": "https://www.sec.gov/Archives/edgar/data/0001045810/000104581021000131/R2.htm",
+        "condensed consolidated statement of comprehensive income": "https://www.sec.gov/Archives/edgar/data/0001045810/000104581021000131/R3.htm",
+        "condensed consolidated balance sheets": "https://www.sec.gov/Archives/edgar/data/0001045810/000104581021000131/R4.htm",
+        "condensed consolidated statements of shareholders' equity": "https://www.sec.gov/Archives/edgar/data/0001045810/000104581021000131/R5.htm",
+        "consolidated statements of shareholders' equity (parenthetical)": "https://www.sec.gov/Archives/edgar/data/0001045810/000104581021000131/R6.htm",
+        "condensed consolidated statements of cash flows": "https://www.sec.gov/Archives/edgar/data/0001045810/000104581021000131/R7.htm"
+    },
+    "2021-10-31": {
+        "baselink": "https://www.sec.gov/Archives/edgar/data/0001045810/000104581021000163",
+        "condensed consolidated statements of income": "https://www.sec.gov/Archives/edgar/data/0001045810/000104581021000163/R2.htm",
+        "condensed consolidated statement of comprehensive income": "https://www.sec.gov/Archives/edgar/data/0001045810/000104581021000163/R3.htm",
+        "condensed consolidated balance sheets": "https://www.sec.gov/Archives/edgar/data/0001045810/000104581021000163/R4.htm",
+        "condensed consolidated statements of shareholders' equity": "https://www.sec.gov/Archives/edgar/data/0001045810/000104581021000163/R5.htm",
+        "consolidated statements of shareholders' equity (parenthetical)": "https://www.sec.gov/Archives/edgar/data/0001045810/000104581021000163/R6.htm",
+        "condensed consolidated statements of cash flows": "https://www.sec.gov/Archives/edgar/data/0001045810/000104581021000163/R7.htm"
+    },
+    "2022-01-30": {
+        "baselink": "https://www.sec.gov/Archives/edgar/data/0001045810/000104581022000036",
+        "consolidated statements of income": "https://www.sec.gov/Archives/edgar/data/0001045810/000104581022000036/R3.htm",
+        "consolidated statements of comprehensive income": "https://www.sec.gov/Archives/edgar/data/0001045810/000104581022000036/R4.htm",
+        "consolidated balance sheets": "https://www.sec.gov/Archives/edgar/data/0001045810/000104581022000036/R5.htm",
+        "consolidated balance sheets (parenthetical)": "https://www.sec.gov/Archives/edgar/data/0001045810/000104581022000036/R6.htm",
+        "consolidated statements of shareholders' equity": "https://www.sec.gov/Archives/edgar/data/0001045810/000104581022000036/R7.htm",
+        "consolidated statements of shareholders' equity (parenthetical)": "https://www.sec.gov/Archives/edgar/data/0001045810/000104581022000036/R8.htm",
+        "consolidated statements of cash flows": "https://www.sec.gov/Archives/edgar/data/0001045810/000104581022000036/R9.htm"
+    },
+    "2022-05-01": {
+        "baselink": "https://www.sec.gov/Archives/edgar/data/0001045810/000104581022000079",
+        "condensed consolidated statements of income": "https://www.sec.gov/Archives/edgar/data/0001045810/000104581022000079/R2.htm",
+        "condensed consolidated statement of comprehensive income": "https://www.sec.gov/Archives/edgar/data/0001045810/000104581022000079/R3.htm",
+        "condensed consolidated balance sheets": "https://www.sec.gov/Archives/edgar/data/0001045810/000104581022000079/R4.htm",
+        "condensed consolidated statements of shareholders' equity": "https://www.sec.gov/Archives/edgar/data/0001045810/000104581022000079/R5.htm",
+        "consolidated statements of shareholders' equity (parenthetical)": "https://www.sec.gov/Archives/edgar/data/0001045810/000104581022000079/R6.htm",
+        "condensed consolidated statements of cash flows": "https://www.sec.gov/Archives/edgar/data/0001045810/000104581022000079/R7.htm"
+    },
+    "2022-07-31": {
+        "baselink": "https://www.sec.gov/Archives/edgar/data/0001045810/000104581022000147",
+        "condensed consolidated statements of income": "https://www.sec.gov/Archives/edgar/data/0001045810/000104581022000147/R2.htm",
+        "condensed consolidated statement of comprehensive income": "https://www.sec.gov/Archives/edgar/data/0001045810/000104581022000147/R3.htm",
+        "condensed consolidated balance sheets": "https://www.sec.gov/Archives/edgar/data/0001045810/000104581022000147/R4.htm",
+        "condensed consolidated statements of shareholders' equity": "https://www.sec.gov/Archives/edgar/data/0001045810/000104581022000147/R5.htm",
+        "condensed consolidated statements of shareholders??? equity (parenthetical)": "https://www.sec.gov/Archives/edgar/data/0001045810/000104581022000147/R6.htm",
+        "condensed consolidated statements of cash flows": "https://www.sec.gov/Archives/edgar/data/0001045810/000104581022000147/R7.htm"
+    },
+    "2022-10-30": {
+        "baselink": "https://www.sec.gov/Archives/edgar/data/0001045810/000104581022000166",
+        "condensed consolidated statements of income": "https://www.sec.gov/Archives/edgar/data/0001045810/000104581022000166/R2.htm",
+        "condensed consolidated statement of comprehensive income": "https://www.sec.gov/Archives/edgar/data/0001045810/000104581022000166/R3.htm",
+        "condensed consolidated balance sheets": "https://www.sec.gov/Archives/edgar/data/0001045810/000104581022000166/R4.htm",
+        "condensed consolidated statements of shareholders' equity": "https://www.sec.gov/Archives/edgar/data/0001045810/000104581022000166/R5.htm",
+        "condensed consolidated statements of shareholders??? equity (parenthetical)": "https://www.sec.gov/Archives/edgar/data/0001045810/000104581022000166/R6.htm",
+        "condensed consolidated statements of cash flows": "https://www.sec.gov/Archives/edgar/data/0001045810/000104581022000166/R7.htm"
+    },
+    "2023-01-29": {
+        "baselink": "https://www.sec.gov/Archives/edgar/data/0001045810/000104581023000017",
+        "consolidated statements of income": "https://www.sec.gov/Archives/edgar/data/0001045810/000104581023000017/R3.htm",
+        "consolidated statements of comprehensive income": "https://www.sec.gov/Archives/edgar/data/0001045810/000104581023000017/R4.htm",
+        "consolidated balance sheets": "https://www.sec.gov/Archives/edgar/data/0001045810/000104581023000017/R5.htm",
+        "consolidated balance sheets (parenthetical)": "https://www.sec.gov/Archives/edgar/data/0001045810/000104581023000017/R6.htm",
+        "consolidated statements of shareholders' equity": "https://www.sec.gov/Archives/edgar/data/0001045810/000104581023000017/R7.htm",
+        "consolidated statements of shareholders' equity (parenthetical)": "https://www.sec.gov/Archives/edgar/data/0001045810/000104581023000017/R8.htm",
+        "consolidated statements of cash flows": "https://www.sec.gov/Archives/edgar/data/0001045810/000104581023000017/R9.htm"
+    },
+    "2023-04-30": {
+        "baselink": "https://www.sec.gov/Archives/edgar/data/0001045810/000104581023000093",
+        "condensed consolidated statements of income": "https://www.sec.gov/Archives/edgar/data/0001045810/000104581023000093/R2.htm",
+        "condensed consolidated statement of comprehensive income": "https://www.sec.gov/Archives/edgar/data/0001045810/000104581023000093/R3.htm",
+        "condensed consolidated balance sheets": "https://www.sec.gov/Archives/edgar/data/0001045810/000104581023000093/R4.htm",
+        "condensed consolidated statements of shareholders' equity": "https://www.sec.gov/Archives/edgar/data/0001045810/000104581023000093/R5.htm",
+        "condensed consolidated statements of shareholders??? equity (parenthetical)": "https://www.sec.gov/Archives/edgar/data/0001045810/000104581023000093/R6.htm",
+        "condensed consolidated statements of cash flows": "https://www.sec.gov/Archives/edgar/data/0001045810/000104581023000093/R7.htm"
+    },
+    "2023-07-30": {
+        "baselink": "https://www.sec.gov/Archives/edgar/data/0001045810/000104581023000175",
+        "condensed consolidated statements of income": "https://www.sec.gov/Archives/edgar/data/0001045810/000104581023000175/R2.htm",
+        "condensed consolidated statement of comprehensive income": "https://www.sec.gov/Archives/edgar/data/0001045810/000104581023000175/R3.htm",
+        "condensed consolidated balance sheets": "https://www.sec.gov/Archives/edgar/data/0001045810/000104581023000175/R4.htm",
+        "condensed consolidated statements of shareholders' equity": "https://www.sec.gov/Archives/edgar/data/0001045810/000104581023000175/R5.htm",
+        "condensed consolidated statements of shareholders??? equity (parenthetical)": "https://www.sec.gov/Archives/edgar/data/0001045810/000104581023000175/R6.htm",
+        "condensed consolidated statements of cash flows": "https://www.sec.gov/Archives/edgar/data/0001045810/000104581023000175/R7.htm"
+    },
+    "2023-10-29": {
+        "baselink": "https://www.sec.gov/Archives/edgar/data/0001045810/000104581023000227",
+        "condensed consolidated statements of income": "https://www.sec.gov/Archives/edgar/data/0001045810/000104581023000227/R2.htm",
+        "condensed consolidated statement of comprehensive income": "https://www.sec.gov/Archives/edgar/data/0001045810/000104581023000227/R3.htm",
+        "condensed consolidated balance sheets": "https://www.sec.gov/Archives/edgar/data/0001045810/000104581023000227/R4.htm",
+        "condensed consolidated statements of shareholders' equity": "https://www.sec.gov/Archives/edgar/data/0001045810/000104581023000227/R5.htm",
+        "condensed consolidated statements of shareholders??? equity (parenthetical)": "https://www.sec.gov/Archives/edgar/data/0001045810/000104581023000227/R6.htm",
+        "condensed consolidated statements of cash flows": "https://www.sec.gov/Archives/edgar/data/0001045810/000104581023000227/R7.htm"
+    },
+    "2024-01-28": {
+        "baselink": "https://www.sec.gov/Archives/edgar/data/0001045810/000104581024000029",
+        "consolidated statements of income": "https://www.sec.gov/Archives/edgar/data/0001045810/000104581024000029/R3.htm",
+        "consolidated statements of comprehensive income": "https://www.sec.gov/Archives/edgar/data/0001045810/000104581024000029/R4.htm",
+        "consolidated balance sheets": "https://www.sec.gov/Archives/edgar/data/0001045810/000104581024000029/R5.htm",
+        "consolidated balance sheets (parenthetical)": "https://www.sec.gov/Archives/edgar/data/0001045810/000104581024000029/R6.htm",
+        "consolidated statements of shareholders' equity": "https://www.sec.gov/Archives/edgar/data/0001045810/000104581024000029/R7.htm",
+        "consolidated statements of shareholders' equity (parenthetical)": "https://www.sec.gov/Archives/edgar/data/0001045810/000104581024000029/R8.htm",
+        "consolidated statements of cash flows": "https://www.sec.gov/Archives/edgar/data/0001045810/000104581024000029/R9.htm"
+    }
+}
