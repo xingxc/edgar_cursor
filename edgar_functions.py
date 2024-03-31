@@ -294,6 +294,34 @@ def get_statement_file_names_in_filling_summary(ticker, acc_num, headers):
         return {}
 
 
+# def get_statement_links(ticker, acc_num, acc_date, headers):
+#     """
+#     Args:
+#         - ticker[str]: ticker symbol
+#         - acc_num[str]: accession number
+#         - acc_date[str]: date of the accession number
+#         - headers[dict]: headers for the request.get() function
+
+#     Returns:
+#         - statement_link_log[dict]: dictionary of all statement links
+
+#     Description:
+#         - This function returns a dictionary of all statement links for a given ticker, accession number, and date
+
+#     """
+#     cik = cik_matching_ticker(ticker, headers=headers)
+#     baselink = f"https://www.sec.gov/Archives/edgar/data/{cik}/{acc_num}"
+#     statement_file_name_dict = get_statement_file_names_in_filling_summary(
+#         ticker, acc_num, headers
+#     )
+#     statement_link_log = {acc_date: {"accession_number":acc_num,"baselink": baselink}}
+
+#     for statement_key, statement_value in statement_file_name_dict.items():
+#         statement_link_log[acc_date][statement_key] = f"{baselink}/{statement_value}"
+
+#     return statement_link_log
+
+
 def get_statement_links(ticker, acc_num, acc_date, headers):
     """
     Args:
@@ -314,12 +342,26 @@ def get_statement_links(ticker, acc_num, acc_date, headers):
     statement_file_name_dict = get_statement_file_names_in_filling_summary(
         ticker, acc_num, headers
     )
-    statement_link_log = {acc_date: {"baselink": baselink}}
 
-    for statement_key, statement_value in statement_file_name_dict.items():
-        statement_link_log[acc_date][statement_key] = f"{baselink}/{statement_value}"
+    statement_link_log = {acc_num: {"accession_date": acc_date, "baselink": baselink}}
+    statement_df = pd.DataFrame(
+        columns=["accession_number", "statement_name", "statement_link"]
+    )
 
-    return statement_link_log
+    for i, (statement_key, statement_value) in enumerate(
+        statement_file_name_dict.items()
+    ):
+        statement_link_log[acc_num][statement_key] = f"{baselink}/{statement_value}"
+
+        statement_df.loc[i] = pd.Series(
+            {
+                "accession_number": acc_num,
+                "statement_name": statement_key,
+                "statement_link": f"{baselink}/{statement_value}",
+            },
+        )
+
+    return statement_link_log, statement_df
 
 
 def get_statement_soup(statement_link, headers):
@@ -685,6 +727,8 @@ def filter_links(links_dict, path_statement_map):
 
     statement_map = utility_belt.import_json_file(path_statement_map)
     links_filtered = {}
+
+    links_filtered["accession_date"] = links_dict["accession_date"]
     for statement_name, possible_keys_list in statement_map.items():
         for possible_key in possible_keys_list:
             statement_link = links_dict.get(possible_key, None)
