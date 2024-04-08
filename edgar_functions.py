@@ -113,6 +113,42 @@ def get_submissions_for_ticker(tickers, headers, only_filings_df=False):
     return company_json
 
 
+# def get_filter_filing(ticker, headers, ten_k=True, accession_number_only=False):
+#     """
+#     Inputs:
+#         ticker [str]: ticker symbol
+#         headers [dict]: headers for the requests.get() function
+#         ten_k [bool]: if True, returns 10-K filings, if False, returns 10-Q filings
+#         accession_number_only [bool]:
+#             - if True: returns a series of the accession numbers for all the 10-K or 10-Q filings.
+#             - if False: returns a dataframe of all the 10-K or 10-Q filings.
+
+#     Returns:
+#         if accession_number_only is True:
+#             return pd.Series: series of the acc-numbers with index as the reportDate.
+#         if accession_number_only is False:
+#             return df [pd.DataFrame]: dataframe of all the 10-K or 10-Q filings.
+#     """
+
+#     company_filing_df = get_submissions_for_ticker(
+#         ticker, headers=headers, only_filings_df=True
+#     )
+#     if ten_k:
+#         df = company_filing_df[company_filing_df["form"] == "10-K"]
+#     else:
+#         df = company_filing_df[company_filing_df["form"] == "10-Q"]
+
+#     if accession_number_only:
+#         df = df.set_index("reportDate")
+#         return df["accessionNumber"]
+#     else:
+#         df.index = df["reportDate"]
+#         df = df.drop(columns=["reportDate"])
+#         df = df[["accessionNumber", "form"]]
+#         df["accessionNumber"] = df["accessionNumber"].str.replace("-", "")
+#         return df
+
+
 def get_filter_filing(ticker, headers, ten_k=True, accession_number_only=False):
     """
     Inputs:
@@ -142,10 +178,20 @@ def get_filter_filing(ticker, headers, ten_k=True, accession_number_only=False):
         df = df.set_index("reportDate")
         return df["accessionNumber"]
     else:
-        df.index = df["reportDate"]
-        df = df.drop(columns=["reportDate"])
-        df = df[["accessionNumber", "form"]]
-        df["accessionNumber"] = df["accessionNumber"].str.replace("-", "")
+
+        df.index = df["accessionNumber"].str.replace("-", "")
+        df = df.rename_axis("accession_number")
+        df = df[["reportDate", "form"]]
+        df.rename(
+            columns={
+                "reportDate": "report_date",
+            },
+            inplace=True,
+        )
+        # df = df.rename(columns={"reportDate": "report_date"})
+
+        # df = df.drop(columns=["reportDate"])
+        # df["reportDate"] = df["reportDate"]
         return df
 
 
@@ -314,7 +360,7 @@ def get_statement_file_names_in_filling_summary(ticker, acc_num, headers):
 #     statement_file_name_dict = get_statement_file_names_in_filling_summary(
 #         ticker, acc_num, headers
 #     )
-#     statement_link_log = {acc_date: {"accession_number":acc_num,"baselink": baselink}}
+#     statement_link_log = {acc_date: {"accessionNumber":acc_num,"baselink": baselink}}
 
 #     for statement_key, statement_value in statement_file_name_dict.items():
 #         statement_link_log[acc_date][statement_key] = f"{baselink}/{statement_value}"
@@ -323,7 +369,7 @@ def get_statement_file_names_in_filling_summary(ticker, acc_num, headers):
 
 
 def get_statement_links(ticker, acc_num, acc_date, headers):
-    """
+    """df_accession
     Args:
         - ticker[str]: ticker symbol
         - acc_num[str]: accession number
@@ -393,7 +439,7 @@ def get_statement_soup(statement_link, headers):
 
 #     Returns:
 #         - BeautifulSoup object of the html or xml of the statement from baselink.
-#         - Baselink: https://www.sec.gov/Archives/edgar/data/{cik}/{accession_number}/{statement_ID}
+#         - Baselink: https://www.sec.gov/Archives/edgar/data/{cik}/{accessionNumber}/{statement_ID}
 
 #     Description:
 #         - Gets the cik number from the ticker symbol
@@ -712,6 +758,33 @@ def get_statement_df(statement_link, headers):
     return df
 
 
+# def filter_links(links_dict, path_statement_map):
+#     """
+#     args:
+#         - links_dict[dict]: dictionary of links
+#         - path_statement_map[str]: path to the json file containing the statement map
+
+#     returns:
+#         - links_filtered[dict]: dictionary of filtered links
+
+#     description:
+#         - filters the links dictionary for the core statements
+#     """
+
+#     statement_map = utility_belt.import_json_file(path_statement_map)
+#     links_filtered = {}
+
+#     links_filtered["accession_date"] = links_dict["accession_date"]
+#     for statement_name, possible_keys_list in statement_map.items():
+#         for possible_key in possible_keys_list:
+#             statement_link = links_dict.get(possible_key, None)
+#             if statement_link is not None:
+#                 links_filtered[statement_name] = statement_link
+#                 print(f"Retrieved: {statement_name} - {statement_link}")
+
+#     return links_filtered
+
+
 def filter_links(links_dict, path_statement_map):
     """
     args:
@@ -728,15 +801,30 @@ def filter_links(links_dict, path_statement_map):
     statement_map = utility_belt.import_json_file(path_statement_map)
     links_filtered = {}
 
+    statement_df = pd.DataFrame(
+        columns=["accession_date", "statement_name", "statement_link"]
+    )
+
     links_filtered["accession_date"] = links_dict["accession_date"]
-    for statement_name, possible_keys_list in statement_map.items():
+    for i, (statement_name, possible_keys_list) in enumerate(statement_map.items()):
         for possible_key in possible_keys_list:
             statement_link = links_dict.get(possible_key, None)
-            if statement_link is not None:
-                links_filtered[statement_name] = statement_link
-                print(f"Retrieved: {statement_name} - {statement_link}")
 
-    return links_filtered
+            if statement_link is not None:
+
+                acc_num = links_dict["accession_date"]
+                links_filtered[statement_name] = statement_link
+
+                print(f"Retrieved: {statement_name} - {statement_link}")
+                statement_df.loc[i] = pd.Series(
+                    {
+                        "accession_date": acc_num,
+                        "statement_name": statement_name,
+                        "statement_link": statement_link,
+                    },
+                )
+
+    return links_filtered, statement_df
 
 
 # def process_one_statement(ticker, acc_num, statement_name, statement_keys_map, headers):

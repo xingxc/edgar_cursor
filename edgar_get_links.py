@@ -1,30 +1,20 @@
-# %%
-
 ########## ------ START OF SCRIPT ------ ##########
-
+# %%
 # Imports
 import os
 import psycopg
 import requests
 import subprocess
+import sqlalchemy
 import utility_belt
 import pandas as pd
 import edgar_functions
-from sqlalchemy import create_engine
-
+import psql_conn
 
 # %% Inputs and initilizing info
 
 headers = {"User-agent": "email@email.com"}
-
-path_dict = {
-    "ticker": r"/Users/johnxing/Documents/Documents - Apple Mac Mini/finances/stocks/python/get_SEC_data/ticker",
-    "json": r"/Users/johnxing/Documents/Documents - Apple Mac Mini/finances/stocks/python/get_SEC_data/statement_key_mapping.json",
-}
 ticker = "nvda"
-path_dict["ticker"] = os.path.join(path_dict["ticker"], ticker.lower())
-utility_belt.mkdir(path_dict["ticker"])
-
 
 # %% Get 10k and 10q accession numbers:
 
@@ -38,7 +28,6 @@ acc_10q = edgar_functions.get_filter_filing(
 df_accession = pd.concat([acc_10k, acc_10q], axis=0)
 df_accession.sort_index(inplace=True)
 
-
 # %% Retrieve links for all statements
 
 links_full = {}
@@ -46,9 +35,8 @@ links_core = {}
 
 df_statement_links = pd.DataFrame()
 
-for acc_date, row in df_accession.iterrows():
-    acc_num = row["accessionNumber"]
-
+for acc_num, row in df_accession.iterrows():
+    acc_date = row["report_date"]
     links_statement_dict, links_statement_df = edgar_functions.get_statement_links(
         ticker,
         acc_num,
@@ -60,13 +48,7 @@ for acc_date, row in df_accession.iterrows():
     df_statement_links = pd.concat([df_statement_links, links_statement_df], axis=0)
     print(f"{acc_num} ; {acc_date} ; links retrieved")
 
-df_statement_links.reset_index(drop=True, inplace=True)
-
-# % Filter for core links
-for acc_num, links in links_full.items():
-    print(f"{acc_num}")
-    links_core[acc_num] = edgar_functions.filter_links(links, path_dict["json"])
-
+# df_statement_links.reset_index(drop=True, inplace=True)
 # %% Create postgres engine and export accession numbers to postgres database
 
 dialect = "postgresql"
@@ -76,7 +58,7 @@ host = "localhost"
 port = "5432"
 db_name = "test"
 
-engine = create_engine(
+engine = sqlalchemy.create_engine(
     f"{dialect}+psycopg://{username}:{password}@{host}:{port}/{db_name}"
 )
 
@@ -84,12 +66,39 @@ engine = create_engine(
 table_name_accession = f"{ticker}_accession_numbers"
 table_name_links = f"{ticker}_statement_links"
 
-df_accession.to_sql(table_name_accession, engine, if_exists="replace", index=True)
-df_statement_links.to_sql(table_name_links, engine, if_exists="replace", index=False)
+print(f"export to database: {table_name_accession}")
+df_accession.to_sql(
+    table_name_accession,
+    engine,
+    if_exists="replace",
+    index=True,
+)
 
+print(f"export to database: {table_name_links}")
+df_statement_links.to_sql(
+    table_name_links,
+    engine,
+    if_exists="replace",
+    dtype={},
+    index=False,
+)
 
 # %% Export accession numbers and links to ticker folder
 
+path_dict = {
+    "ticker": r"/Users/johnxing/Documents/Documents - Apple Mac Mini/finances/stocks/python/get_SEC_data/ticker",
+    "json": r"/Users/johnxing/Documents/Documents - Apple Mac Mini/finances/stocks/python/get_SEC_data/statement_key_mapping.json",
+}
+
+path_dict["ticker"] = os.path.join(path_dict["ticker"], ticker.lower())
+utility_belt.mkdir(path_dict["ticker"])
+
+# % Filter for core links
+for acc_num, links in links_full.items():
+    print(f"{acc_num}")
+    links_core[acc_num], _ = edgar_functions.filter_links(links, path_dict["json"])
+
+# Export links and accession numbers
 utility_belt.export_json_file(
     os.path.join(path_dict["ticker"], f"{ticker}_links_full.json"), links_full
 )
