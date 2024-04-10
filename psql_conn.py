@@ -26,6 +26,77 @@ def execute_query(query, engine):
         return result
 
 
+def drop_constraint(table_name, constraint_name, engine):
+    """
+    Drop a constraint from a table
+
+    Parameters:
+        table_name: str
+            name of the table
+        constraint_name: str
+            name of the constraint to be dropped
+        engine: sqlalchemy.engine.base.Connection
+            sqlalchemy engine to connect to psql database
+
+    Returns:
+        None
+    """
+
+    # Define the SQL command
+    sql = (
+        f"ALTER TABLE {table_name} DROP CONSTRAINT IF EXISTS {constraint_name}; COMMIT;"
+    )
+    # Execute the SQL command
+    execute_query(sql, engine)
+
+
+def add_primary_key_if_not_exists(table_name, column_name, engine):
+    """
+    Add primary key to a table from an existing column if a primary key does not already exist
+
+    Parameters:
+        engine: sqlalchemy.engine.base.Connection
+            sqlalchemy engine to connect to psql database
+        table_name: str
+            name of the table
+        column_name: str
+            name of the column to be used as primary key
+
+    Returns:
+        column_name: str
+            name of the primary key column(s) of the table
+    """
+
+    # Define the SQL command to check if a primary key already exists
+    sql_check = sqlalchemy.text(
+        f"""
+        SELECT a.attname
+        FROM   pg_index i
+        JOIN   pg_attribute a ON a.attnum = ANY(i.indkey)
+        WHERE  i.indrelid = '{table_name}'::regclass
+        AND    i.indisprimary;
+    """
+    )
+
+    # Execute the SQL command
+    with engine.connect() as connection:
+        result = connection.execute(sql_check)
+        primary_key = result.scalar()
+
+    # If a primary key does not exist, add the primary key
+    if not primary_key:
+        # Define the SQL command to add the primary key
+        sql_add = f"ALTER TABLE {table_name} ADD PRIMARY KEY ({column_name}); COMMIT;"
+
+        # Execute the SQL command
+        execute_query(sql_add, engine)
+        return column_name
+
+    # If a primary key already exists, return its name
+    else:
+        return primary_key
+
+
 def get_primary_key(table_name, engine):
     """
     Get the primary key column(s) of a table
@@ -157,7 +228,7 @@ def add_primary_key(table_name, column_name, engine):
 
     query = f"""
     ALTER TABLE {table_name}
-    ADD PRIMARY KEY ({column_name});
+    ADD PRIMARY KEY ({column_name}); COMMIT;
     """
     results = execute_query(query, engine)
     return results
