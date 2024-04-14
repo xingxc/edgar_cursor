@@ -26,9 +26,9 @@ def execute_query(query, engine):
         return result
 
 
-def drop_constraint(table_name, constraint_name, engine):
+def drop_constraint_if_exists(table_name, constraint_name, engine):
     """
-    Drop a constraint from a table
+    Drop a constraint from a table if the constraint exists
 
     Parameters:
         table_name: str
@@ -41,13 +41,14 @@ def drop_constraint(table_name, constraint_name, engine):
     Returns:
         None
     """
-
+    print(f"Before Drop Constraint: {get_constraints(table_name, engine)}")
     # Define the SQL command
     sql = (
         f"ALTER TABLE {table_name} DROP CONSTRAINT IF EXISTS {constraint_name}; COMMIT;"
     )
     # Execute the SQL command
     execute_query(sql, engine)
+    print(f"After Drop Constraint: {get_constraints(table_name, engine)}")
 
 
 def add_primary_key_if_not_exists(table_name, column_name, engine):
@@ -67,33 +68,27 @@ def add_primary_key_if_not_exists(table_name, column_name, engine):
             name of the primary key column(s) of the table
     """
 
+    print(f"Before Add Constraint: {get_constraints(table_name, engine)}")
     # Define the SQL command to check if a primary key already exists
-    sql_check = sqlalchemy.text(
-        f"""
-        SELECT a.attname
-        FROM   pg_index i
-        JOIN   pg_attribute a ON a.attnum = ANY(i.indkey)
-        WHERE  i.indrelid = '{table_name}'::regclass
-        AND    i.indisprimary;
-    """
-    )
-
-    # Execute the SQL command
-    with engine.connect() as connection:
-        result = connection.execute(sql_check)
-        primary_key = result.scalar()
+    sql_check = f"SELECT a.attname FROM pg_index i JOIN pg_attribute a ON a.attnum = ANY(i.indkey) WHERE i.indrelid = '{table_name}'::regclass AND i.indisprimary;"
+    primary_key = execute_query(sql_check, engine)
 
     # If a primary key does not exist, add the primary key
-    if not primary_key:
+    if not primary_key.scalar():
+
         # Define the SQL command to add the primary key
         sql_add = f"ALTER TABLE {table_name} ADD PRIMARY KEY ({column_name}); COMMIT;"
 
         # Execute the SQL command
         execute_query(sql_add, engine)
+
+        print(f"After Add Constraint: {get_constraints(table_name, engine)}")
         return column_name
 
     # If a primary key already exists, return its name
     else:
+        print(f"Add Canceled: {get_constraints(table_name, engine)}")
+
         return primary_key
 
 

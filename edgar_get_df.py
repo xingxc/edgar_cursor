@@ -6,8 +6,45 @@ import subprocess
 import utility_belt
 import pandas as pd
 import edgar_functions
+import psql_conn
+import sqlalchemy
+
+ticker = "nvda"
+headers = {"User-agent": "email@email.com"}
 
 
+dialect = "postgresql"
+username = os.getenv("DATABASE_USER")
+password = os.getenv("DATABASE_PASSWORD")
+host = "localhost"
+port = "5432"
+db_name = "test"
+
+engine = sqlalchemy.create_engine(
+    f"{dialect}+psycopg://{username}:{password}@{host}:{port}/{db_name}"
+)
+
+
+# TODO: Create a good way to check if the table exists and find the accession and links table names
+table_names = sqlalchemy.inspect(engine).get_table_names()
+table_name_accession = f"{ticker}_accession_numbers"
+table_name_links = f"{ticker}_statement_links"
+
+# Get the tables as dataframes
+df_accession = pd.read_sql_table(table_name_accession, engine)
+df_statement_links = pd.read_sql_table(table_name_links, engine)
+
+# %%
+# Convert the report_date from str to datetime obj
+df_accession["report_date"] = pd.to_datetime(
+    df_accession["report_date"],
+    format="%Y-%m-%d",
+)
+
+df_accession["report_date"].max()
+
+
+# %%
 class ticker_statement:
     def __init__(self, ticker, headers):
         self.ticker = ticker
