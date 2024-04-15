@@ -62,26 +62,61 @@ engine = sqlalchemy.create_engine(
     f"{dialect}+psycopg://{username}:{password}@{host}:{port}/{db_name}"
 )
 
-# Export links to postgres database
-table_name_accession = f"{ticker}_accession_numbers"
-table_name_links = f"{ticker}_statement_links"
+# table names and primary/foreign key constraints
+accession_table_name = f"{ticker}_accession_numbers"
+links_table_name = f"{ticker}_statement_link"
 
-print(f"export to database: {table_name_accession}")
+accession_pk_column = "accession_number"
+links_pk_column = "statement_link"
+
+links_fk_column = "accession_number"
+links_fk_constraint_name = "fk_accession_number"
+
+
+# Drop tables if they exist with cascade
+psql_conn.drop_table_if_exists(accession_table_name, engine, cascade=True)
+psql_conn.drop_table_if_exists(links_table_name, engine, cascade=True)
+
+# Create tables from dataframes
+print(f"export to database: {accession_table_name}")
 df_accession.to_sql(
-    table_name_accession,
+    accession_table_name,
     engine,
     if_exists="replace",
     index=True,
 )
 
-print(f"export to database: {table_name_links}")
+print(f"export to database: {links_table_name}")
 df_statement_links.to_sql(
-    table_name_links,
+    links_table_name,
     engine,
     if_exists="replace",
     dtype={},
     index=False,
 )
+
+# Add primary and foreign keys
+psql_conn.add_primary_key_if_not_exists(
+    accession_table_name,
+    accession_pk_column,
+    engine,
+)
+
+psql_conn.add_primary_key_if_not_exists(
+    links_table_name,
+    links_pk_column,
+    engine,
+)
+
+psql_conn.add_foreign_key_if_not_exists(
+    links_table_name,
+    links_fk_column,
+    links_fk_constraint_name,
+    accession_table_name,
+    accession_pk_column,
+    engine,
+)
+
 
 # %% Export accession numbers and links to ticker folder
 

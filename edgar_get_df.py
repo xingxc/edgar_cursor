@@ -25,23 +25,40 @@ engine = sqlalchemy.create_engine(
 )
 
 
-# TODO: Create a good way to check if the table exists and find the accession and links table names
-table_names = sqlalchemy.inspect(engine).get_table_names()
-table_name_accession = f"{ticker}_accession_numbers"
-table_name_links = f"{ticker}_statement_links"
+# %%
 
-# Get the tables as dataframes
+# Get the table names
+table_name_accession = psql_conn.get_table_names_like(
+    f"{ticker}_accession_numbers.*", engine
+)["table_name"].iloc[0]
+table_name_links = psql_conn.get_table_names_like(
+    f"{ticker}_statement_links.*", engine
+)["table_name"].iloc[0]
+
+# Get the tables as dataframes from table names
 df_accession = pd.read_sql_table(table_name_accession, engine)
-df_statement_links = pd.read_sql_table(table_name_links, engine)
+
 
 # %%
-# Convert the report_date from str to datetime obj
-df_accession["report_date"] = pd.to_datetime(
-    df_accession["report_date"],
-    format="%Y-%m-%d",
+
+acc_num = df_accession["accession_number"].iloc[-1]
+
+df_statement_links = psql_conn.get_sql_table_where_fk_equal(
+    table_name_fk=table_name_links,
+    column_name_fk="accession_number",
+    table_name_pk=table_name_accession,
+    value_pk=acc_num,
+    engine=engine,
 )
 
-df_accession["report_date"].max()
+
+# %%
+report_dates = df_accession["report_date"]
+
+for i, acc_date in report_dates.items():
+    acc_num = df_accession.loc[i, "accession_number"]
+
+    df_statement_links[df_statement_links["accession_number"] == acc_num]
 
 
 # %%
