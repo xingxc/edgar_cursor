@@ -6,61 +6,6 @@ import logging
 import utility_belt
 from bs4 import BeautifulSoup
 
-# statement_keys_map = {
-#     "balance_sheet": [
-#         "balance sheet",
-#         "balance sheets",
-#         "statement of financial position",
-#         "consolidated balance sheets",
-#         "consolidated balance sheet",
-#         "consolidated financial position",
-#         "consolidated balance sheets - southern",
-#         "consolidated statements of financial position",
-#         "consolidated statement of financial position",
-#         "consolidated statements of financial condition",
-#         "combined and consolidated balance sheet",
-#         "condensed consolidated balance sheets",
-#         "consolidated balance sheets, as of december 31",
-#         "dow consolidated balance sheets",
-#         "consolidated balance sheets (unaudited)",
-#     ],
-#     "income_statement": [
-#         "income statement",
-#         "income statements",
-#         "statement of earnings (loss)",
-#         "statements of consolidated income",
-#         "consolidated statements of operations",
-#         "consolidated statement of operations",
-#         "consolidated statements of earnings",
-#         "consolidated statement of earnings",
-#         "consolidated statements of income",
-#         "consolidated statement of income",
-#         "consolidated income statements",
-#         "consolidated income statement",
-#         "condensed consolidated statements of earnings",
-#         'condensed consolidated statements of income (loss)',
-#         "consolidated results of operations",
-#         "consolidated statements of income (loss)",
-#         "consolidated statements of income - southern",
-#         "consolidated statements of operations and comprehensive income",
-#         "consolidated statements of comprehensive income",
-#     ],
-#     "cash_flow_statement": [
-#         "cash flows statement",
-#         "cash flows statements",
-#         "statement of cash flows",
-#         "statements of consolidated cash flows",
-#         "consolidated statements of cash flows",
-#         "consolidated statement of cash flows",
-#         "consolidated statement of cash flow",
-#         "consolidated cash flows statements",
-#         "consolidated cash flow statements",
-#         "condensed consolidated statements of cash flows",
-#         "consolidated statements of cash flows (unaudited)",
-#         "consolidated statements of cash flows - southern",
-#     ],
-# }
-
 
 links_logged = {}
 
@@ -783,6 +728,25 @@ def get_statement_df(statement_link, headers):
 #                 print(f"Retrieved: {statement_name} - {statement_link}")
 
 #     return links_filtered
+
+
+def get_filtered_statement_links(df_statement_links, statement_name_key_map):
+    _ = {}
+    for i, possible_key in df_statement_links["statement_name"].items():
+        for statement_name, possible_keys_series in statement_name_key_map.items():
+            index_series = possible_keys_series[
+                possible_keys_series == possible_key
+            ].index
+            if not index_series.empty:
+                _[statement_name] = i
+                break
+
+    _index = list(_.values())
+    _keys = list(_.keys())
+    df_statement_filtered = df_statement_links.loc[_index]
+    df_statement_filtered["statement_name"] = _keys
+
+    return df_statement_filtered
 
 
 def filter_links(links_dict, path_statement_map):

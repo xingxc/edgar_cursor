@@ -77,6 +77,8 @@ links_fk_constraint_name = "fk_accession_number"
 psql_conn.drop_table_if_exists(accession_table_name, engine, cascade=True)
 psql_conn.drop_table_if_exists(links_table_name, engine, cascade=True)
 
+
+# %%
 # Create tables from dataframes
 print(f"export to database: {accession_table_name}")
 df_accession.to_sql(
@@ -117,29 +119,43 @@ psql_conn.add_foreign_key_if_not_exists(
     engine,
 )
 
+# %% Export the statement key mapping to the database
+
+path_json = r"/Users/johnxing/Documents/Documents - Apple Mac Mini/finances/stocks/python/get_SEC_data/statement_key_mapping.json"
+df_json = utility_belt.import_json_file(path_json)
+df_json = pd.DataFrame.from_dict(df_json, orient="index").T
+
+df_json.to_sql(
+    "statement_key_mapping",
+    engine,
+    if_exists="replace",
+    dtype={},
+    index=False,
+)
+
+########## ------ END OF SCRIPT ------ ##########
+
 
 # %% Export accession numbers and links to ticker folder
 
-path_dict = {
-    "ticker": r"/Users/johnxing/Documents/Documents - Apple Mac Mini/finances/stocks/python/get_SEC_data/ticker",
-    "json": r"/Users/johnxing/Documents/Documents - Apple Mac Mini/finances/stocks/python/get_SEC_data/statement_key_mapping.json",
-}
+# path_dict = {
+#     "ticker": r"/Users/johnxing/Documents/Documents - Apple Mac Mini/finances/stocks/python/get_SEC_data/ticker",
+#     "json": r"/Users/johnxing/Documents/Documents - Apple Mac Mini/finances/stocks/python/get_SEC_data/statement_key_mapping.json",
+# }
 
-path_dict["ticker"] = os.path.join(path_dict["ticker"], ticker.lower())
-utility_belt.mkdir(path_dict["ticker"])
+# path_dict["ticker"] = os.path.join(path_dict["ticker"], ticker.lower())
+# utility_belt.mkdir(path_dict["ticker"])
 
-# % Filter for core links
-for acc_num, links in links_full.items():
-    print(f"{acc_num}")
-    links_core[acc_num], _ = edgar_functions.filter_links(links, path_dict["json"])
+# # % Filter for core links
+# for acc_num, links in links_full.items():
+#     print(f"{acc_num}")
+#     links_core[acc_num], _ = edgar_functions.filter_links(links, path_dict["json"])
 
-# Export links and accession numbers
-utility_belt.export_json_file(
-    os.path.join(path_dict["ticker"], f"{ticker}_links_full.json"), links_full
-)
-utility_belt.export_json_file(
-    os.path.join(path_dict["ticker"], f"{ticker}_links_core.json"), links_core
-)
-df_accession.to_csv(os.path.join(path_dict["ticker"], "accession_numbers.csv"))
-
-########## ------ END OF SCRIPT ------ ##########
+# # Export links and accession numbers
+# utility_belt.export_json_file(
+#     os.path.join(path_dict["ticker"], f"{ticker}_links_full.json"), links_full
+# )
+# utility_belt.export_json_file(
+#     os.path.join(path_dict["ticker"], f"{ticker}_links_core.json"), links_core
+# )
+# df_accession.to_csv(os.path.join(path_dict["ticker"], "accession_numbers.csv"))

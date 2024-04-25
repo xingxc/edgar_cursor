@@ -1,4 +1,7 @@
 {
+    "balance_parenthetical": [
+        "consolidated balance sheets (parenthetical)"
+    ],
     "balance_sheet": [
         "balance sheet",
         "balance sheets",
@@ -15,33 +18,6 @@
         "consolidated balance sheets, as of december 31",
         "dow consolidated balance sheets",
         "consolidated balance sheets (unaudited)"
-    ],
-    "balance_parenthetical": [
-        "consolidated balance sheets (parenthetical)"
-    ],
-    "income_statement": [
-        "income statement",
-        "income statements",
-        "statement of earnings (loss)",
-        "statements of consolidated income",
-        "consolidated statements of operations",
-        "consolidated statement of operations",
-        "consolidated statements of earnings",
-        "consolidated statement of earnings",
-        "consolidated statements of income",
-        "consolidated statement of income",
-        "consolidated income statements",
-        "consolidated income statement",
-        "condensed consolidated statements of earnings",
-        "condensed consolidated statements of income (loss)",
-        "consolidated results of operations",
-        "consolidated statements of income (loss)",
-        "consolidated statements of income - southern",
-        "consolidated statements of operations and comprehensive income",
-        "consolidated statements of operations and comprehensive loss",
-        "consolidated statements of comprehensive income",
-        "condensed consolidated statements of income",
-        "condensed consolidated statements of operations and comprehensive loss"
     ],
     "cash_flow_statement": [
         "cash flows statement",
@@ -60,5 +36,30 @@
     "income_comprehensive": [
         "consolidated statements of comprehensive income",
         "condensed consolidated statement of comprehensive income"
+    ],
+    "income_statement": [
+        "income statement",
+        "income statements",
+        "statement of earnings (loss)",
+        "statements of consolidated income",
+        "consolidated statement of income",
+        "consolidated statement of earnings",
+        "consolidated statement of operations",
+        "consolidated statements of income",
+        "consolidated statements of operations",
+        "consolidated statements of earnings",
+        "consolidated statements of income",
+        "consolidated income statements",
+        "consolidated income statement",
+        "condensed consolidated statements of earnings",
+        "condensed consolidated statements of income (loss)",
+        "consolidated results of operations",
+        "consolidated statements of income (loss)",
+        "consolidated statements of income - southern",
+        "consolidated statements of operations and comprehensive income",
+        "consolidated statements of operations and comprehensive loss",
+        "consolidated statements of comprehensive income",
+        "condensed consolidated statements of income",
+        "condensed consolidated statements of operations and comprehensive loss"
     ]
 }
