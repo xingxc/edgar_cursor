@@ -4,23 +4,32 @@ import os
 import sqlalchemy
 import pandas as pd
 import psycopg
+import requests
+import numpy as np
+import edgar_functions
+from bs4 import BeautifulSoup
 
 
-dialect = "postgresql"
-username = os.getenv("DATABASE_USER")
-password = os.getenv("DATABASE_PASSWORD")
-host = "localhost"
-port = "5432"
-dbname = "test"
+# %% Inputs and initilizing info
 
+headers = {"User-agent": "email@email.com"}
 ticker = "nvda"
-column_name = "accession_number"
-table_name = "nvda_accession_numbers"
-constraint_name = "nvda_accession_numbers_pkey"
-engine = sqlalchemy.create_engine(
-    f"{dialect}+psycopg://{username}:{password}@{host}:{port}/{dbname}",
-    client_encoding="utf8",
+
+# %% Get 10k and 10q accession numbers:
+
+acc_10k = edgar_functions.get_filter_filing(
+    ticker, headers=headers, ten_k=True, accession_number_only=False
 )
+acc_10q = edgar_functions.get_filter_filing(
+    ticker, headers=headers, ten_k=False, accession_number_only=False
+)
+
+df_accession = pd.concat([acc_10k, acc_10q], axis=0)
+df_accession.sort_index(inplace=True)
+
+
+#%%
+
 
 # %% add and drop constraints
 
@@ -48,20 +57,3 @@ psql_conn.get_constraints("statement_key_mapping", engine)
 
 # %%
 
-
-def get_statement_name_key_map(df_statement_links, statement_name_key_map):
-    _ = {}
-    for i, possible_key in df_statement_links["statement_name"].items():
-        for statement_name, possible_keys_series in statement_name_key_map.items():
-            index_series = possible_keys_series[
-                possible_keys_series == possible_key
-            ].index
-            if not index_series.empty:
-                _[statement_name] = i
-                break
-
-    _ = list(_.values())
-
-    df_statement_filtered = df_statement_links.loc[_]
-
-    return df_statement_filtered

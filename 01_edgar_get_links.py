@@ -10,6 +10,7 @@ import utility_belt
 import pandas as pd
 import edgar_functions
 import psql_conn
+from bs4 import BeautifulSoup
 
 # %% Inputs and initilizing info
 
@@ -48,7 +49,21 @@ for acc_num, row in df_accession.iterrows():
     df_statement_links = pd.concat([df_statement_links, links_statement_df], axis=0)
     print(f"{acc_num} ; {acc_date} ; links retrieved")
 
-# df_statement_links.reset_index(drop=True, inplace=True)
+
+#%%
+print(df_accession)  # accession number and date relationship
+print(df_statement_links)  # statement links and accession number relationship
+
+# %% Return a filtered dataframe for a specific accession number
+
+# df_filtered = df_statement_links[
+#     df_statement_links["accession_number"] == "000104581024000124"
+# ]
+
+# _ = df_statement_links[df_statement_links["statement_name"].str.contains("segment")]
+# _.to_csv("segment_check.csv")
+# segment information is R36 for nvidia
+
 # %% Create postgres engine and export accession numbers to postgres database
 
 dialect = "postgresql"
@@ -63,8 +78,8 @@ engine = sqlalchemy.create_engine(
 )
 
 # table names and primary/foreign key constraints
-accession_table_name = f"{ticker}_accession_numbers"
-links_table_name = f"{ticker}_statement_link"
+ticker_accession_numbers = f"{ticker}_accession_numbers"
+ticker_statement_link = f"{ticker}_statement_link"
 
 accession_pk_column = "accession_number"
 links_pk_column = "statement_link"
@@ -73,24 +88,25 @@ links_fk_column = "accession_number"
 links_fk_constraint_name = "fk_accession_number"
 
 
+# %%
 # Drop tables if they exist with cascade
-psql_conn.drop_table_if_exists(accession_table_name, engine, cascade=True)
-psql_conn.drop_table_if_exists(links_table_name, engine, cascade=True)
+psql_conn.drop_table_if_exists(ticker_accession_numbers, engine, cascade=True)
+psql_conn.drop_table_if_exists(ticker_statement_link, engine, cascade=True)
 
 
 # %%
 # Create tables from dataframes
-print(f"export to database: {accession_table_name}")
+print(f"export to database: {ticker_accession_numbers}")
 df_accession.to_sql(
-    accession_table_name,
+    ticker_accession_numbers,
     engine,
     if_exists="replace",
     index=True,
 )
 
-print(f"export to database: {links_table_name}")
+print(f"export to database: {ticker_statement_link}")
 df_statement_links.to_sql(
-    links_table_name,
+    ticker_statement_link,
     engine,
     if_exists="replace",
     dtype={},
@@ -99,22 +115,22 @@ df_statement_links.to_sql(
 
 # Add primary and foreign keys
 psql_conn.add_primary_key_if_not_exists(
-    accession_table_name,
+    ticker_accession_numbers,
     accession_pk_column,
     engine,
 )
 
 psql_conn.add_primary_key_if_not_exists(
-    links_table_name,
+    ticker_statement_link,
     links_pk_column,
     engine,
 )
 
 psql_conn.add_foreign_key_if_not_exists(
-    links_table_name,
+    ticker_statement_link,
     links_fk_column,
     links_fk_constraint_name,
-    accession_table_name,
+    ticker_accession_numbers,
     accession_pk_column,
     engine,
 )

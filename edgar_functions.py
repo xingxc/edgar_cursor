@@ -1,4 +1,5 @@
 import pandas as pd
+import re
 import requests
 import calendar
 import numpy as np
@@ -273,6 +274,55 @@ def get_statement_file_names_in_filling_summary(ticker, acc_num, headers):
 
         for report in filing_summary_soup.find_all("Report"):
             file_name = get_file_name(report)
+
+            if file_name is None:
+                continue
+            
+            short_name, long_name = report.find("ShortName"), report.find(
+                "LongName"
+            )
+            # print(f'short_name: {short_name} ; long_name: {long_name} ; file_name: {file_name}')
+            statement_file_name_dict[short_name.text.lower()] = file_name
+
+        return statement_file_name_dict
+
+    except requests.RequestException as e:
+        print(f"An error occured: {e}")
+        return {}
+
+
+def get_statement_file_names_in_filling_summary_filtered(ticker, acc_num, headers):
+    """
+    Inputs:
+        ticker [str]: ticker symbol
+        acc_num [str]: accession number
+        headers [dict]: headers for the requests.get() function
+
+    Returns:
+        statement_file_names_dict [dict]: dictionary of statement names and file names
+
+    Description:
+        - Gets the cik number from the ticker symbol
+        - Gets the filing summary xml from baselink and return the XML as string
+        - Parses the filing summary XML string into a BeautifulSoup object
+        - Loops through the BeautifulSoup object to find the file names of the statements
+            - calls is_file_statement() to check if the report is a statement
+        - Returns statement_file_names_dict which is a dictionary of statement names and file names
+    """
+    try:
+        session = requests.Session()
+        cik = cik_matching_ticker(ticker, headers=headers)
+        baselink = f"https://www.sec.gov/Archives/edgar/data/{cik}/{acc_num}/"
+        filing_summary_link = f"{baselink}/FilingSummary.xml"
+        filing_summary_response = session.get(
+            filing_summary_link, headers=headers
+        ).content.decode("utf-8")
+
+        filing_summary_soup = BeautifulSoup(filing_summary_response, "lxml-xml")
+        statement_file_name_dict = {}
+
+        for report in filing_summary_soup.find_all("Report"):
+            file_name = get_file_name(report)
             short_name, long_name = report.find("ShortName"), report.find("LongName")
             # print(f'short_name: {short_name} ; long_name: {long_name} ; file_name: {file_name}')
             if is_file_statement(long_name, short_name, file_name):
@@ -356,6 +406,21 @@ def get_statement_links(ticker, acc_num, acc_date, headers):
 
 
 def get_statement_soup(statement_link, headers):
+
+    '''
+    Args:
+        - statement_link[str]: link to the statement
+        - headers[dict]: headers for the request
+
+    Returns:
+        - BeautifulSoup object of the html or xml of the statement from statement_link
+
+    Description:
+        - retrieves the statement from the link and returns it as a BeautifulSoup object
+    '''
+
+
+
     session = requests.Session()
     try:
         statement_response = session.get(statement_link, headers=headers)
@@ -491,7 +556,15 @@ def extract_columns_values_and_dates_from_statement(soup):
                 continue  # Skip rows without onclick elements
 
             # save onclick elements to columns_dict and append name to columns_list
-            columns_dict[onclick_elements[0].text] = onclick_elements
+            onclick_string = onclick_elements[0].get("onclick")
+            regex_match = re.search(
+                r"Show\.showAR\( this, '(.*?)', window \);", onclick_string
+            )
+
+            if regex_match:
+                columns_dict[onclick_elements[0].text] = regex_match.group(1)
+
+            # columns_dict[onclick_elements[0].text] = onclick_elements
             columns_list.append(onclick_elements[0].text)
 
             # Inititate values array with NaNs
@@ -554,12 +627,16 @@ def get_datetime_index_dates_from_statement(soup: BeautifulSoup) -> pd.DatetimeI
         - convert the list of strings to a Pandas DatetimeIndex object
         - return the DatetimeIndex object
     """
-    table_headers = soup.find_all("th", {"class": "th"})
-    dates = [str(th.div.string) for th in table_headers if th.div and th.div.string]
+    
+    table_dates = soup.find_all("th", {"class": "th"})
+    dates = [str(th.div.string) for th in table_dates if th.div and th.div.string]
     dates = [standardize_date(date).replace(".", "") for date in dates]
-    date_time_index = pd.to_datetime(dates)
+    try:
+        dates = pd.to_datetime(dates)
+    except Exception as e:
+        print(f"Error converting dates to datetime: {e}")
 
-    return date_time_index
+    return dates
 
 
 def standardize_date(date: str) -> str:

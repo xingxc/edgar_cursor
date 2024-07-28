@@ -1,9 +1,13 @@
 import json
 import subprocess
+from bs4 import BeautifulSoup
 
 
 def import_json_file(file_path):
     """
+
+    Import a json file as a dictionary.
+
     Args:
         - file_path[str]: file path to the json file
 
@@ -17,6 +21,9 @@ def import_json_file(file_path):
 
 def export_json_file(file_path, data):
     """
+
+    Export a dictionary to a json file.
+
     Args:
         - file_path[str]: file path to the json file
         - data[dict]: dictionary of the json file
@@ -30,6 +37,8 @@ def export_json_file(file_path, data):
 
 def mkdir(path_dir):
     """
+    Create a directory if it does not exist.
+
     Args:
         - path_dir[str]: file path to the directory
 
@@ -40,3 +49,18 @@ def mkdir(path_dir):
     print(command)
     subprocess.run(command, shell=True, capture_output=True, text=True)
 
+
+def save_soup_to_html(soup, file_path):
+    """
+
+    Saves a BeautifulSoup object as a prettified HTML file.
+
+    Args:
+        - soup (BeautifulSoup): The BeautifulSoup object to save.
+        - file_path (str): The file path where the HTML should be saved.
+
+    Returns:
+        - None
+    """
+    with open(file_path, "w") as file:
+        file.write(soup.prettify())

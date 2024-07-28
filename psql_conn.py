@@ -362,10 +362,12 @@ def get_sql_table_where_fk_equal(
     """
 
     sql = f"""
-            SELECT a.report_date, a.form, t.accession_number, t.statement_name, t.statement_link FROM {table_name_fk} t
-            JOIN {table_name_pk} a ON t.{column_name_fk} = a.{column_name_fk}
-            WHERE t.{column_name_fk} = '{value_pk}';
-           """
+        SELECT a.report_date, a.form, t.accession_number, t.statement_name, t.statement_link
+        FROM {table_name_fk} t
+        JOIN {table_name_pk} a ON t.{column_name_fk} = a.{column_name_fk}
+        WHERE t.{column_name_fk} = '{value_pk}';
+        """
+
 
     result = execute_query(sql, engine)
 
