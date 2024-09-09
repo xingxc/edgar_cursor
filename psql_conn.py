@@ -234,6 +234,48 @@ def get_column_names(table_name, engine):
     return rows
 
 
+def get_all_constraints(engine):
+    """
+    Get all constraints of all tables
+
+    Parameters:
+        engine: sqlalchemy.engine.base.Connection
+            sqlalchemy engine to connect to psql database
+
+    Returns:
+        rows: list
+            list of constraints of all tables in the database
+    """
+
+    sql = """
+    SELECT 
+        tc.table_name, 
+        tc.constraint_name, 
+        tc.constraint_type, 
+        kcu.column_name 
+    FROM 
+        information_schema.table_constraints AS tc 
+    JOIN 
+        information_schema.key_column_usage AS kcu 
+    ON 
+        tc.constraint_name = kcu.constraint_name 
+    WHERE 
+        tc.table_schema = 'public' 
+    ORDER BY 
+        tc.table_name, tc.constraint_name;
+    """
+
+    results = execute_query(sql, engine)
+    rows = results.fetchall()
+
+    # Add header row
+    header = ('table_name', 'constraint_name', 'constraint_type', 'column_name')
+    rows.insert(0, header)
+    rows = pd.DataFrame(rows[1:], columns=rows[0])
+
+    return rows
+
+
 def get_constraints(table_name, engine):
     """
 
@@ -302,7 +344,7 @@ def get_constraint_relationship(constraint_name, engine):
     return rows
 
 
-def get_sql_table_where_column_equal(
+def get_rows_where_column_equal(
     table_name,
     column_name,
     value,
@@ -367,7 +409,6 @@ def get_sql_table_where_fk_equal(
         JOIN {table_name_pk} a ON t.{column_name_fk} = a.{column_name_fk}
         WHERE t.{column_name_fk} = '{value_pk}';
         """
-
 
     result = execute_query(sql, engine)
 

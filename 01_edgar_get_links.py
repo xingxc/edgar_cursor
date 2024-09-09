@@ -46,11 +46,13 @@ for acc_num, row in df_accession.iterrows():
     )
 
     links_full[acc_num] = links_statement_dict[acc_num]
+    links_statement_df.insert(loc=1, column='report_date', value=acc_date)
+
     df_statement_links = pd.concat([df_statement_links, links_statement_df], axis=0)
     print(f"{acc_num} ; {acc_date} ; links retrieved")
 
 
-#%%
+# %%
 print(df_accession)  # accession number and date relationship
 print(df_statement_links)  # statement links and accession number relationship
 
