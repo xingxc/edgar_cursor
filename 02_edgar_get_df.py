@@ -14,7 +14,7 @@ import sqlalchemy
 # %% Inputs and initilizing info
 ticker = "nvda"
 headers = {"User-agent": "email@email.com"}
-path_ticker = "/Users/johnxing/Documents/Documents - Apple Mac Mini/finances/stocks/ticker/nvda/python"
+path_ticker = "/Users/johnxing/Documents/Documents - Apple Mac Mini/finances/stocks/python/get_SEC_data/ticker"
 path_statement_html = f"{path_ticker}/statements_html"
 path_statement_df = f"{path_ticker}/statements_df"
 

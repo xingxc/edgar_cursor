@@ -1,3 +1,4 @@
+import os
 import pandas as pd
 import re
 import requests
@@ -277,10 +278,8 @@ def get_statement_file_names_in_filling_summary(ticker, acc_num, headers):
 
             if file_name is None:
                 continue
-            
-            short_name, long_name = report.find("ShortName"), report.find(
-                "LongName"
-            )
+
+            short_name, long_name = report.find("ShortName"), report.find("LongName")
             # print(f'short_name: {short_name} ; long_name: {long_name} ; file_name: {file_name}')
             statement_file_name_dict[short_name.text.lower()] = file_name
 
@@ -333,6 +332,118 @@ def get_statement_file_names_in_filling_summary_filtered(ticker, acc_num, header
     except requests.RequestException as e:
         print(f"An error occured: {e}")
         return {}
+
+
+def get_report_html(ticker, acc_num, headers):
+    """
+    Inputs:
+        ticker [str]: ticker symbol
+        acc_num [str]: accession number
+        headers [dict]: headers for the requests.get() function
+
+    Returns:
+        html_link [str]: link to the html file
+
+    Description:
+        - Gets the cik number from the ticker symbol
+        - Gets the filing summary xml from baselink and return the XML as string
+        - Parses the filing summary XML string into a BeautifulSoup object
+        - Loops through the BeautifulSoup object to find the html link
+        - Returns the html link
+    """
+
+    # get cik and filing summary link
+    cik = cik_matching_ticker(ticker, headers=headers)
+    baselink = f"https://www.sec.gov/Archives/edgar/data/{cik}/{acc_num}/"
+    filing_summary_link = f"{baselink}/FilingSummary.xml"
+
+    # create a session and return the beautiful soup object of the filing summary link
+    session = requests.Session()
+    filing_summary_response = session.get(
+        filing_summary_link, headers=headers
+    ).content.decode("utf-8")
+    filing_summary_soup = BeautifulSoup(filing_summary_response, "lxml-xml")
+
+    # find and return the html link
+    for file in filing_summary_soup.find_all("File"):
+        classes = file.get("original")
+        if classes == file.text:
+            html_link = os.path.join(baselink, file.text)
+            return html_link
+
+
+def get_index_link(ticker, acc_num, headers):
+    """
+    Inputs:
+        ticker [str]: ticker symbol
+        acc_num [str]: accession number
+        headers [dict]: headers for the requests.get() function
+
+    Returns:
+        index_link [str]: link to the index file
+
+    Description:
+        - Gets the cik number from the ticker symbol
+        - Gets the filing summary xml from baselink and return the XML as string
+        - Parses the filing summary XML string into a BeautifulSoup object
+        - Loops through the BeautifulSoup object to find the index link
+        - Returns the index link
+    """
+
+    # get the cik and base link
+    cik = cik_matching_ticker(ticker, headers=headers)
+    baselink = f"https://www.sec.gov/Archives/edgar/data/{cik}/{acc_num}"
+
+    # create a session and return the beautiful soup object of the base link
+    session = requests.Session()
+    baselink_response = session.get(baselink, headers=headers).content.decode("utf-8")
+    baselink_soup = BeautifulSoup(baselink_response, "lxml-xml")
+
+    # find the div with id main-content
+    main_content_soup = baselink_soup.find_all("div", id="main-content")
+
+    # find the index link
+    for content_soup in main_content_soup:
+        for tr in content_soup.find_all("tr"):
+            for td in tr.find_all("td"):
+                for a in td.find_all("a", href=True):
+                    if "index.html" in a.get("href"):
+                        index_link = f"https://www.sec.gov{a.get('href')}"
+                        return index_link
+
+
+def get_ixbrl_link(ticker, acc_num, headers):
+    """
+    Inputs:
+        ticker [str]: ticker symbol
+        acc_num [str]: accession number
+        headers [dict]: headers for the requests.get() function
+    
+    Returns:
+        iXBRL_link [str]: link to the iXBRL file
+    
+    Description:
+        - Gets the index link from get_index_link
+        - Creates a session and returns the beautiful soup object of the index link
+        - Iterates through the rows to find the one with text "iXBRL"
+        - Returns the iXBRL link
+
+    """
+    index_link = get_index_link(ticker, acc_num, headers)
+    # create a session and return the beautiful soup object of the index link
+    session = requests.Session()
+    index_link_response = session.get(index_link, headers=headers).content.decode(
+        "utf-8"
+    )
+    index_link_soup = BeautifulSoup(index_link_response, "lxml-xml")
+
+    # Ensure index_link_soup is not None
+    if index_link_soup:
+        # Iterate through the rows to find the one with text "iXBRL"
+        for row in index_link_soup.find_all("td", scope="row"):
+            if row.find(string="iXBRL"):
+                iXBRL_link = f"https://www.sec.gov{row.find('a').get('href')}"
+                return iXBRL_link
 
 
 # def get_statement_links(ticker, acc_num, acc_date, headers):
@@ -406,8 +517,7 @@ def get_statement_links(ticker, acc_num, acc_date, headers):
 
 
 def get_statement_soup(statement_link, headers):
-
-    '''
+    """
     Args:
         - statement_link[str]: link to the statement
         - headers[dict]: headers for the request
@@ -417,9 +527,7 @@ def get_statement_soup(statement_link, headers):
 
     Description:
         - retrieves the statement from the link and returns it as a BeautifulSoup object
-    '''
-
-
+    """
 
     session = requests.Session()
     try:
@@ -627,7 +735,7 @@ def get_datetime_index_dates_from_statement(soup: BeautifulSoup) -> pd.DatetimeI
         - convert the list of strings to a Pandas DatetimeIndex object
         - return the DatetimeIndex object
     """
-    
+
     table_dates = soup.find_all("th", {"class": "th"})
     dates = [str(th.div.string) for th in table_dates if th.div and th.div.string]
     dates = [standardize_date(date).replace(".", "") for date in dates]

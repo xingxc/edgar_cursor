@@ -15,7 +15,18 @@ from bs4 import BeautifulSoup
 # %% Inputs and initilizing info
 
 headers = {"User-agent": "email@email.com"}
+path_tickers = "/Users/johnxing/Documents/Documents - Apple Mac Mini/finances/stocks/python/get_SEC_data/ticker"
 ticker = "nvda"
+
+
+# %% Create ticker folder and subfolders
+path_ticker = os.path.join(path_tickers, ticker.lower())
+path_statement_html = os.path.join(path_ticker, "statements_html")
+path_statement_df = os.path.join(path_ticker, "statements_df")
+
+utility_belt.mkdir(path_ticker)
+utility_belt.mkdir(path_statement_html)
+utility_belt.mkdir(path_statement_df)
 
 # %% Get 10k and 10q accession numbers:
 
@@ -28,6 +39,8 @@ acc_10q = edgar_functions.get_filter_filing(
 
 df_accession = pd.concat([acc_10k, acc_10q], axis=0)
 df_accession.sort_index(inplace=True)
+df_accession["ixbrl_link"] = None
+df_accession["html_link"] = None
 
 # %% Retrieve links for all statements
 
@@ -35,9 +48,12 @@ links_full = {}
 links_core = {}
 
 df_statement_links = pd.DataFrame()
+# df_report_links = pd.DataFrame()
 
 for acc_num, row in df_accession.iterrows():
     acc_date = row["report_date"]
+
+    # Get statement links
     links_statement_dict, links_statement_df = edgar_functions.get_statement_links(
         ticker,
         acc_num,
@@ -46,25 +62,28 @@ for acc_num, row in df_accession.iterrows():
     )
 
     links_full[acc_num] = links_statement_dict[acc_num]
-    links_statement_df.insert(loc=1, column='report_date', value=acc_date)
+    links_statement_df.insert(loc=1, column="report_date", value=acc_date)
 
     df_statement_links = pd.concat([df_statement_links, links_statement_df], axis=0)
+
+    # Get report links
+    df_accession["ixbrl_link"].loc[acc_num] = edgar_functions.get_ixbrl_link(
+        ticker, acc_num, headers
+    )
+    df_accession["html_link"].loc[acc_num] = edgar_functions.get_report_html(
+        ticker, acc_num, headers
+    )
+
+    # Print progress
     print(f"{acc_num} ; {acc_date} ; links retrieved")
 
+# %% Export dataframes to csv
 
-# %%
 print(df_accession)  # accession number and date relationship
 print(df_statement_links)  # statement links and accession number relationship
 
-# %% Return a filtered dataframe for a specific accession number
-
-# df_filtered = df_statement_links[
-#     df_statement_links["accession_number"] == "000104581024000124"
-# ]
-
-# _ = df_statement_links[df_statement_links["statement_name"].str.contains("segment")]
-# _.to_csv("segment_check.csv")
-# segment information is R36 for nvidia
+df_statement_links.to_csv(os.path.join(path_ticker, "nvda_statement_links.csv"))
+df_accession.to_csv(os.path.join(path_ticker, "nvda_accession_numbers.csv"))
 
 # %% Create postgres engine and export accession numbers to postgres database
 
@@ -90,14 +109,13 @@ links_fk_column = "accession_number"
 links_fk_constraint_name = "fk_accession_number"
 
 
-# %%
+# %% Export to database
 # Drop tables if they exist with cascade
 psql_conn.drop_table_if_exists(ticker_accession_numbers, engine, cascade=True)
 psql_conn.drop_table_if_exists(ticker_statement_link, engine, cascade=True)
 
-
-# %%
-# Create tables from dataframes
+# % Exporting data
+# Create sql tables from dataframes
 print(f"export to database: {ticker_accession_numbers}")
 df_accession.to_sql(
     ticker_accession_numbers,
@@ -137,6 +155,7 @@ psql_conn.add_foreign_key_if_not_exists(
     engine,
 )
 
+
 # %% Export the statement key mapping to the database
 
 path_json = r"/Users/johnxing/Documents/Documents - Apple Mac Mini/finances/stocks/python/get_SEC_data/statement_key_mapping.json"
@@ -153,27 +172,4 @@ df_json.to_sql(
 
 ########## ------ END OF SCRIPT ------ ##########
 
-
-# %% Export accession numbers and links to ticker folder
-
-# path_dict = {
-#     "ticker": r"/Users/johnxing/Documents/Documents - Apple Mac Mini/finances/stocks/python/get_SEC_data/ticker",
-#     "json": r"/Users/johnxing/Documents/Documents - Apple Mac Mini/finances/stocks/python/get_SEC_data/statement_key_mapping.json",
-# }
-
-# path_dict["ticker"] = os.path.join(path_dict["ticker"], ticker.lower())
-# utility_belt.mkdir(path_dict["ticker"])
-
-# # % Filter for core links
-# for acc_num, links in links_full.items():
-#     print(f"{acc_num}")
-#     links_core[acc_num], _ = edgar_functions.filter_links(links, path_dict["json"])
-
-# # Export links and accession numbers
-# utility_belt.export_json_file(
-#     os.path.join(path_dict["ticker"], f"{ticker}_links_full.json"), links_full
-# )
-# utility_belt.export_json_file(
-#     os.path.join(path_dict["ticker"], f"{ticker}_links_core.json"), links_core
-# )
-# df_accession.to_csv(os.path.join(path_dict["ticker"], "accession_numbers.csv"))
+# %%
