@@ -1,0 +1,5 @@
+,report_date,form,accession_number,statement_name,statement_link,tables_scaped
+0,2023-06-30,10K,000165037223000040,balance_sheet,https://www.sec.gov/Archives/edgar/data/0001650372/000165037223000040/R2.htm,1
+1,2023-06-30,10K,000165037223000040,balance_parenthetical,https://www.sec.gov/Archives/edgar/data/0001650372/000165037223000040/R3.htm,1
+2,2023-06-30,10K,000165037223000040,income_statement,https://www.sec.gov/Archives/edgar/data/0001650372/000165037223000040/R4.htm,1
+3,2023-06-30,10K,000165037223000040,cash_flow_statement,https://www.sec.gov/Archives/edgar/data/0001650372/000165037223000040/R8.htm,1

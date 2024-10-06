@@ -13,7 +13,7 @@ from bs4 import BeautifulSoup
 # %% Inputs and initilizing info
 
 headers = {"User-agent": "email@email.com"}
-ticker = "nvda"
+ticker = "team"
 
 
 # %% Create postgres engine and export accession numbers to postgres database
@@ -27,6 +27,13 @@ db_name = "test"
 engine = sqlalchemy.create_engine(
     f"{dialect}+psycopg://{username}:{password}@{host}:{port}/{db_name}"
 )
+
+#%%
+
+
+psql_conn.get_all_constraints(engine)
+
+
 
 # %%
 # psql_conn.get_table_names_like(".*", engine)

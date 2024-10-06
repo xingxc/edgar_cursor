@@ -1,0 +1,5 @@
+,report_date,form,accession_number,statement_name,statement_link,tables_scaped
+0,2019-01-27,10-K,000104581019000023,income_statement,https://www.sec.gov/Archives/edgar/data/0001045810/000104581019000023/R2.htm,0
+1,2019-01-27,10-K,000104581019000023,income_comprehensive,https://www.sec.gov/Archives/edgar/data/0001045810/000104581019000023/R3.htm,1
+2,2019-01-27,10-K,000104581019000023,balance_sheet,https://www.sec.gov/Archives/edgar/data/0001045810/000104581019000023/R4.htm,1
+3,2019-01-27,10-K,000104581019000023,cash_flow_statement,https://www.sec.gov/Archives/edgar/data/0001045810/000104581019000023/R8.htm,1

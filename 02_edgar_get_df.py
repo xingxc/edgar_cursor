@@ -1,4 +1,3 @@
-
 # %% Imports
 import re
 import os
@@ -10,14 +9,16 @@ import edgar_functions
 import psql_conn
 import sqlalchemy
 
-
 # %% Inputs and initilizing info
-ticker = "nvda"
-headers = {"User-agent": "email@email.com"}
-path_ticker = "/Users/johnxing/Documents/Documents - Apple Mac Mini/finances/stocks/python/get_SEC_data/ticker"
-path_statement_html = f"{path_ticker}/statements_html"
-path_statement_df = f"{path_ticker}/statements_df"
 
+headers = {"User-agent": "email@email.com"}
+path_tickers = "/Users/johnxing/Documents/Documents - Apple Mac Mini/finances/stocks/python/get_SEC_data/ticker"
+ticker = "team"
+
+# %% Create ticker folder and subfolders
+path_ticker = os.path.join(path_tickers, ticker.lower())
+path_statement_html = os.path.join(path_ticker, "statements_html")
+path_statement_df = os.path.join(path_ticker, "statements_df")
 
 # %% Create postgres engine and export accession numbers to postgres database
 dialect = "postgresql"
@@ -59,13 +60,172 @@ df_accession = pd.read_sql_table(ticker_accession_numbers, engine)
 # Get the statement key mapping
 df_statement_name_key_map = pd.read_sql_table("statement_key_mapping", engine)
 
+
 # %% Get all the links and filtered links for the accession numbers
 
 dict_statement_link_collector = {}
 dict_statement_link_filtered = {}
 
-# for i, row in df_accession.iterrows():
-df_accession_row = df_accession.iloc[-1, :]
+for i, df_accession_row in df_accession.iterrows():
+    # df_accession_row = df_accession.iloc[-1, :]
+    acc_num = df_accession_row["accession_number"]
+    report_date = df_accession_row["report_date"]
+    form_name = df_accession_row["form"]
+    print(
+        f"-------------------- {ticker} - {acc_num} - {report_date} - {form_name} --------------------"
+    )
+
+    # Return dataframe from "accession number table" and "statement link table" for specific accession number
+    df_statement_links = psql_conn.get_sql_table_where_fk_equal(
+        table_name_fk=ticker_statement_link,
+        column_name_fk="accession_number",
+        table_name_pk=ticker_accession_numbers,
+        value_pk=acc_num,
+        engine=engine,
+    )
+
+    # % Get the filtered statement links
+    dict_statement_link_collector[acc_num] = df_statement_links
+    dict_statement_link_filtered[acc_num] = (
+        edgar_functions.get_filtered_statement_links(
+            df_statement_links, df_statement_name_key_map
+        )
+    )
+
+    # % Display the filtered statement links
+    # display(dict_statement_link_collector[acc_num])
+    # display(dict_statement_link_filtered[acc_num])
+
+    # % Get statements from collector links
+    # statement_name_series = dict_statement_link_collector[acc_num]["statement_name"]
+    statement_name_series = dict_statement_link_filtered[acc_num]["statement_name"]
+
+    # log of the statements that are scraped
+    statement_log = pd.DataFrame(
+        columns=[
+            "report_date",
+            "form",
+            "accession_number",
+            "statement_name",
+            "statement_link",
+            "tables_scaped",
+        ]
+    )
+
+    # % Return dataframe
+    for ticker_statement_name in statement_name_series:
+
+        # ticker_statement_name = statement_name_series[0]
+        statement_info = dict_statement_link_filtered[acc_num][
+            dict_statement_link_filtered[acc_num]["statement_name"]
+            == ticker_statement_name
+        ]
+        # statement_info.loc[:, 'tables_scaped'] = 0
+        statement_info.insert(len(statement_info.columns), "tables_scaped", [0])
+
+        # Get statement soup from link
+        statement_link = statement_info["statement_link"].iloc[0]
+        statement_soup = edgar_functions.get_statement_soup(
+            statement_link, headers=headers
+        )
+
+        # Save the soup to html
+        utility_belt.save_soup_to_html(
+            statement_soup,
+            os.path.join(
+                path_statement_html,
+                f"{ticker}_{report_date}_{form_name}_{acc_num}_{ticker_statement_name}.html",
+            ),
+        )
+
+        print(f"output html: {ticker} ; {acc_num} ; {ticker_statement_name}")
+
+        # % Find all statement soup with class as tag_filter
+        tag_filter = "report"
+        tag_list = statement_soup.find_all("table", class_=tag_filter)
+
+        # % Start of iteration for all tables
+        for i, tag_soup in enumerate(tag_list):
+            try:
+                # % Get the date
+                statement_date = (
+                    edgar_functions.get_datetime_index_dates_from_statement(tag_soup)
+                )
+
+                # Get the header
+                statement_header = tag_soup.find("th", class_="tl")
+                statement_header = statement_header.find_parent("tr")
+                statement_header = statement_header.text.strip().replace("\n", " ; ")
+                # print(statement_header)
+
+                # % Get the data from tag_soup
+                classes_to_find = ["re", "ro", "rou", "reu"]
+                tag_soup_rows = tag_soup.find_all(
+                    ["tr", "th", "td"], class_=classes_to_find
+                )
+
+                statement_df = []
+                class_row = ["nump", "pl"]
+
+                for row in tag_soup_rows:
+                    cols = row.find_all(["tr", "th", "td"], class_=class_row)
+                    cols = [ele.text.strip() for ele in cols]
+                    statement_df.append(cols)  # Add the data
+
+                # % Construct DataFrame
+                statement_df = pd.DataFrame(statement_df)
+                statement_df = statement_df.set_index(0)
+                statement_df.index.name = statement_header
+                statement_df.columns = statement_date
+                # statement_df.name = statement_name
+
+                # display(statement_df)
+                report_name = f"{ticker}_{report_date}_{form_name}_{acc_num}_{ticker_statement_name}_{i}"
+
+                # Export the income statement to csv
+                statement_df.to_csv(
+                    os.path.join(
+                        path_statement_df,
+                        f"{report_name}_{i}.csv",
+                    )
+                )
+                print(f"output csv: {ticker} ; {acc_num} ; {ticker_statement_name}")
+
+                # Export the statement to the database
+                statement_df.to_sql(
+                    report_name,
+                    engine,
+                    if_exists="replace",
+                    index=True,
+                )
+                print(f"output sql: {ticker} ; {acc_num} ; {ticker_statement_name}")
+
+                statement_info.loc[:, "tables_scaped"] = (
+                    statement_info["tables_scaped"] + 1
+                )
+
+            except Exception as e:
+                print(f"Error: {e}")
+
+        statement_log = pd.concat([statement_log, statement_info], ignore_index=True)
+
+    # Output the statement log for the statements that are outputed
+    print(f"{acc_num} - {report_date} - {form_name}")
+    statement_log.to_csv(
+        f"{path_ticker}/{ticker}_{report_date}_{form_name}_{acc_num}_edgar_statement_log.csv"
+    )
+
+
+# %% ------------------------- SINGLE TEST -------------------------
+
+
+dict_statement_link_collector = {}
+dict_statement_link_filtered = {}
+
+# for i, df_accession_row in df_accession.iterrows():
+
+i = df_accession.index[-2]
+df_accession_row = df_accession.iloc[i, :]
 acc_num = df_accession_row["accession_number"]
 report_date = df_accession_row["report_date"]
 form_name = df_accession_row["form"]
@@ -80,18 +240,19 @@ df_statement_links = psql_conn.get_sql_table_where_fk_equal(
     engine=engine,
 )
 
-# %% Collector and filtered links
+# % Get the filtered statement links
 dict_statement_link_collector[acc_num] = df_statement_links
 dict_statement_link_filtered[acc_num] = edgar_functions.get_filtered_statement_links(
     df_statement_links, df_statement_name_key_map
 )
 
-display(dict_statement_link_collector[acc_num])
-display(dict_statement_link_filtered[acc_num])
+# % Display the filtered statement links
+# display(dict_statement_link_collector[acc_num])
+# display(dict_statement_link_filtered[acc_num])
 
-# %% Get statements from collector links
-
-statement_name_series = dict_statement_link_collector[acc_num]["statement_name"]
+# % Get statements from collector links
+# statement_name_series = dict_statement_link_collector[acc_num]["statement_name"]
+statement_name_series = dict_statement_link_filtered[acc_num]["statement_name"]
 
 # log of the statements that are scraped
 statement_log = pd.DataFrame(
@@ -104,105 +265,123 @@ statement_log = pd.DataFrame(
         "tables_scaped",
     ]
 )
+# % Return dataframe
+# for ticker_statement_name in statement_name_series:
+# ticker_statement_name = statement_name_series[0]
+
+ticker_statement_name = statement_name_series[3]
+statement_info = dict_statement_link_filtered[acc_num][
+    dict_statement_link_filtered[acc_num]["statement_name"] == ticker_statement_name
+]
+statement_info.insert(len(statement_info.columns), "tables_scaped", [0])
+
+# Get statement soup from link
+statement_link = statement_info["statement_link"].iloc[0]
+statement_soup = edgar_functions.get_statement_soup(statement_link, headers=headers)
 
 
-#%%
-for ticker_statement_name in statement_name_series:
+# %%
+# Save the soup to html
+utility_belt.save_soup_to_html(
+    statement_soup,
+    os.path.join(
+        path_statement_html,
+        f"{report_date}_{acc_num}_{ticker_statement_name}.html",
+    ),
+)
 
-    # ticker_statement_name = statement_name_series[0]
-    statement_info = dict_statement_link_collector[acc_num][
-        dict_statement_link_collector[acc_num]["statement_name"]
-        == ticker_statement_name
-    ]
-    statement_info["tables_scaped"] = 0
+print(f"html: {acc_num} ; {ticker_statement_name}")
 
-    # Get statement soup from link
-    statement_link = statement_info["statement_link"].iloc[0]
-    statement_soup = edgar_functions.get_statement_soup(statement_link, headers=headers)
+# % Find all statement soup with class as tag_filter
+tag_filter = "report"
+tag_list = statement_soup.find_all("table", class_=tag_filter)
 
-    # Save the soup to html
-    utility_belt.save_soup_to_html(
-        statement_soup,
-        os.path.join(
-            path_statement_html, f"{report_date}_{acc_num}_{ticker_statement_name}.html"
-        ),
-    )
+# % Start of iteration for all tables
+for i, tag_soup in enumerate(tag_list):
+    # try:
+    # % Get the date
+    statement_date = edgar_functions.get_datetime_index_dates_from_statement(tag_soup)
 
-    print(f"html: {acc_num} ; {ticker_statement_name}")
+    # Get the header
+    statement_header = tag_soup.find("th", class_="tl")
+    statement_header = statement_header.find_parent("tr")
+    statement_header = statement_header.text.strip().replace("\n", " ; ")
+    print(statement_header)
 
-    # % Find all statement soup with class as tag_filter
-    tag_filter = "report"
-    tag_list = statement_soup.find_all("table", class_=tag_filter)
+    # % Get the data from tag_soup
+    classes_to_find = ["re", "ro", "rou", "reu"]
+    tag_soup_rows = tag_soup.find_all(["tr", "th", "td"], class_=classes_to_find)
 
-    # % Start of iteration for all tables
-    for i, tag_soup in enumerate(tag_list):
-        try:
-            # % Get the date
-            statement_date = edgar_functions.get_datetime_index_dates_from_statement(
-                tag_soup
-            )
+    statement_df = []
+    class_row = ["nump", "pl"]
+    for row in tag_soup_rows:
+        cols = row.find_all(
+            ["tr", "th", "td"], class_=class_row
+        )  # This handles both th and td
+        # cols = row.find_all(["tr", "th", "td"])  # This handles both th and td
+        cols = [ele.text.strip() for ele in cols]
+        statement_df.append(cols)  # Add the data
 
-            # Get the header
-            statement_header = tag_soup.find("th", class_="tl")
-            statement_header = statement_header.find_parent("tr")
-            statement_header = statement_header.text.strip().replace("\n", " ; ")
-            print(statement_header)
+    # % Construct DataFrame
+    statement_df = pd.DataFrame(statement_df)
 
-            # % Get the data from tag_soup
-            classes_to_find = ["re", "ro", "rou", "reu"]
-            tag_soup_rows = tag_soup.find_all(
-                ["tr", "th", "td"], class_=classes_to_find
-            )
+    statement_df = statement_df.set_index(0)
+    statement_df.index.name = statement_header
+    statement_df.columns = statement_date
 
-            statement_df = []
-            for row in tag_soup_rows:
-                cols = row.find_all(["tr", "th", "td"])  # This handles both th and td
-                cols = [ele.text.strip() for ele in cols]
-                statement_df.append(cols)  # Add the data
+    display(statement_df)
 
-            # % Construct DataFrame
-            statement_df = pd.DataFrame(statement_df)
-            statement_df = statement_df.set_index(0)
-            statement_df.index.name = statement_header
-            statement_df.columns = statement_date
-            # statement_df.name = statement_name
-            display(statement_df)
+    # report_name = f"{ticker}-{report_date}_{acc_num}_{ticker_statement_name}_{i}"
 
-            # Export the income statement to csv
-            statement_df.to_csv(
-                os.path.join(
-                    path_statement_df,
-                    f"{report_date}_{acc_num}_{ticker_statement_name}_{i}.csv",
-                )
-            )
-            statement_info["tables_scaped"] += 1
-        except Exception as e:
-            print(f"Error: {e}")
+    # # Export the statement to csv
+    # statement_df.to_csv(
+    #     os.path.join(
+    #         path_statement_df,
+    #         f"{report_name}.csv",
+    #     )
+    # )
 
-    statement_log = pd.concat([statement_log, statement_info], ignore_index=True)
+    # # Export the statement to the database
+    # statement_df.to_sql(
+    #     report_name,
+    #     engine,
+    #     if_exists="replace",
+    #     index=True,
+    # )
+
+    # statement_info["tables_scaped"] += 1
+
+    # except Exception as e:
+    #     print(f"Error: {e}")
+
+statement_log = pd.concat([statement_log, statement_info], ignore_index=True)
 
 # Output the statement log for the statements that are outputed
 print(f"{acc_num} - {report_date} - {form_name}")
 statement_log.to_csv(
-    f"{path_ticker}/{report_date}_{acc_num}_{form_name}_edgar_statement_log.csv"
+    f"{path_ticker}/{acc_num}_{report_date}_{form_name}_edgar_statement_log.csv"
 )
 
 
-# %% Single 
+# %% ------------------------------ OLD ------------------------------------------
 
-ticker_statement_name = statement_name_series[6]
+# %% Single
+
+ticker_statement_name = statement_name_series.iloc[0]
 statement_info = dict_statement_link_collector[acc_num][
-    dict_statement_link_collector[acc_num]["statement_name"]
-    == ticker_statement_name
+    dict_statement_link_collector[acc_num]["statement_name"] == ticker_statement_name
 ]
+
+# %%
+
 statement_info["tables_scaped"] = 0
 
 # Get statement soup from link
 statement_link = statement_info["statement_link"].iloc[0]
 statement_soup = edgar_functions.get_statement_soup(statement_link, headers=headers)
 
-display(statement_info['statement_link'].iloc[0])
-#%%
+display(statement_info["statement_link"].iloc[0])
+# %%
 
 # Save the soup to html
 utility_belt.save_soup_to_html(
@@ -234,9 +413,7 @@ for i, tag_soup in enumerate(tag_list):
 
         # % Get the data from tag_soup
         classes_to_find = ["re", "ro", "rou", "reu"]
-        tag_soup_rows = tag_soup.find_all(
-            ["tr", "th", "td"], class_=classes_to_find
-        )
+        tag_soup_rows = tag_soup.find_all(["tr", "th", "td"], class_=classes_to_find)
 
         statement_df = []
         for row in tag_soup_rows:
@@ -272,8 +449,6 @@ statement_log.to_csv(
 )
 
 display(statement_df)
-
-
 
 
 # %%
@@ -539,7 +714,7 @@ for link in std_out:
 
 # %% Import links and accession numbers
 
-links_core = utility_belt.import_json_file(path_dict["nvda_links_core"])
+links_core = utility_belt.import_json_file(path_dict[f"{ticker}_links_core"])
 df_acc = pd.read_csv(path_dict["accession_numbers"], index_col=0)
 report_dates = list(df_acc.index)
 

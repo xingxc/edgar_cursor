@@ -16,7 +16,7 @@ from bs4 import BeautifulSoup
 
 headers = {"User-agent": "email@email.com"}
 path_tickers = "/Users/johnxing/Documents/Documents - Apple Mac Mini/finances/stocks/python/get_SEC_data/ticker"
-ticker = "nvda"
+ticker = "team"
 
 
 # %% Create ticker folder and subfolders
@@ -36,6 +36,10 @@ acc_10k = edgar_functions.get_filter_filing(
 acc_10q = edgar_functions.get_filter_filing(
     ticker, headers=headers, ten_k=False, accession_number_only=False
 )
+
+acc_10k['form'] = acc_10k['form'].str.replace('-', '')
+acc_10q['form'] = acc_10q['form'].str.replace('-', '')
+
 
 df_accession = pd.concat([acc_10k, acc_10q], axis=0)
 df_accession.sort_index(inplace=True)
@@ -82,8 +86,8 @@ for acc_num, row in df_accession.iterrows():
 print(df_accession)  # accession number and date relationship
 print(df_statement_links)  # statement links and accession number relationship
 
-df_statement_links.to_csv(os.path.join(path_ticker, "nvda_statement_links.csv"))
-df_accession.to_csv(os.path.join(path_ticker, "nvda_accession_numbers.csv"))
+df_statement_links.to_csv(os.path.join(path_ticker, f"{ticker}_statement_links.csv"))
+df_accession.to_csv(os.path.join(path_ticker, f"{ticker}_accession_numbers.csv"))
 
 # %% Create postgres engine and export accession numbers to postgres database
 
