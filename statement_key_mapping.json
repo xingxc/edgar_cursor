@@ -1,8 +1,13 @@
 {
-    "balance_parenthetical": [
-        "consolidated balance sheets (parenthetical)"
+
+    "revenue-segment": [
+        "Revenue - Disaggregation of Revenue by Geographic Region and Deployment Options (Details)"
     ],
-    "balance_sheet": [
+    "balance-parenthetical": [
+        "consolidated balance sheets (parenthetical)",
+        "condensed consolidated balance sheets (parenthetical)"
+    ],
+    "balance-sheet": [
         "balance sheet",
         "balance sheets",
         "statement of financial position",
@@ -19,7 +24,7 @@
         "dow consolidated balance sheets",
         "consolidated balance sheets (unaudited)"
     ],
-    "cash_flow_statement": [
+    "cash-flow-statement": [
         "cash flows statement",
         "cash flows statements",
         "statement of cash flows",
@@ -33,11 +38,10 @@
         "consolidated statements of cash flows (unaudited)",
         "consolidated statements of cash flows - southern"
     ],
-    "income_comprehensive": [
-        "consolidated statements of comprehensive income",
-        "condensed consolidated statement of comprehensive income"
+    "income-parenthetical": [
+        "condensed consolidated statements of operations (parenthetical)"
     ],
-    "income_statement": [
+    "income-statement": [
         "income statement",
         "income statements",
         "statement of earnings (loss)",
@@ -60,6 +64,7 @@
         "consolidated statements of operations and comprehensive income",
         "consolidated statements of operations and comprehensive loss",
         "consolidated statements of comprehensive income",
+        "condensed consolidated statement of comprehensive income",
         "condensed consolidated statements of operation",
         "condensed consolidated statements of income",
         "condensed consolidated statements of operations and comprehensive loss"

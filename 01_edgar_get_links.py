@@ -16,7 +16,7 @@ from bs4 import BeautifulSoup
 
 headers = {"User-agent": "email@email.com"}
 path_tickers = "/Users/johnxing/Documents/Documents - Apple Mac Mini/finances/stocks/python/get_SEC_data/ticker"
-ticker = "team"
+ticker = "nvda"
 
 
 # %% Create ticker folder and subfolders
