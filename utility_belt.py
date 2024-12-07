@@ -51,7 +51,7 @@ def mkdir(path_dir):
     subprocess.run(command, shell=True, capture_output=True, text=True)
 
 
-def save_soup_to_html(soup, file_path):
+def save_soup_to_html(soup, file_path, encoding="utf-8"):
     """
 
     Saves a BeautifulSoup object as a prettified HTML file.
@@ -63,7 +63,7 @@ def save_soup_to_html(soup, file_path):
     Returns:
         - None
     """
-    with open(file_path, "w") as file:
+    with open(file_path, "w", encoding=encoding) as file:
         file.write(soup.prettify())
 
 
