@@ -28,11 +28,10 @@ engine = sqlalchemy.create_engine(
     f"{dialect}+psycopg://{username}:{password}@{host}:{port}/{db_name}"
 )
 
-#%%
+# %%
 
 
 psql_conn.get_all_constraints(engine)
-
 
 
 # %%
@@ -57,4 +56,3 @@ df_accession.sort_index(inplace=True)
 
 
 # %%
-

@@ -149,7 +149,7 @@ statement_header = tag_soup.find("th", class_="tl")
 statement_header = statement_header.find_parent("tr")
 statement_header = statement_header.text.strip().replace("\n", " ; ")
 
-# %% 
+# %%
 
 classes_to_find = ["re", "ro", "rou", "reu"]
 

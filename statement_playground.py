@@ -69,7 +69,7 @@ df_cash, columns_cash = statement_dict["cash_flow_statement"]
 df_income, columns_income = statement_dict["income_statement"]
 df_income_comprehensive, columns_comprehensive = statement_dict["income_comprehensive"]
 
-display(df_balance) 
+display(df_balance)
 display(df_cash)
 display(df_income)
 display(df_income_comprehensive)

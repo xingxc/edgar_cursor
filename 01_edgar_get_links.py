@@ -39,8 +39,8 @@ acc_10q = edgar_functions.get_filter_filing(
     ticker, headers=headers, ten_k=False, accession_number_only=False
 )
 
-acc_10k['form'] = acc_10k['form'].str.replace('-', '')
-acc_10q['form'] = acc_10q['form'].str.replace('-', '')
+acc_10k["form"] = acc_10k["form"].str.replace("-", "")
+acc_10q["form"] = acc_10q["form"].str.replace("-", "")
 
 
 df_accession = pd.concat([acc_10k, acc_10q], axis=0)
@@ -94,14 +94,14 @@ print(df_statement_links)  # statement links and accession number relationship
 df_statement_links.to_csv(os.path.join(path_ticker, f"{ticker}_statement_links.csv"))
 df_accession.to_csv(os.path.join(path_ticker, f"{ticker}_accession_numbers.csv"))
 
-#%% Export full filings to filings folder
+# %% Export full filings to filings folder
 
 for acc_num, row in df_accession.iterrows():
 
-    link_statement_full = row['html_link']
+    link_statement_full = row["html_link"]
     soup_statement_full = edgar_functions.get_statement_soup(
-                link_statement_full, headers=headers
-            )
+        link_statement_full, headers=headers
+    )
 
     # Save the soup to html
     utility_belt.save_soup_to_html(

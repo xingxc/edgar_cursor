@@ -26,7 +26,9 @@ acc_date = acc.index[0]
 
 # %% get all statement soup
 
-statement_link_log = edgar_functions_working.get_statement_links(ticker, acc_num, acc_date, headers)
+statement_link_log = edgar_functions_working.get_statement_links(
+    ticker, acc_num, acc_date, headers
+)
 statement_names = list(statement_link_log[acc_date].keys())
 
 name = statement_names[1]
@@ -42,9 +44,13 @@ statement_soup = edgar_functions_working.get_statement_soup(statement_link, head
     columns_dict,
     values_set,
     index_dates,
-) = edgar_functions_working.extract_columns_values_and_dates_from_statement(statement_soup)
+) = edgar_functions_working.extract_columns_values_and_dates_from_statement(
+    statement_soup
+)
 
-df = edgar_functions_working.create_dataframe_of_statement_values_columns_dates(values_set, columns, index_dates)
+df = edgar_functions_working.create_dataframe_of_statement_values_columns_dates(
+    values_set, columns, index_dates
+)
 df = df.T
 
 # %%

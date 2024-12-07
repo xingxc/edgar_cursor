@@ -269,7 +269,7 @@ def get_all_constraints(engine):
     rows = results.fetchall()
 
     # Add header row
-    header = ('table_name', 'constraint_name', 'constraint_type', 'column_name')
+    header = ("table_name", "constraint_name", "constraint_type", "column_name")
     rows.insert(0, header)
     rows = pd.DataFrame(rows[1:], columns=rows[0])
 
