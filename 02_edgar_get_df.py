@@ -13,7 +13,7 @@ import sqlalchemy
 
 headers = {"User-agent": "email@email.com"}
 path_tickers = "/Users/johnxing/Documents/Documents - Apple Mac Mini/finances/stocks/python/get_SEC_data/ticker"
-ticker = "nvda"
+ticker = "uber"
 
 # %% Create ticker folder and subfolders
 path_ticker = os.path.join(path_tickers, ticker.lower())

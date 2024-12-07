@@ -16,17 +16,19 @@ from bs4 import BeautifulSoup
 
 headers = {"User-agent": "email@email.com"}
 path_tickers = "/Users/johnxing/Documents/Documents - Apple Mac Mini/finances/stocks/python/get_SEC_data/ticker"
-ticker = "nvda"
+ticker = "uber"
 
 
 # %% Create ticker folder and subfolders
 path_ticker = os.path.join(path_tickers, ticker.lower())
 path_statement_html = os.path.join(path_ticker, "statements_html")
 path_statement_df = os.path.join(path_ticker, "statements_df")
+path_filing_html = os.path.join(path_ticker, "filing_html")
 
 utility_belt.mkdir(path_ticker)
 utility_belt.mkdir(path_statement_html)
 utility_belt.mkdir(path_statement_df)
+utility_belt.mkdir(path_filing_html)
 
 # %% Get 10k and 10q accession numbers:
 
@@ -81,6 +83,9 @@ for acc_num, row in df_accession.iterrows():
     # Print progress
     print(f"{acc_num} ; {acc_date} ; links retrieved")
 
+df_accession = df_accession.sort_values(by="report_date")
+
+
 # %% Export dataframes to csv
 
 print(df_accession)  # accession number and date relationship
@@ -88,6 +93,26 @@ print(df_statement_links)  # statement links and accession number relationship
 
 df_statement_links.to_csv(os.path.join(path_ticker, f"{ticker}_statement_links.csv"))
 df_accession.to_csv(os.path.join(path_ticker, f"{ticker}_accession_numbers.csv"))
+
+#%% Export full filings to filings folder
+
+for acc_num, row in df_accession.iterrows():
+
+    link_statement_full = row['html_link']
+    soup_statement_full = edgar_functions.get_statement_soup(
+                link_statement_full, headers=headers
+            )
+
+    # Save the soup to html
+    utility_belt.save_soup_to_html(
+        soup_statement_full,
+        os.path.join(
+            path_filing_html,
+            f"{ticker}_{row['report_date']}_{row['form']}_{acc_num}.html",
+        ),
+    )
+
+    print(f"output html: {ticker} ; {acc_num} ; full statement")
 
 # %% Create postgres engine and export accession numbers to postgres database
 
@@ -175,5 +200,3 @@ df_json.to_sql(
 )
 
 ########## ------ END OF SCRIPT ------ ##########
-
-# %%

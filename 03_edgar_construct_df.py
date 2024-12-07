@@ -13,7 +13,7 @@ import sqlalchemy
 
 headers = {"User-agent": "email@email.com"}
 path_tickers = "/Users/johnxing/Documents/Documents - Apple Mac Mini/finances/stocks/python/get_SEC_data/ticker"
-ticker = "nvda"
+ticker = "team"
 
 # %% Create ticker folder and subfolders
 path_ticker = os.path.join(path_tickers, ticker.lower())
@@ -78,6 +78,10 @@ for key_statement in statement_path_keys:
         df = pd.read_csv(row["path"])
 
         df_construct = pd.concat([df_construct, df], axis=1)
+
+    df_construct.columns= [re.split(r'[.:]',item)[0] for item in df_construct.columns.values]
     statement_construct_dict[key_statement] = df_construct
     df_construct.to_csv(f"{path_ticker}/{ticker}_CONSTRUCTED_{key_statement}.csv")
     print(f"OUTPUT: {path_ticker}/{ticker}_CONSTRUCTED_{key_statement}.csv")
+
+# %%
