@@ -540,7 +540,7 @@ def get_statement_soup(statement_link, headers):
                 statement_response.content, "lxml-xml", from_encoding="utf-8"
             )
         else:
-            return BeautifulSoup(statement_response.content, "lxml")
+            return BeautifulSoup(statement_response.content, "lxml-xml", from_encoding="ascii")
 
     except requests.RequestException as e:
         raise ValueError(f"Error fetching the statement: {e}")

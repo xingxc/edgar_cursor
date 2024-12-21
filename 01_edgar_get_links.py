@@ -96,6 +96,7 @@ df_accession.to_csv(os.path.join(path_ticker, f"{ticker}_accession_numbers.csv")
 
 # %% Export full filings to filings folder
 
+
 for acc_num, row in df_accession.iterrows():
 
     link_statement_full = row["html_link"]
@@ -200,3 +201,5 @@ df_json.to_sql(
 )
 
 ########## ------ END OF SCRIPT ------ ##########
+
+# %%
