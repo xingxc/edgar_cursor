@@ -12,11 +12,14 @@ import edgar_functions
 import psql_conn
 from bs4 import BeautifulSoup
 
+
 # %% Inputs and initilizing info
 
 headers = {"User-agent": "email@email.com"}
-path_tickers = "/Users/johnxing/Documents/Documents - Apple Mac Mini/finances/stocks/python/get_SEC_data/ticker"
-ticker = "uber"
+path_tickers = (
+    "/Users/johnxing/Documents/Documents - Apple Mac Mini/finances/stocks/ticker"
+)
+ticker = "tmdx"
 
 
 # %% Create ticker folder and subfolders
@@ -47,6 +50,7 @@ df_accession = pd.concat([acc_10k, acc_10q], axis=0)
 df_accession.sort_index(inplace=True)
 df_accession["ixbrl_link"] = None
 df_accession["html_link"] = None
+
 
 # %% Retrieve links for all statements
 
@@ -96,24 +100,29 @@ df_accession.to_csv(os.path.join(path_ticker, f"{ticker}_accession_numbers.csv")
 
 # %% Export full filings to filings folder
 
-
 for acc_num, row in df_accession.iterrows():
 
-    link_statement_full = row["html_link"]
-    soup_statement_full = edgar_functions.get_statement_soup(
-        link_statement_full, headers=headers
-    )
+    try:
+        link_statement_full = row["html_link"]
+        soup_statement_full = edgar_functions.get_statement_soup(
+            link_statement_full, headers=headers
+        )
 
-    # Save the soup to html
-    utility_belt.save_soup_to_html(
-        soup_statement_full,
-        os.path.join(
-            path_filing_html,
-            f"{ticker}_{row['report_date']}_{row['form']}_{acc_num}.html",
-        ),
-    )
+        # Save the soup to html
+        utility_belt.save_soup_to_html(
+            soup_statement_full,
+            os.path.join(
+                path_filing_html,
+                f"{ticker}_{row['report_date']}_{row['form']}_{acc_num}.html",
+            ),
+        )
 
-    print(f"output html: {ticker} ; {acc_num} ; full statement")
+        print(
+            f"output html: {ticker} ; {row['report_date']} ; {acc_num} ; full statement"
+        )
+    except Exception as e:
+        print(f"error: {ticker} ; {row['report_date']} ; {acc_num} ; full statement")
+        print(e)
 
 # %% Create postgres engine and export accession numbers to postgres database
 

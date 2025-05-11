@@ -1,96 +1,4 @@
 ,accession_number,report_date,statement_name,statement_link
-0,000104581016000300,2016-07-31,document and entity information document,https://www.sec.gov/Archives/edgar/data/0001045810/000104581016000300/R1.htm
-1,000104581016000300,2016-07-31,condensed consolidated statements of income,https://www.sec.gov/Archives/edgar/data/0001045810/000104581016000300/R2.htm
-2,000104581016000300,2016-07-31,condensed consolidated statement of comprehensive income,https://www.sec.gov/Archives/edgar/data/0001045810/000104581016000300/R3.htm
-3,000104581016000300,2016-07-31,condensed consolidated balance sheets,https://www.sec.gov/Archives/edgar/data/0001045810/000104581016000300/R4.htm
-4,000104581016000300,2016-07-31,condensed consolidated statements of cash flows,https://www.sec.gov/Archives/edgar/data/0001045810/000104581016000300/R5.htm
-5,000104581016000300,2016-07-31,summary of significant accounting policies,https://www.sec.gov/Archives/edgar/data/0001045810/000104581016000300/R6.htm
-6,000104581016000300,2016-07-31,stock based compensation,https://www.sec.gov/Archives/edgar/data/0001045810/000104581016000300/R7.htm
-7,000104581016000300,2016-07-31,net income per share,https://www.sec.gov/Archives/edgar/data/0001045810/000104581016000300/R8.htm
-8,000104581016000300,2016-07-31,income taxes,https://www.sec.gov/Archives/edgar/data/0001045810/000104581016000300/R9.htm
-9,000104581016000300,2016-07-31,marketable securities,https://www.sec.gov/Archives/edgar/data/0001045810/000104581016000300/R10.htm
-10,000104581016000300,2016-07-31,fair value of financial assets and liabilities,https://www.sec.gov/Archives/edgar/data/0001045810/000104581016000300/R11.htm
-11,000104581016000300,2016-07-31,intangible assets,https://www.sec.gov/Archives/edgar/data/0001045810/000104581016000300/R12.htm
-12,000104581016000300,2016-07-31,balance sheet components,https://www.sec.gov/Archives/edgar/data/0001045810/000104581016000300/R13.htm
-13,000104581016000300,2016-07-31,derivative financial instrument,https://www.sec.gov/Archives/edgar/data/0001045810/000104581016000300/R14.htm
-14,000104581016000300,2016-07-31,guarantees,https://www.sec.gov/Archives/edgar/data/0001045810/000104581016000300/R15.htm
-15,000104581016000300,2016-07-31,convertible debt,https://www.sec.gov/Archives/edgar/data/0001045810/000104581016000300/R16.htm
-16,000104581016000300,2016-07-31,commitments and contingencies,https://www.sec.gov/Archives/edgar/data/0001045810/000104581016000300/R17.htm
-17,000104581016000300,2016-07-31,stockholders' equity,https://www.sec.gov/Archives/edgar/data/0001045810/000104581016000300/R18.htm
-18,000104581016000300,2016-07-31,segment information,https://www.sec.gov/Archives/edgar/data/0001045810/000104581016000300/R19.htm
-19,000104581016000300,2016-07-31,restructuring and other charges,https://www.sec.gov/Archives/edgar/data/0001045810/000104581016000300/R20.htm
-20,000104581016000300,2016-07-31,summary of significant accounting policies (policies),https://www.sec.gov/Archives/edgar/data/0001045810/000104581016000300/R21.htm
-21,000104581016000300,2016-07-31,stock based compensation (tables),https://www.sec.gov/Archives/edgar/data/0001045810/000104581016000300/R22.htm
-22,000104581016000300,2016-07-31,net income per share (tables),https://www.sec.gov/Archives/edgar/data/0001045810/000104581016000300/R23.htm
-23,000104581016000300,2016-07-31,marketable securities (tables),https://www.sec.gov/Archives/edgar/data/0001045810/000104581016000300/R24.htm
-24,000104581016000300,2016-07-31,fair value of financial assets and liabilities (tables),https://www.sec.gov/Archives/edgar/data/0001045810/000104581016000300/R25.htm
-25,000104581016000300,2016-07-31,intangible assets (tables),https://www.sec.gov/Archives/edgar/data/0001045810/000104581016000300/R26.htm
-26,000104581016000300,2016-07-31,balance sheet components (tables),https://www.sec.gov/Archives/edgar/data/0001045810/000104581016000300/R27.htm
-27,000104581016000300,2016-07-31,guarantees (tables),https://www.sec.gov/Archives/edgar/data/0001045810/000104581016000300/R28.htm
-28,000104581016000300,2016-07-31,convertible debt (table),https://www.sec.gov/Archives/edgar/data/0001045810/000104581016000300/R29.htm
-29,000104581016000300,2016-07-31,segment information (tables),https://www.sec.gov/Archives/edgar/data/0001045810/000104581016000300/R30.htm
-30,000104581016000300,2016-07-31,restructuring and other charges (tables),https://www.sec.gov/Archives/edgar/data/0001045810/000104581016000300/R31.htm
-31,000104581016000300,2016-07-31,stock based compensation (details),https://www.sec.gov/Archives/edgar/data/0001045810/000104581016000300/R32.htm
-32,000104581016000300,2016-07-31,net income per share (details),https://www.sec.gov/Archives/edgar/data/0001045810/000104581016000300/R33.htm
-33,000104581016000300,2016-07-31,income taxes (details),https://www.sec.gov/Archives/edgar/data/0001045810/000104581016000300/R34.htm
-34,000104581016000300,2016-07-31,marketable securities (details),https://www.sec.gov/Archives/edgar/data/0001045810/000104581016000300/R35.htm
-35,000104581016000300,2016-07-31,fair value of financial assets and liabilities (details),https://www.sec.gov/Archives/edgar/data/0001045810/000104581016000300/R36.htm
-36,000104581016000300,2016-07-31,intangible assets (details),https://www.sec.gov/Archives/edgar/data/0001045810/000104581016000300/R37.htm
-37,000104581016000300,2016-07-31,balance sheet components (details),https://www.sec.gov/Archives/edgar/data/0001045810/000104581016000300/R38.htm
-38,000104581016000300,2016-07-31,derivative financial instrument (details),https://www.sec.gov/Archives/edgar/data/0001045810/000104581016000300/R39.htm
-39,000104581016000300,2016-07-31,guarantees (details),https://www.sec.gov/Archives/edgar/data/0001045810/000104581016000300/R40.htm
-40,000104581016000300,2016-07-31,convertible debt (details),https://www.sec.gov/Archives/edgar/data/0001045810/000104581016000300/R41.htm
-41,000104581016000300,2016-07-31,commitments and contingencies (details),https://www.sec.gov/Archives/edgar/data/0001045810/000104581016000300/R42.htm
-42,000104581016000300,2016-07-31,stockholders' equity (details),https://www.sec.gov/Archives/edgar/data/0001045810/000104581016000300/R43.htm
-43,000104581016000300,2016-07-31,segment information (details),https://www.sec.gov/Archives/edgar/data/0001045810/000104581016000300/R44.htm
-44,000104581016000300,2016-07-31,restructuring and other charges (details),https://www.sec.gov/Archives/edgar/data/0001045810/000104581016000300/R45.htm
-0,000104581016000353,2016-10-30,document and entity information document,https://www.sec.gov/Archives/edgar/data/0001045810/000104581016000353/R1.htm
-1,000104581016000353,2016-10-30,condensed consolidated statements of income,https://www.sec.gov/Archives/edgar/data/0001045810/000104581016000353/R2.htm
-2,000104581016000353,2016-10-30,condensed consolidated statement of comprehensive income,https://www.sec.gov/Archives/edgar/data/0001045810/000104581016000353/R3.htm
-3,000104581016000353,2016-10-30,condensed consolidated balance sheets,https://www.sec.gov/Archives/edgar/data/0001045810/000104581016000353/R4.htm
-4,000104581016000353,2016-10-30,condensed consolidated statements of cash flows,https://www.sec.gov/Archives/edgar/data/0001045810/000104581016000353/R5.htm
-5,000104581016000353,2016-10-30,summary of significant accounting policies,https://www.sec.gov/Archives/edgar/data/0001045810/000104581016000353/R6.htm
-6,000104581016000353,2016-10-30,stock based compensation,https://www.sec.gov/Archives/edgar/data/0001045810/000104581016000353/R7.htm
-7,000104581016000353,2016-10-30,net income per share,https://www.sec.gov/Archives/edgar/data/0001045810/000104581016000353/R8.htm
-8,000104581016000353,2016-10-30,income taxes,https://www.sec.gov/Archives/edgar/data/0001045810/000104581016000353/R9.htm
-9,000104581016000353,2016-10-30,marketable securities,https://www.sec.gov/Archives/edgar/data/0001045810/000104581016000353/R10.htm
-10,000104581016000353,2016-10-30,fair value of financial assets and liabilities,https://www.sec.gov/Archives/edgar/data/0001045810/000104581016000353/R11.htm
-11,000104581016000353,2016-10-30,intangible assets,https://www.sec.gov/Archives/edgar/data/0001045810/000104581016000353/R12.htm
-12,000104581016000353,2016-10-30,balance sheet components,https://www.sec.gov/Archives/edgar/data/0001045810/000104581016000353/R13.htm
-13,000104581016000353,2016-10-30,derivative financial instrument,https://www.sec.gov/Archives/edgar/data/0001045810/000104581016000353/R14.htm
-14,000104581016000353,2016-10-30,guarantees,https://www.sec.gov/Archives/edgar/data/0001045810/000104581016000353/R15.htm
-15,000104581016000353,2016-10-30,debt,https://www.sec.gov/Archives/edgar/data/0001045810/000104581016000353/R16.htm
-16,000104581016000353,2016-10-30,commitments and contingencies,https://www.sec.gov/Archives/edgar/data/0001045810/000104581016000353/R17.htm
-17,000104581016000353,2016-10-30,stockholders' equity,https://www.sec.gov/Archives/edgar/data/0001045810/000104581016000353/R18.htm
-18,000104581016000353,2016-10-30,segment information,https://www.sec.gov/Archives/edgar/data/0001045810/000104581016000353/R19.htm
-19,000104581016000353,2016-10-30,restructuring and other charges,https://www.sec.gov/Archives/edgar/data/0001045810/000104581016000353/R20.htm
-20,000104581016000353,2016-10-30,summary of significant accounting policies (policies),https://www.sec.gov/Archives/edgar/data/0001045810/000104581016000353/R21.htm
-21,000104581016000353,2016-10-30,summary of significant accounting policies (tables),https://www.sec.gov/Archives/edgar/data/0001045810/000104581016000353/R22.htm
-22,000104581016000353,2016-10-30,stock based compensation (tables),https://www.sec.gov/Archives/edgar/data/0001045810/000104581016000353/R23.htm
-23,000104581016000353,2016-10-30,net income per share (tables),https://www.sec.gov/Archives/edgar/data/0001045810/000104581016000353/R24.htm
-24,000104581016000353,2016-10-30,marketable securities (tables),https://www.sec.gov/Archives/edgar/data/0001045810/000104581016000353/R25.htm
-25,000104581016000353,2016-10-30,fair value of financial assets and liabilities (tables),https://www.sec.gov/Archives/edgar/data/0001045810/000104581016000353/R26.htm
-26,000104581016000353,2016-10-30,intangible assets (tables),https://www.sec.gov/Archives/edgar/data/0001045810/000104581016000353/R27.htm
-27,000104581016000353,2016-10-30,balance sheet components (tables),https://www.sec.gov/Archives/edgar/data/0001045810/000104581016000353/R28.htm
-28,000104581016000353,2016-10-30,guarantees (tables),https://www.sec.gov/Archives/edgar/data/0001045810/000104581016000353/R29.htm
-29,000104581016000353,2016-10-30,debt (table),https://www.sec.gov/Archives/edgar/data/0001045810/000104581016000353/R30.htm
-30,000104581016000353,2016-10-30,segment information (tables),https://www.sec.gov/Archives/edgar/data/0001045810/000104581016000353/R31.htm
-31,000104581016000353,2016-10-30,restructuring and other charges (tables),https://www.sec.gov/Archives/edgar/data/0001045810/000104581016000353/R32.htm
-32,000104581016000353,2016-10-30,summary of significant accounting policies (details),https://www.sec.gov/Archives/edgar/data/0001045810/000104581016000353/R33.htm
-33,000104581016000353,2016-10-30,stock based compensation (details),https://www.sec.gov/Archives/edgar/data/0001045810/000104581016000353/R34.htm
-34,000104581016000353,2016-10-30,net income per share (details),https://www.sec.gov/Archives/edgar/data/0001045810/000104581016000353/R35.htm
-35,000104581016000353,2016-10-30,income taxes (details),https://www.sec.gov/Archives/edgar/data/0001045810/000104581016000353/R36.htm
-36,000104581016000353,2016-10-30,marketable securities (details),https://www.sec.gov/Archives/edgar/data/0001045810/000104581016000353/R37.htm
-37,000104581016000353,2016-10-30,fair value of financial assets and liabilities (details),https://www.sec.gov/Archives/edgar/data/0001045810/000104581016000353/R38.htm
-38,000104581016000353,2016-10-30,intangible assets (details),https://www.sec.gov/Archives/edgar/data/0001045810/000104581016000353/R39.htm
-39,000104581016000353,2016-10-30,balance sheet components (details),https://www.sec.gov/Archives/edgar/data/0001045810/000104581016000353/R40.htm
-40,000104581016000353,2016-10-30,derivative financial instrument (details),https://www.sec.gov/Archives/edgar/data/0001045810/000104581016000353/R41.htm
-41,000104581016000353,2016-10-30,guarantees (details),https://www.sec.gov/Archives/edgar/data/0001045810/000104581016000353/R42.htm
-42,000104581016000353,2016-10-30,debt (details),https://www.sec.gov/Archives/edgar/data/0001045810/000104581016000353/R43.htm
-43,000104581016000353,2016-10-30,commitments and contingencies (details),https://www.sec.gov/Archives/edgar/data/0001045810/000104581016000353/R44.htm
-44,000104581016000353,2016-10-30,stockholders' equity (details),https://www.sec.gov/Archives/edgar/data/0001045810/000104581016000353/R45.htm
-45,000104581016000353,2016-10-30,segment information (details),https://www.sec.gov/Archives/edgar/data/0001045810/000104581016000353/R46.htm
-46,000104581016000353,2016-10-30,restructuring and other charges (details),https://www.sec.gov/Archives/edgar/data/0001045810/000104581016000353/R47.htm
 0,000104581017000027,2017-01-29,document and entity information document,https://www.sec.gov/Archives/edgar/data/0001045810/000104581017000027/R1.htm
 1,000104581017000027,2017-01-29,consolidated statements of income,https://www.sec.gov/Archives/edgar/data/0001045810/000104581017000027/R2.htm
 2,000104581017000027,2017-01-29,consolidated statements of comprehensive income,https://www.sec.gov/Archives/edgar/data/0001045810/000104581017000027/R3.htm
@@ -2142,3 +2050,167 @@
 70,000104581024000264,2024-07-28,segment information - schedule of revenue by geographic regions (details),https://www.sec.gov/Archives/edgar/data/0001045810/000104581024000264/R71.htm
 71,000104581024000264,2024-07-28,segment information - concentration risk (details),https://www.sec.gov/Archives/edgar/data/0001045810/000104581024000264/R72.htm
 72,000104581024000264,2024-07-28,segment information - schedule of revenue by market (details),https://www.sec.gov/Archives/edgar/data/0001045810/000104581024000264/R73.htm
+0,000104581024000316,2024-10-27,cover,https://www.sec.gov/Archives/edgar/data/0001045810/000104581024000316/R1.htm
+1,000104581024000316,2024-10-27,condensed consolidated statements of income,https://www.sec.gov/Archives/edgar/data/0001045810/000104581024000316/R2.htm
+2,000104581024000316,2024-10-27,condensed consolidated statements of comprehensive income,https://www.sec.gov/Archives/edgar/data/0001045810/000104581024000316/R3.htm
+3,000104581024000316,2024-10-27,condensed consolidated balance sheets,https://www.sec.gov/Archives/edgar/data/0001045810/000104581024000316/R4.htm
+4,000104581024000316,2024-10-27,condensed consolidated statements of shareholders' equity,https://www.sec.gov/Archives/edgar/data/0001045810/000104581024000316/R5.htm
+5,000104581024000316,2024-10-27,condensed consolidated statements of shareholders' equity (parenthetical),https://www.sec.gov/Archives/edgar/data/0001045810/000104581024000316/R6.htm
+6,000104581024000316,2024-10-27,condensed consolidated statements of cash flows,https://www.sec.gov/Archives/edgar/data/0001045810/000104581024000316/R7.htm
+7,000104581024000316,2024-10-27,summary of significant accounting policies,https://www.sec.gov/Archives/edgar/data/0001045810/000104581024000316/R8.htm
+8,000104581024000316,2024-10-27,leases,https://www.sec.gov/Archives/edgar/data/0001045810/000104581024000316/R9.htm
+9,000104581024000316,2024-10-27,stock-based compensation,https://www.sec.gov/Archives/edgar/data/0001045810/000104581024000316/R10.htm
+10,000104581024000316,2024-10-27,net income per share,https://www.sec.gov/Archives/edgar/data/0001045810/000104581024000316/R11.htm
+11,000104581024000316,2024-10-27,income taxes,https://www.sec.gov/Archives/edgar/data/0001045810/000104581024000316/R12.htm
+12,000104581024000316,2024-10-27,cash equivalents and marketable securities,https://www.sec.gov/Archives/edgar/data/0001045810/000104581024000316/R13.htm
+13,000104581024000316,2024-10-27,fair value of financial assets and liabilities and investments in non-affiliated entities,https://www.sec.gov/Archives/edgar/data/0001045810/000104581024000316/R14.htm
+14,000104581024000316,2024-10-27,amortizable intangible assets and goodwill,https://www.sec.gov/Archives/edgar/data/0001045810/000104581024000316/R15.htm
+15,000104581024000316,2024-10-27,balance sheet components,https://www.sec.gov/Archives/edgar/data/0001045810/000104581024000316/R16.htm
+16,000104581024000316,2024-10-27,derivative financial instruments,https://www.sec.gov/Archives/edgar/data/0001045810/000104581024000316/R17.htm
+17,000104581024000316,2024-10-27,debt,https://www.sec.gov/Archives/edgar/data/0001045810/000104581024000316/R18.htm
+18,000104581024000316,2024-10-27,commitments and contingencies,https://www.sec.gov/Archives/edgar/data/0001045810/000104581024000316/R19.htm
+19,000104581024000316,2024-10-27,shareholders' equity,https://www.sec.gov/Archives/edgar/data/0001045810/000104581024000316/R20.htm
+20,000104581024000316,2024-10-27,segment information,https://www.sec.gov/Archives/edgar/data/0001045810/000104581024000316/R21.htm
+21,000104581024000316,2024-10-27,pay vs performance disclosure,https://www.sec.gov/Archives/edgar/data/0001045810/000104581024000316/R22.htm
+22,000104581024000316,2024-10-27,insider trading arrangements,https://www.sec.gov/Archives/edgar/data/0001045810/000104581024000316/R23.htm
+23,000104581024000316,2024-10-27,summary of significant accounting policies (policies),https://www.sec.gov/Archives/edgar/data/0001045810/000104581024000316/R24.htm
+24,000104581024000316,2024-10-27,leases (tables),https://www.sec.gov/Archives/edgar/data/0001045810/000104581024000316/R25.htm
+25,000104581024000316,2024-10-27,stock-based compensation (tables),https://www.sec.gov/Archives/edgar/data/0001045810/000104581024000316/R26.htm
+26,000104581024000316,2024-10-27,net income per share (tables),https://www.sec.gov/Archives/edgar/data/0001045810/000104581024000316/R27.htm
+27,000104581024000316,2024-10-27,cash equivalents and marketable securities (tables),https://www.sec.gov/Archives/edgar/data/0001045810/000104581024000316/R28.htm
+28,000104581024000316,2024-10-27,fair value of financial assets and liabilities and investments in non-affiliated entities (tables),https://www.sec.gov/Archives/edgar/data/0001045810/000104581024000316/R29.htm
+29,000104581024000316,2024-10-27,amortizable intangible assets and goodwill (tables),https://www.sec.gov/Archives/edgar/data/0001045810/000104581024000316/R30.htm
+30,000104581024000316,2024-10-27,balance sheet components (tables),https://www.sec.gov/Archives/edgar/data/0001045810/000104581024000316/R31.htm
+31,000104581024000316,2024-10-27,derivative financial instruments (tables),https://www.sec.gov/Archives/edgar/data/0001045810/000104581024000316/R32.htm
+32,000104581024000316,2024-10-27,debt (tables),https://www.sec.gov/Archives/edgar/data/0001045810/000104581024000316/R33.htm
+33,000104581024000316,2024-10-27,commitments and contingencies (tables),https://www.sec.gov/Archives/edgar/data/0001045810/000104581024000316/R34.htm
+34,000104581024000316,2024-10-27,segment information (tables),https://www.sec.gov/Archives/edgar/data/0001045810/000104581024000316/R35.htm
+35,000104581024000316,2024-10-27,summary of significant accounting policies (details),https://www.sec.gov/Archives/edgar/data/0001045810/000104581024000316/R36.htm
+36,000104581024000316,2024-10-27,leases - schedule of future minimum lease obligations (details),https://www.sec.gov/Archives/edgar/data/0001045810/000104581024000316/R37.htm
+37,000104581024000316,2024-10-27,leases - narrative (details),https://www.sec.gov/Archives/edgar/data/0001045810/000104581024000316/R38.htm
+38,000104581024000316,2024-10-27,leases - schedule of other lease information (details),https://www.sec.gov/Archives/edgar/data/0001045810/000104581024000316/R39.htm
+39,000104581024000316,2024-10-27,stock-based compensation - schedule of stock-based compensation expense (details),https://www.sec.gov/Archives/edgar/data/0001045810/000104581024000316/R40.htm
+40,000104581024000316,2024-10-27,stock-based compensation - schedule of equity awards (details),https://www.sec.gov/Archives/edgar/data/0001045810/000104581024000316/R41.htm
+41,000104581024000316,2024-10-27,stock-based compensation - narrative (details),https://www.sec.gov/Archives/edgar/data/0001045810/000104581024000316/R42.htm
+42,000104581024000316,2024-10-27,net income per share (details),https://www.sec.gov/Archives/edgar/data/0001045810/000104581024000316/R43.htm
+43,000104581024000316,2024-10-27,income taxes (details),https://www.sec.gov/Archives/edgar/data/0001045810/000104581024000316/R44.htm
+44,000104581024000316,2024-10-27,cash equivalents and marketable securities - schedule of securities (details),https://www.sec.gov/Archives/edgar/data/0001045810/000104581024000316/R45.htm
+45,000104581024000316,2024-10-27,cash equivalents and marketable securities - narrative (details),https://www.sec.gov/Archives/edgar/data/0001045810/000104581024000316/R46.htm
+46,000104581024000316,2024-10-27,cash equivalents and marketable securities - schedule of unrealized losses aggregated by investment category (details),https://www.sec.gov/Archives/edgar/data/0001045810/000104581024000316/R47.htm
+47,000104581024000316,2024-10-27,cash equivalents and marketable securities - schedule of amortized cost and estimated fair value of cash equivalents and marketable securities (details),https://www.sec.gov/Archives/edgar/data/0001045810/000104581024000316/R48.htm
+48,000104581024000316,2024-10-27,fair value of financial assets and liabilities and investments in non-affiliated entities - schedule of fair value of financial assets and liabilities (details),https://www.sec.gov/Archives/edgar/data/0001045810/000104581024000316/R49.htm
+49,000104581024000316,2024-10-27,fair value of financial assets and liabilities and investments in non-affiliated entities - schedule of carrying value of non-marketable equity securities (details),https://www.sec.gov/Archives/edgar/data/0001045810/000104581024000316/R50.htm
+50,000104581024000316,2024-10-27,fair value of financial assets and liabilities and investments in non-affiliated entities - narrative (details),https://www.sec.gov/Archives/edgar/data/0001045810/000104581024000316/R51.htm
+51,000104581024000316,2024-10-27,amortizable intangible assets and goodwill (details),https://www.sec.gov/Archives/edgar/data/0001045810/000104581024000316/R52.htm
+52,000104581024000316,2024-10-27,balance sheet components - narrative (details),https://www.sec.gov/Archives/edgar/data/0001045810/000104581024000316/R53.htm
+53,000104581024000316,2024-10-27,balance sheet components - schedule of inventory (details),https://www.sec.gov/Archives/edgar/data/0001045810/000104581024000316/R54.htm
+54,000104581024000316,2024-10-27,balance sheet components - schedule of other assets (long term) (details),https://www.sec.gov/Archives/edgar/data/0001045810/000104581024000316/R55.htm
+55,000104581024000316,2024-10-27,balance sheet components - schedule of accrued and other current liabilities (details),https://www.sec.gov/Archives/edgar/data/0001045810/000104581024000316/R56.htm
+56,000104581024000316,2024-10-27,balance sheet components - schedule of other long-term liabilities (details),https://www.sec.gov/Archives/edgar/data/0001045810/000104581024000316/R57.htm
+57,000104581024000316,2024-10-27,balance sheet components - schedule of changes in deferred revenue (details),https://www.sec.gov/Archives/edgar/data/0001045810/000104581024000316/R58.htm
+58,000104581024000316,2024-10-27,balance sheet components - revenue remaining performance obligation (details),https://www.sec.gov/Archives/edgar/data/0001045810/000104581024000316/R59.htm
+59,000104581024000316,2024-10-27,derivative financial instruments - schedule of notional value of our foreign currency contracts outstanding (details),https://www.sec.gov/Archives/edgar/data/0001045810/000104581024000316/R60.htm
+60,000104581024000316,2024-10-27,derivative financial instruments - narrative (details),https://www.sec.gov/Archives/edgar/data/0001045810/000104581024000316/R61.htm
+61,000104581024000316,2024-10-27,debt - schedule of long-term debt (details),https://www.sec.gov/Archives/edgar/data/0001045810/000104581024000316/R62.htm
+62,000104581024000316,2024-10-27,debt - narrative (details),https://www.sec.gov/Archives/edgar/data/0001045810/000104581024000316/R63.htm
+63,000104581024000316,2024-10-27,commitments and contingencies - narrative (details),https://www.sec.gov/Archives/edgar/data/0001045810/000104581024000316/R64.htm
+64,000104581024000316,2024-10-27,commitments and contingencies - schedule of future commitments due by year (details),https://www.sec.gov/Archives/edgar/data/0001045810/000104581024000316/R65.htm
+65,000104581024000316,2024-10-27,commitments and contingencies - schedule of product warranty liabilities (details),https://www.sec.gov/Archives/edgar/data/0001045810/000104581024000316/R66.htm
+66,000104581024000316,2024-10-27,shareholders' equity (details),https://www.sec.gov/Archives/edgar/data/0001045810/000104581024000316/R67.htm
+67,000104581024000316,2024-10-27,segment information - narrative (details),https://www.sec.gov/Archives/edgar/data/0001045810/000104581024000316/R68.htm
+68,000104581024000316,2024-10-27,segment information - schedule of segments (details),https://www.sec.gov/Archives/edgar/data/0001045810/000104581024000316/R69.htm
+69,000104581024000316,2024-10-27,segment information - schedule of reconciling items (details),https://www.sec.gov/Archives/edgar/data/0001045810/000104581024000316/R70.htm
+70,000104581024000316,2024-10-27,segment information - schedule of revenue by geographic regions (details),https://www.sec.gov/Archives/edgar/data/0001045810/000104581024000316/R71.htm
+71,000104581024000316,2024-10-27,segment information - concentration risk (details),https://www.sec.gov/Archives/edgar/data/0001045810/000104581024000316/R72.htm
+72,000104581024000316,2024-10-27,segment information - schedule of revenue by market (details),https://www.sec.gov/Archives/edgar/data/0001045810/000104581024000316/R73.htm
+0,000104581025000023,2025-01-26,cover page,https://www.sec.gov/Archives/edgar/data/0001045810/000104581025000023/R1.htm
+1,000104581025000023,2025-01-26,audit information,https://www.sec.gov/Archives/edgar/data/0001045810/000104581025000023/R2.htm
+2,000104581025000023,2025-01-26,consolidated statements of income,https://www.sec.gov/Archives/edgar/data/0001045810/000104581025000023/R3.htm
+3,000104581025000023,2025-01-26,consolidated statements of comprehensive income,https://www.sec.gov/Archives/edgar/data/0001045810/000104581025000023/R4.htm
+4,000104581025000023,2025-01-26,consolidated balance sheets,https://www.sec.gov/Archives/edgar/data/0001045810/000104581025000023/R5.htm
+5,000104581025000023,2025-01-26,consolidated balance sheets (parenthetical),https://www.sec.gov/Archives/edgar/data/0001045810/000104581025000023/R6.htm
+6,000104581025000023,2025-01-26,consolidated statements of shareholders' equity,https://www.sec.gov/Archives/edgar/data/0001045810/000104581025000023/R7.htm
+7,000104581025000023,2025-01-26,consolidated statements of shareholders' equity (parenthetical),https://www.sec.gov/Archives/edgar/data/0001045810/000104581025000023/R8.htm
+8,000104581025000023,2025-01-26,consolidated statements of cash flows,https://www.sec.gov/Archives/edgar/data/0001045810/000104581025000023/R9.htm
+9,000104581025000023,2025-01-26,organization and summary of significant accounting policies,https://www.sec.gov/Archives/edgar/data/0001045810/000104581025000023/R10.htm
+10,000104581025000023,2025-01-26,business combination,https://www.sec.gov/Archives/edgar/data/0001045810/000104581025000023/R11.htm
+11,000104581025000023,2025-01-26,stock-based compensation,https://www.sec.gov/Archives/edgar/data/0001045810/000104581025000023/R12.htm
+12,000104581025000023,2025-01-26,net income per share,https://www.sec.gov/Archives/edgar/data/0001045810/000104581025000023/R13.htm
+13,000104581025000023,2025-01-26,goodwill,https://www.sec.gov/Archives/edgar/data/0001045810/000104581025000023/R14.htm
+14,000104581025000023,2025-01-26,amortizable intangible assets,https://www.sec.gov/Archives/edgar/data/0001045810/000104581025000023/R15.htm
+15,000104581025000023,2025-01-26,cash equivalents and marketable securities,https://www.sec.gov/Archives/edgar/data/0001045810/000104581025000023/R16.htm
+16,000104581025000023,2025-01-26,fair value of financial assets and liabilities and non-marketable equity securities,https://www.sec.gov/Archives/edgar/data/0001045810/000104581025000023/R17.htm
+17,000104581025000023,2025-01-26,balance sheet components,https://www.sec.gov/Archives/edgar/data/0001045810/000104581025000023/R18.htm
+18,000104581025000023,2025-01-26,derivative financial instruments,https://www.sec.gov/Archives/edgar/data/0001045810/000104581025000023/R19.htm
+19,000104581025000023,2025-01-26,debt,https://www.sec.gov/Archives/edgar/data/0001045810/000104581025000023/R20.htm
+20,000104581025000023,2025-01-26,commitments and contingencies,https://www.sec.gov/Archives/edgar/data/0001045810/000104581025000023/R21.htm
+21,000104581025000023,2025-01-26,income taxes,https://www.sec.gov/Archives/edgar/data/0001045810/000104581025000023/R22.htm
+22,000104581025000023,2025-01-26,shareholders??? equity,https://www.sec.gov/Archives/edgar/data/0001045810/000104581025000023/R23.htm
+23,000104581025000023,2025-01-26,employee retirement plans,https://www.sec.gov/Archives/edgar/data/0001045810/000104581025000023/R24.htm
+24,000104581025000023,2025-01-26,segment information,https://www.sec.gov/Archives/edgar/data/0001045810/000104581025000023/R25.htm
+25,000104581025000023,2025-01-26,leases,https://www.sec.gov/Archives/edgar/data/0001045810/000104581025000023/R26.htm
+26,000104581025000023,2025-01-26,schedule ii - valuation and qualifying accounts,https://www.sec.gov/Archives/edgar/data/0001045810/000104581025000023/R27.htm
+27,000104581025000023,2025-01-26,pay vs performance disclosure,https://www.sec.gov/Archives/edgar/data/0001045810/000104581025000023/R28.htm
+28,000104581025000023,2025-01-26,insider trading arrangements,https://www.sec.gov/Archives/edgar/data/0001045810/000104581025000023/R29.htm
+29,000104581025000023,2025-01-26,insider trading policies and procedures,https://www.sec.gov/Archives/edgar/data/0001045810/000104581025000023/R30.htm
+30,000104581025000023,2025-01-26,cybersecurity risk management and strategy disclosure,https://www.sec.gov/Archives/edgar/data/0001045810/000104581025000023/R31.htm
+31,000104581025000023,2025-01-26,organization and summary of significant accounting policies (policies),https://www.sec.gov/Archives/edgar/data/0001045810/000104581025000023/R32.htm
+32,000104581025000023,2025-01-26,stock-based compensation (tables),https://www.sec.gov/Archives/edgar/data/0001045810/000104581025000023/R33.htm
+33,000104581025000023,2025-01-26,net income per share (tables),https://www.sec.gov/Archives/edgar/data/0001045810/000104581025000023/R34.htm
+34,000104581025000023,2025-01-26,amortizable intangible assets (tables),https://www.sec.gov/Archives/edgar/data/0001045810/000104581025000023/R35.htm
+35,000104581025000023,2025-01-26,cash equivalents and marketable securities (tables),https://www.sec.gov/Archives/edgar/data/0001045810/000104581025000023/R36.htm
+36,000104581025000023,2025-01-26,fair value of financial assets and liabilities and non-marketable equity securities (tables),https://www.sec.gov/Archives/edgar/data/0001045810/000104581025000023/R37.htm
+37,000104581025000023,2025-01-26,balance sheet components (tables),https://www.sec.gov/Archives/edgar/data/0001045810/000104581025000023/R38.htm
+38,000104581025000023,2025-01-26,derivative financial instruments (tables),https://www.sec.gov/Archives/edgar/data/0001045810/000104581025000023/R39.htm
+39,000104581025000023,2025-01-26,debt (tables),https://www.sec.gov/Archives/edgar/data/0001045810/000104581025000023/R40.htm
+40,000104581025000023,2025-01-26,commitments and contingencies (tables),https://www.sec.gov/Archives/edgar/data/0001045810/000104581025000023/R41.htm
+41,000104581025000023,2025-01-26,income taxes (tables),https://www.sec.gov/Archives/edgar/data/0001045810/000104581025000023/R42.htm
+42,000104581025000023,2025-01-26,segment information (tables),https://www.sec.gov/Archives/edgar/data/0001045810/000104581025000023/R43.htm
+43,000104581025000023,2025-01-26,leases (tables),https://www.sec.gov/Archives/edgar/data/0001045810/000104581025000023/R44.htm
+44,000104581025000023,2025-01-26,organization and summary of significant accounting policies (details),https://www.sec.gov/Archives/edgar/data/0001045810/000104581025000023/R45.htm
+45,000104581025000023,2025-01-26,business combination (details),https://www.sec.gov/Archives/edgar/data/0001045810/000104581025000023/R46.htm
+46,000104581025000023,2025-01-26,stock-based compensation - schedule of stock-based compensation expense (details),https://www.sec.gov/Archives/edgar/data/0001045810/000104581025000023/R47.htm
+47,000104581025000023,2025-01-26,stock-based compensation - summary of equity awards (details),https://www.sec.gov/Archives/edgar/data/0001045810/000104581025000023/R48.htm
+48,000104581025000023,2025-01-26,stock-based compensation - narrative (details),https://www.sec.gov/Archives/edgar/data/0001045810/000104581025000023/R49.htm
+49,000104581025000023,2025-01-26,stock-based compensation - equity incentive plans (details),https://www.sec.gov/Archives/edgar/data/0001045810/000104581025000023/R50.htm
+50,000104581025000023,2025-01-26,net income per share (details),https://www.sec.gov/Archives/edgar/data/0001045810/000104581025000023/R51.htm
+51,000104581025000023,2025-01-26,goodwill (details),https://www.sec.gov/Archives/edgar/data/0001045810/000104581025000023/R52.htm
+52,000104581025000023,2025-01-26,amortizable intangible assets (details),https://www.sec.gov/Archives/edgar/data/0001045810/000104581025000023/R53.htm
+53,000104581025000023,2025-01-26,cash equivalents and marketable securities - cash equivalents and marketable securities (details),https://www.sec.gov/Archives/edgar/data/0001045810/000104581025000023/R54.htm
+54,000104581025000023,2025-01-26,cash equivalents and marketable securities - unrealized losses aggregated by investment category (details),https://www.sec.gov/Archives/edgar/data/0001045810/000104581025000023/R55.htm
+55,000104581025000023,2025-01-26,cash equivalents and marketable securities - amortized cost and estimated fair value of cash equivalents and marketable securities (details),https://www.sec.gov/Archives/edgar/data/0001045810/000104581025000023/R56.htm
+56,000104581025000023,2025-01-26,fair value of financial assets and liabilities and non-marketable equity securities (details),https://www.sec.gov/Archives/edgar/data/0001045810/000104581025000023/R57.htm
+57,000104581025000023,2025-01-26,fair value of financial assets and liabilities and non-marketable equity securities - carrying value of non-marketable equity securities (details),https://www.sec.gov/Archives/edgar/data/0001045810/000104581025000023/R58.htm
+58,000104581025000023,2025-01-26,fair value of financial assets and liabilities and non-marketable equity securities - cumulative gross (details),https://www.sec.gov/Archives/edgar/data/0001045810/000104581025000023/R59.htm
+59,000104581025000023,2025-01-26,balance sheet components - narrative (details),https://www.sec.gov/Archives/edgar/data/0001045810/000104581025000023/R60.htm
+60,000104581025000023,2025-01-26,balance sheet components - inventories (details),https://www.sec.gov/Archives/edgar/data/0001045810/000104581025000023/R61.htm
+61,000104581025000023,2025-01-26,balance sheet components - property and equipment (details),https://www.sec.gov/Archives/edgar/data/0001045810/000104581025000023/R62.htm
+62,000104581025000023,2025-01-26,balance sheet components - other assets (details),https://www.sec.gov/Archives/edgar/data/0001045810/000104581025000023/R63.htm
+63,000104581025000023,2025-01-26,balance sheet components - accrued and other current liabilities (details),https://www.sec.gov/Archives/edgar/data/0001045810/000104581025000023/R64.htm
+64,000104581025000023,2025-01-26,balance sheet components - other long-term liabilities (details),https://www.sec.gov/Archives/edgar/data/0001045810/000104581025000023/R65.htm
+65,000104581025000023,2025-01-26,balance sheet components - deferred revenue (details),https://www.sec.gov/Archives/edgar/data/0001045810/000104581025000023/R66.htm
+66,000104581025000023,2025-01-26,balance sheet components - revenue remaining performance obligation (details),https://www.sec.gov/Archives/edgar/data/0001045810/000104581025000023/R67.htm
+67,000104581025000023,2025-01-26,derivative financial instruments - notional value of our foreign currency forward contracts outstanding (details),https://www.sec.gov/Archives/edgar/data/0001045810/000104581025000023/R68.htm
+68,000104581025000023,2025-01-26,derivative financial instruments - narrative (details),https://www.sec.gov/Archives/edgar/data/0001045810/000104581025000023/R69.htm
+69,000104581025000023,2025-01-26,debt - narrative (details),https://www.sec.gov/Archives/edgar/data/0001045810/000104581025000023/R70.htm
+70,000104581025000023,2025-01-26,debt - schedule of debt (details),https://www.sec.gov/Archives/edgar/data/0001045810/000104581025000023/R71.htm
+71,000104581025000023,2025-01-26,commitments and contingencies - narrative (details),https://www.sec.gov/Archives/edgar/data/0001045810/000104581025000023/R72.htm
+72,000104581025000023,2025-01-26,commitments and contingencies - summary of future commitments due by year (details),https://www.sec.gov/Archives/edgar/data/0001045810/000104581025000023/R73.htm
+73,000104581025000023,2025-01-26,commitments and contingencies - schedule of product warranty liabilities (details),https://www.sec.gov/Archives/edgar/data/0001045810/000104581025000023/R74.htm
+74,000104581025000023,2025-01-26,income taxes - components of income tax expense (details),https://www.sec.gov/Archives/edgar/data/0001045810/000104581025000023/R75.htm
+75,000104581025000023,2025-01-26,income taxes - income tax reconciliation (details),https://www.sec.gov/Archives/edgar/data/0001045810/000104581025000023/R76.htm
+76,000104581025000023,2025-01-26,income taxes - deferred taxes (details),https://www.sec.gov/Archives/edgar/data/0001045810/000104581025000023/R77.htm
+77,000104581025000023,2025-01-26,income taxes - narrative (details),https://www.sec.gov/Archives/edgar/data/0001045810/000104581025000023/R78.htm
+78,000104581025000023,2025-01-26,income taxes - unrecognized tax benefits (details),https://www.sec.gov/Archives/edgar/data/0001045810/000104581025000023/R79.htm
+79,000104581025000023,2025-01-26,shareholders' equity (details),https://www.sec.gov/Archives/edgar/data/0001045810/000104581025000023/R80.htm
+80,000104581025000023,2025-01-26,employee retirement plans (details),https://www.sec.gov/Archives/edgar/data/0001045810/000104581025000023/R81.htm
+81,000104581025000023,2025-01-26,segment information - narrative (details),https://www.sec.gov/Archives/edgar/data/0001045810/000104581025000023/R82.htm
+82,000104581025000023,2025-01-26,segment information - reportable segments (details),https://www.sec.gov/Archives/edgar/data/0001045810/000104581025000023/R83.htm
+83,000104581025000023,2025-01-26,segment information - reconciling items (details),https://www.sec.gov/Archives/edgar/data/0001045810/000104581025000023/R84.htm
+84,000104581025000023,2025-01-26,segment information - revenue and long-lived assets by region (details),https://www.sec.gov/Archives/edgar/data/0001045810/000104581025000023/R85.htm
+85,000104581025000023,2025-01-26,segment information - revenue and accounts receivable by major customer (details),https://www.sec.gov/Archives/edgar/data/0001045810/000104581025000023/R86.htm
+86,000104581025000023,2025-01-26,segment information - schedule of revenue by market (details),https://www.sec.gov/Archives/edgar/data/0001045810/000104581025000023/R87.htm
+87,000104581025000023,2025-01-26,leases - schedule of future minimum lease payments (details),https://www.sec.gov/Archives/edgar/data/0001045810/000104581025000023/R88.htm
+88,000104581025000023,2025-01-26,leases - narrative (details),https://www.sec.gov/Archives/edgar/data/0001045810/000104581025000023/R89.htm
+89,000104581025000023,2025-01-26,leases - schedule of other lease information (details),https://www.sec.gov/Archives/edgar/data/0001045810/000104581025000023/R90.htm
+90,000104581025000023,2025-01-26,schedule ii - valuation and qualifying accounts (details),https://www.sec.gov/Archives/edgar/data/0001045810/000104581025000023/R91.htm
