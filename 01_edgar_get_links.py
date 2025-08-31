@@ -1,6 +1,5 @@
 ########## ------ START OF SCRIPT ------ ##########
-# %%
-# Imports
+# %% Imports
 import os
 import psycopg
 import requests
@@ -12,15 +11,13 @@ import edgar_functions
 import psql_conn
 from bs4 import BeautifulSoup
 
-
 # %% Inputs and initilizing info
 
 headers = {"User-agent": "email@email.com"}
 path_tickers = (
     "/Users/johnxing/Documents/Documents - Apple Mac Mini/finances/stocks/ticker"
 )
-ticker = "tmdx"
-
+ticker = "jpm"
 
 # %% Create ticker folder and subfolders
 path_ticker = os.path.join(path_tickers, ticker.lower())
@@ -35,22 +32,16 @@ utility_belt.mkdir(path_filing_html)
 
 # %% Get 10k and 10q accession numbers:
 
-acc_10k = edgar_functions.get_filter_filing(
-    ticker, headers=headers, ten_k=True, accession_number_only=False
-)
-acc_10q = edgar_functions.get_filter_filing(
-    ticker, headers=headers, ten_k=False, accession_number_only=False
-)
+acc_ = edgar_functions.get_filter_filing(ticker, headers=headers, form_type='', accession_number_only=False)
+# acc_ = edgar_functions.get_filter_filing(ticker, headers=headers, form_type='10k', accession_number_only=False)
+# acc_ = edgar_functions.get_filter_filing(ticker, headers=headers, form_type='10q', accession_number_only=False)
 
-acc_10k["form"] = acc_10k["form"].str.replace("-", "")
-acc_10q["form"] = acc_10q["form"].str.replace("-", "")
+acc_["form"].str.replace("-", "")
 
-
-df_accession = pd.concat([acc_10k, acc_10q], axis=0)
-df_accession.sort_index(inplace=True)
+df_accession = pd.concat([acc_], axis=0)
+df_accession = df_accession.sort_values(by="report_date")
 df_accession["ixbrl_link"] = None
 df_accession["html_link"] = None
-
 
 # %% Retrieve links for all statements
 

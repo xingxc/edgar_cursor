@@ -38,26 +38,62 @@ def cik_matching_ticker(ticker, headers):
     raise ValueError(f"Ticker {ticker} not found in SEC CIK list")
 
 
-def get_submissions_for_ticker(tickers, headers, only_filings_df=False):
-    """
-    Input:
-        ticker [str]: ticker symbol
-        headers [dict]: headers for the requests.get() function
-        only_filings_df [bool]: if True, returns a dataframe of the filings for the ticker
 
-    Returns:
-        if only_filings_df is True:
-            return filings_dataframe [pd.DataFrame]: dataframe of the filings for the ticker
-        if only_filings_df is False:
-            return company_json [dict]: dictionary of the filings for the ticker
 
-    """
+def get_submissions_for_ticker(tickers, headers, get_archive=False):
+
+    # Get cik and recent filings
     cik = cik_matching_ticker(tickers, headers=headers)
     url = f"https://data.sec.gov/submissions/CIK{cik}.json"
     company_json = requests.get(url, headers=headers).json()
-    if only_filings_df:
-        return pd.DataFrame(company_json["filings"]["recent"])
-    return company_json
+
+    additional_files = company_json['filings']['files']
+    company_filing_df = pd.DataFrame(company_json["filings"]["recent"])
+
+    # Optionally get archived filings
+    if get_archive:
+    
+        df_archived_links = pd.DataFrame()
+        df_company_filing_archived = pd.DataFrame()
+
+        # get the links of the archived files
+        for row in additional_files:
+            df_archived_links = pd.concat([df_archived_links, pd.DataFrame([row])], ignore_index=True)
+
+        # get the filings from the archived files
+        for row in df_archived_links['name']:
+
+            url_archived = f"https://data.sec.gov/submissions/{row}"
+            company_json_archived = requests.get(url_archived, headers=headers).json()
+            _ = pd.DataFrame(company_json_archived)
+            df_company_filing_archived = pd.concat([df_company_filing_archived, _], ignore_index=True)
+
+            print(f'Downloaded/appended: {url_archived}')
+
+        company_filing_df = pd.concat([company_filing_df, df_company_filing_archived], ignore_index=True)
+
+    return company_filing_df
+
+# def get_submissions_for_ticker(tickers, headers, only_filings_df=False):
+#     """
+#     Input:
+#         ticker [str]: ticker symbol
+#         headers [dict]: headers for the requests.get() function
+#         only_filings_df [bool]: if True, returns a dataframe of the filings for the ticker
+
+#     Returns:
+#         if only_filings_df is True:
+#             return filings_dataframe [pd.DataFrame]: dataframe of the filings for the ticker
+#         if only_filings_df is False:
+#             return company_json [dict]: dictionary of the filings for the ticker
+
+#     """
+#     cik = cik_matching_ticker(tickers, headers=headers)
+#     url = f"https://data.sec.gov/submissions/CIK{cik}.json"
+#     company_json = requests.get(url, headers=headers).json()
+#     if only_filings_df:
+#         return pd.DataFrame(company_json["filings"]["recent"])
+#     return company_json
 
 
 # def get_filter_filing(ticker, headers, ten_k=True, accession_number_only=False):
@@ -96,12 +132,12 @@ def get_submissions_for_ticker(tickers, headers, only_filings_df=False):
 #         return df
 
 
-def get_filter_filing(ticker, headers, ten_k=True, accession_number_only=False):
+def get_filter_filing(ticker, headers, form_type='', accession_number_only=False):
     """
     Inputs:
         ticker [str]: ticker symbol
         headers [dict]: headers for the requests.get() function
-        ten_k [bool]: if True, returns 10-K filings, if False, returns 10-Q filings
+        form_type [bool]: if True, returns 10-K filings, if False, returns 10-Q filings
         accession_number_only [bool]:
             - if True: returns a series of the accession numbers for all the 10-K or 10-Q filings.
             - if False: returns a dataframe of all the 10-K or 10-Q filings.
@@ -113,13 +149,17 @@ def get_filter_filing(ticker, headers, ten_k=True, accession_number_only=False):
             return df [pd.DataFrame]: dataframe of all the 10-K or 10-Q filings.
     """
 
-    company_filing_df = get_submissions_for_ticker(
-        ticker, headers=headers, only_filings_df=True
-    )
-    if ten_k:
+    company_filing_df = get_submissions_for_ticker(ticker, headers=headers, get_archive=True)
+
+
+
+    if form_type == '10k':
         df = company_filing_df[company_filing_df["form"] == "10-K"]
-    else:
+    
+    elif form_type == '10q':
         df = company_filing_df[company_filing_df["form"] == "10-Q"]
+    else:
+        df = company_filing_df[(company_filing_df["form"] == "10-K") | (company_filing_df["form"] == "10-Q")]
 
     if accession_number_only:
         df = df.set_index("reportDate")
@@ -140,6 +180,51 @@ def get_filter_filing(ticker, headers, ten_k=True, accession_number_only=False):
         # df = df.drop(columns=["reportDate"])
         # df["reportDate"] = df["reportDate"]
         return df
+
+
+# def get_filter_filing(ticker, headers, ten_k=True, accession_number_only=False):
+#     """
+#     Inputs:
+#         ticker [str]: ticker symbol
+#         headers [dict]: headers for the requests.get() function
+#         ten_k [bool]: if True, returns 10-K filings, if False, returns 10-Q filings
+#         accession_number_only [bool]:
+#             - if True: returns a series of the accession numbers for all the 10-K or 10-Q filings.
+#             - if False: returns a dataframe of all the 10-K or 10-Q filings.
+
+#     Returns:
+#         if accession_number_only is True:
+#             return pd.Series: series of the acc-numbers with index as the reportDate.
+#         if accession_number_only is False:
+#             return df [pd.DataFrame]: dataframe of all the 10-K or 10-Q filings.
+#     """
+
+#     company_filing_df = get_submissions_for_ticker(ticker, headers=headers, get_archive=True)
+
+#     if ten_k:
+#         df = company_filing_df[company_filing_df["form"] == "10-K"]
+#     else:
+#         df = company_filing_df[company_filing_df["form"] == "10-Q"]
+
+#     if accession_number_only:
+#         df = df.set_index("reportDate")
+#         return df["accessionNumber"]
+#     else:
+
+#         df.index = df["accessionNumber"].str.replace("-", "")
+#         df = df.rename_axis("accession_number")
+#         df = df[["reportDate", "form"]]
+#         df.rename(
+#             columns={
+#                 "reportDate": "report_date",
+#             },
+#             inplace=True,
+#         )
+#         # df = df.rename(columns={"reportDate": "report_date"})
+
+#         # df = df.drop(columns=["reportDate"])
+#         # df["reportDate"] = df["reportDate"]
+#         return df
 
 
 def get_facts_json(ticker, headers):
@@ -537,10 +622,10 @@ def get_statement_soup(statement_link, headers):
 
         if statement_link.endswith(".xml"):
             return BeautifulSoup(
-                statement_response.content, "lxml-xml", from_encoding="utf-8"
+                statement_response.content, "html.parser", from_encoding="utf-8"
             )
         else:
-            return BeautifulSoup(statement_response.content, "lxml-xml", from_encoding="ascii")
+            return BeautifulSoup(statement_response.content, "html.parser", from_encoding="ascii")
 
     except requests.RequestException as e:
         raise ValueError(f"Error fetching the statement: {e}")
