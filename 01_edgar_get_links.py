@@ -26,9 +26,9 @@ path_statement_df = os.path.join(path_ticker, "statements_df")
 path_filing_html = os.path.join(path_ticker, "filing_html")
 
 utility_belt.mkdir(path_ticker)
-utility_belt.mkdir(path_statement_html)
-utility_belt.mkdir(path_statement_df)
 utility_belt.mkdir(path_filing_html)
+# utility_belt.mkdir(path_statement_html)
+# utility_belt.mkdir(path_statement_df)
 
 # %% Get 10k and 10q accession numbers:
 
@@ -100,12 +100,14 @@ for acc_num, row in df_accession.iterrows():
         )
 
         # Save the soup to html
-        utility_belt.save_soup_to_html(
-            soup_statement_full,
-            os.path.join(
+        path_file = os.path.join(
                 path_filing_html,
                 f"{ticker}_{row['report_date']}_{row['form']}_{acc_num}.html",
-            ),
+            )
+        utility_belt.save_soup_to_html(
+            soup_statement_full,
+            path_file,
+            encoding="ascii"
         )
 
         print(
@@ -115,91 +117,96 @@ for acc_num, row in df_accession.iterrows():
         print(f"error: {ticker} ; {row['report_date']} ; {acc_num} ; full statement")
         print(e)
 
-# %% Create postgres engine and export accession numbers to postgres database
-
-dialect = "postgresql"
-username = os.getenv("DATABASE_USER")
-password = os.getenv("DATABASE_PASSWORD")
-host = "localhost"
-port = "5432"
-db_name = "test"
-
-engine = sqlalchemy.create_engine(
-    f"{dialect}+psycopg://{username}:{password}@{host}:{port}/{db_name}"
-)
-
-# table names and primary/foreign key constraints
-ticker_accession_numbers = f"{ticker}_accession_numbers"
-ticker_statement_link = f"{ticker}_statement_link"
-
-accession_pk_column = "accession_number"
-links_pk_column = "statement_link"
-
-links_fk_column = "accession_number"
-links_fk_constraint_name = "fk_accession_number"
-
-
-# %% Export to database
-# Drop tables if they exist with cascade
-psql_conn.drop_table_if_exists(ticker_accession_numbers, engine, cascade=True)
-psql_conn.drop_table_if_exists(ticker_statement_link, engine, cascade=True)
-
-# % Exporting data
-# Create sql tables from dataframes
-print(f"export to database: {ticker_accession_numbers}")
-df_accession.to_sql(
-    ticker_accession_numbers,
-    engine,
-    if_exists="replace",
-    index=True,
-)
-
-print(f"export to database: {ticker_statement_link}")
-df_statement_links.to_sql(
-    ticker_statement_link,
-    engine,
-    if_exists="replace",
-    dtype={},
-    index=False,
-)
-
-# Add primary and foreign keys
-psql_conn.add_primary_key_if_not_exists(
-    ticker_accession_numbers,
-    accession_pk_column,
-    engine,
-)
-
-psql_conn.add_primary_key_if_not_exists(
-    ticker_statement_link,
-    links_pk_column,
-    engine,
-)
-
-psql_conn.add_foreign_key_if_not_exists(
-    ticker_statement_link,
-    links_fk_column,
-    links_fk_constraint_name,
-    ticker_accession_numbers,
-    accession_pk_column,
-    engine,
-)
-
-
-# %% Export the statement key mapping to the database
-
-path_json = r"/Users/johnxing/Documents/Documents - Apple Mac Mini/finances/stocks/python/get_SEC_data/statement_key_mapping.json"
-df_json = utility_belt.import_json_file(path_json)
-df_json = pd.DataFrame.from_dict(df_json, orient="index").T
-
-df_json.to_sql(
-    "statement_key_mapping",
-    engine,
-    if_exists="replace",
-    dtype={},
-    index=False,
-)
 
 ########## ------ END OF SCRIPT ------ ##########
+
+# ########## ------ BRGIN DATABASE PUSH OPTIONAL ------ ##########
+
+# # %% Create postgres engine and export accession numbers to postgres database
+
+# dialect = "postgresql"
+# username = os.getenv("DATABASE_USER")
+# password = os.getenv("DATABASE_PASSWORD")
+# host = "localhost"
+# port = "5432"
+# db_name = "test"
+
+# engine = sqlalchemy.create_engine(
+#     f"{dialect}+psycopg://{username}:{password}@{host}:{port}/{db_name}"
+# )
+
+# # table names and primary/foreign key constraints
+# ticker_accession_numbers = f"{ticker}_accession_numbers"
+# ticker_statement_link = f"{ticker}_statement_link"
+
+# accession_pk_column = "accession_number"
+# links_pk_column = "statement_link"
+
+# links_fk_column = "accession_number"
+# links_fk_constraint_name = "fk_accession_number"
+
+
+# # %% Export to database
+# # Drop tables if they exist with cascade
+# psql_conn.drop_table_if_exists(ticker_accession_numbers, engine, cascade=True)
+# psql_conn.drop_table_if_exists(ticker_statement_link, engine, cascade=True)
+
+# # % Exporting data
+# # Create sql tables from dataframes
+# print(f"export to database: {ticker_accession_numbers}")
+# df_accession.to_sql(
+#     ticker_accession_numbers,
+#     engine,
+#     if_exists="replace",
+#     index=True,
+# )
+
+# print(f"export to database: {ticker_statement_link}")
+# df_statement_links.to_sql(
+#     ticker_statement_link,
+#     engine,
+#     if_exists="replace",
+#     dtype={},
+#     index=False,
+# )
+
+# # Add primary and foreign keys
+# psql_conn.add_primary_key_if_not_exists(
+#     ticker_accession_numbers,
+#     accession_pk_column,
+#     engine,
+# )
+
+# psql_conn.add_primary_key_if_not_exists(
+#     ticker_statement_link,
+#     links_pk_column,
+#     engine,
+# )
+
+# psql_conn.add_foreign_key_if_not_exists(
+#     ticker_statement_link,
+#     links_fk_column,
+#     links_fk_constraint_name,
+#     ticker_accession_numbers,
+#     accession_pk_column,
+#     engine,
+# )
+
+
+# # %% Export the statement key mapping to the database
+
+# path_json = r"/Users/johnxing/Documents/Documents - Apple Mac Mini/finances/stocks/python/get_SEC_data/statement_key_mapping.json"
+# df_json = utility_belt.import_json_file(path_json)
+# df_json = pd.DataFrame.from_dict(df_json, orient="index").T
+
+# df_json.to_sql(
+#     "statement_key_mapping",
+#     engine,
+#     if_exists="replace",
+#     dtype={},
+#     index=False,
+# )
+
+# ########## ------ END DATABASE PUSH OPTIONAL ------ ##########
 
 # %%

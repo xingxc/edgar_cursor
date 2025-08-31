@@ -52,7 +52,7 @@ def mkdir(path_dir):
     subprocess.run(command, shell=True, capture_output=True, text=True)
 
 
-def save_soup_to_html(soup, file_path):
+def save_soup_to_html(soup, file_path, encoding="ascii"):
     """
 
     Saves a BeautifulSoup object as a prettified HTML file.
@@ -67,7 +67,7 @@ def save_soup_to_html(soup, file_path):
 
     # Save the raw HTML from the soup object
     with open(file_path, "wb") as file:
-        file.write(soup.encode())
+        file.write(soup.encode(encoding=encoding))
 
 
 def find_files_with_regex(directory, regex):

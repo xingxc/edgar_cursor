@@ -52,7 +52,8 @@ def get_submissions_for_ticker(tickers, headers, get_archive=False):
 
     # Optionally get archived filings
     if get_archive:
-    
+        
+        print('--- GETTING ARCHIVED FILINGS ---')
         df_archived_links = pd.DataFrame()
         df_company_filing_archived = pd.DataFrame()
 
@@ -71,7 +72,8 @@ def get_submissions_for_ticker(tickers, headers, get_archive=False):
             print(f'Downloaded/appended: {url_archived}')
 
         company_filing_df = pd.concat([company_filing_df, df_company_filing_archived], ignore_index=True)
-
+    
+    print('--- DONE GETTING ARCHIVED FILINGS ---')
     return company_filing_df
 
 # def get_submissions_for_ticker(tickers, headers, only_filings_df=False):
@@ -622,10 +624,11 @@ def get_statement_soup(statement_link, headers):
 
         if statement_link.endswith(".xml"):
             return BeautifulSoup(
-                statement_response.content, "html.parser", from_encoding="utf-8"
+                statement_response.content, "lxml", from_encoding="utf-8"
             )
         else:
-            return BeautifulSoup(statement_response.content, "html.parser", from_encoding="ascii")
+            # return BeautifulSoup(statement_response.content, "html.parser", from_encoding="ascii")
+            return BeautifulSoup(statement_response.content, "lxml", from_encoding="ascii")
 
     except requests.RequestException as e:
         raise ValueError(f"Error fetching the statement: {e}")
